@@ -27,7 +27,6 @@ const trackEvent = (eventName, params = {}) => {
 }
 
 const DOWNLOAD_PATTERN = /github\.com\/carlvellotti\/claude-code-everyone-course\/releases\/download\/v[^/]+\/complete-course\.zip/
-const VARIANT_KEY = 'cc4e-download-ab-variant'
 const EMAIL_SUBMITTED_KEY = 'cc4e-download-email-submitted'
 
 export default function DownloadGate() {
@@ -36,20 +35,10 @@ export default function DownloadGate() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  const [variant, setVariant] = useState(null)
   const inputRef = useRef(null)
 
   useEffect(() => {
-    // Assign or read A/B variant
-    let v = localStorage.getItem(VARIANT_KEY)
-    if (!v) {
-      v = Math.random() < 0.5 ? 'control' : 'email-gate'
-      localStorage.setItem(VARIANT_KEY, v)
-    }
-    setVariant(v)
-
     const handleClick = (e) => {
-      // Walk up to find the <a> element
       let target = e.target
       while (target && target !== document && target.tagName !== 'A') {
         target = target.parentElement
@@ -61,24 +50,22 @@ export default function DownloadGate() {
 
       e.preventDefault()
 
-      const currentVariant = localStorage.getItem(VARIANT_KEY) || v
       const emailAlreadySubmitted = localStorage.getItem(EMAIL_SUBMITTED_KEY)
 
-      trackEvent('download_click', { variant: currentVariant, download_url: href })
+      trackEvent('download_click', { download_url: href })
 
-      if (currentVariant === 'control' || emailAlreadySubmitted) {
-        trackEvent('download_started', { variant: currentVariant, download_url: href })
+      if (emailAlreadySubmitted) {
+        trackEvent('download_started', { download_url: href })
         window.location.href = href
         return
       }
 
-      // Show email gate
       setPendingUrl(href)
       setIsVisible(true)
       setStatus('idle')
       setEmail('')
       setErrorMessage('')
-      trackEvent('email_gate_shown', { variant: currentVariant, download_url: href })
+      trackEvent('email_gate_shown', { download_url: href })
     }
 
     document.addEventListener('click', handleClick, true)
@@ -93,7 +80,7 @@ export default function DownloadGate() {
 
   const handleClose = () => {
     setIsVisible(false)
-    trackEvent('email_gate_dismissed', { variant: variant, download_url: pendingUrl })
+    trackEvent('email_gate_dismissed', { download_url: pendingUrl })
   }
 
   const handleSubmit = async (e) => {
@@ -124,8 +111,8 @@ export default function DownloadGate() {
       if (response.ok && data.success) {
         setStatus('success')
         localStorage.setItem(EMAIL_SUBMITTED_KEY, 'true')
-        trackEvent('email_gate_completed', { variant: variant, download_url: pendingUrl })
-        trackEvent('download_started', { variant: variant, download_url: pendingUrl })
+        trackEvent('email_gate_completed', { download_url: pendingUrl })
+        trackEvent('download_started', { download_url: pendingUrl })
 
         // Trigger download then close modal
         window.location.href = pendingUrl
