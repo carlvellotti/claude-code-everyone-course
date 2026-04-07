@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # 2.1 Setup
 
 Welcome to Module 2. Now we BUILD.
@@ -126,6 +122,37 @@ USER: Let's go
 - Don't overthink the folder creation - just make it simple
 - If the user asks questions about the technology, keep explanations simple and reassuring
 - **For CC4PMs version:** Change ccforeveryone.com to ccforpms.com
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 

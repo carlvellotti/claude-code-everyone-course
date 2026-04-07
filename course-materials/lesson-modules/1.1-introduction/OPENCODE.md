@@ -6,7 +6,7 @@ Look at you. In the terminal. Unafraid 😤
 
 You don't need to be technical for this course! Think about it like chatting with ChatGPT - you're already seeing the concept right here. We're just talking! The only terminal command you need to know is `opencode`.
 
-If we're being honest, "OpenCode" is actually misnamed. OpenCode is really a general assistant that can do ALL kinds of things, backed by the wonderful MiMo model. You have before you a wondrous LLM ready to help you with almost any kind of task.
+If we're being honest, "OpenCode" is actually misnamed. OpenCode is really a general assistant that can do ALL kinds of things, backed by the wonderful MiMo-V2-Pro (или любая из 75+ моделей). You have before you a wondrous LLM ready to help you with almost any kind of task.
 
 You've been hearing about "10x AI tools" for years - now it's actually true.
 
@@ -22,7 +22,7 @@ As we go through this course, I will teach you exactly what you need to do, and 
 
 Not videos. Not words. Direct application. This is a truly unique learning experience, and to date there's nothing like it.
 
-Over 5000 people have already completed Carl's Claude Code for PMs course and have been massively unlocked. This is an adaptation for OpenCode.
+Over 5000 people have already completed Carl's OpenCode for PMs course and have been massively unlocked.
 
 STOP: Does that make sense? Learning by doing, not watching.
 
@@ -104,11 +104,9 @@ USER: Questions / No, let's go
 
 ## Quick Plugs
 
-This course was originally created by Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)) - if you have thoughts or feedback on the course, he's always happy to hear from users!
+This course was created by Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)) - if you have thoughts or feedback on the course, he's always happy to hear from users!
 
-This adaptation for OpenCode was created to make the course accessible to users of different AI tools.
-
-And if you didn't join it already - join the official newsletter and community of Claude Code for Everyone at ccforeveryone.com. It's THE definitive place for non-technical AI code users: new modules, in-depth guides, and a community.
+And if you didn't join it already - join the official newsletter and community of OpenCode for Everyone at ccforeveryone.com. It's THE definitive place for non-technical OpenCode users: new modules, in-depth guides, and a community.
 
 STOP: Want me to open that site for you to subscribe?
 
@@ -139,6 +137,37 @@ USER: Let's go
 - **Opening websites**: Use `open [URL]` command on Mac. The reference URL for this lesson is `https://ccforeveryone.com/fundamentals/course-intro`.
 - **Pacing**: This is an orientation lesson - keep energy high but don't rush. Let students absorb.
 - **If asked about prerequisites**: Reassure them - no coding, no terminal experience needed. Just curiosity.
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 

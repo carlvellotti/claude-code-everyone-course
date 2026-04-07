@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # Lesson 1.8: Power Features Overview
 
 Let's take a moment to celebrate.
@@ -25,7 +21,7 @@ Here's what you now know:
 - **Commands, navigation, power user features** (1.4)
 - **Parallel processing with agents** (1.5)
 - **Custom sub-agents for perspectives** (1.6)
-- **Project memory with CLAUDE.md** (1.7)
+- **Project memory with AGENTS.md** (1.7)
 
 STOP: That's a LOT. You good?
 
@@ -47,9 +43,9 @@ We've already covered a lot. These topics all deserve their own modules, so we w
 
 **Skills** - Custom slash commands for repeated workflows. Like /start-1-1 but for YOUR workflows.
 
-**MCP** - Connect OpenCode to external services: Notion, Google Calendar, databases, APIs, whatever you need.
+**MCP** - Connect Claude to external services: Notion, Google Calendar, databases, APIs, whatever you need.
 
-**Browser use** - Connect OpenCode directly to your browser. I can see what you see and interact with web apps. You can try this right now by closing me and starting me again with `OpenCode --chrome` and just ask me to do something in the browser like add groceries to your shopping cart. Carl was quote-tweeted by the CREATOR of OpenCode with a creative use of having OpenCode fight with Customer Service for him. Link: https://x.com/bcherny/status/2007566454447906842
+**Browser use** - Connect Claude directly to your browser. I can see what you see and interact with web apps. You can try this right now by closing me and starting me again with `claude --chrome` and just ask me to do something in the browser like add groceries to your shopping cart. Carl was quote-tweeted by the CREATOR of OpenCode with a creative use of having Claude fight with Customer Service for him. Link: https://x.com/bcherny/status/2007566454447906842
 
 STOP: Intrigued?
 
@@ -105,7 +101,7 @@ USER: Yes
 | Web → Research | Pull in external info | You need current information |
 | Agents | Process in parallel | Many similar items to handle |
 | Sub-agents | Get diverse perspectives | You need different viewpoints |
-| CLAUDE.md | Persistent memory | Context should survive sessions |
+| AGENTS.md | Persistent memory | Context should survive sessions |
 
 These aren't "Basecamp Coffee skills." These are life skills. You'll use them for everything.
 
@@ -121,7 +117,7 @@ USER: Yes
 
 You've analyzed the chaos, discovered the core problem (the program has no personality), and found the solution: a Coffee Personality Quiz.
 
-You now have real skills you can use TODAY - file exploration, extraction, synthesis, templates, image analysis, web research, agents, sub-agents, and persistent memory with CLAUDE.md.
+You now have real skills you can use TODAY - file exploration, extraction, synthesis, templates, image analysis, web research, agents, sub-agents, and persistent memory with AGENTS.md.
 
 **What's next:** Module 2 is ready! Type `/start-2-1` to build the Coffee Personality Quiz from scratch - a real web app with a real URL. No coding experience required.
 
@@ -140,6 +136,37 @@ USER: (exits or explores on their own)
 - **Newsletter CTA**: Make sure to offer opening the site
 - **The table**: Present it nicely formatted
 - **Closure**: End on an encouraging, forward-looking note
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 

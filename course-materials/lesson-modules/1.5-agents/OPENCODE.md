@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # Lesson 1.5: Agents
 
 Remember those competitor files, old campaigns, and the CSV we saw but didn't touch? They're all in `inherited-chaos/` - take a look if you need a refresher.
@@ -165,6 +161,37 @@ USER: Yes / /start-1-6
 - **Create real files**: campaign-salvage-report.md and comprehensive-research-synthesis.md should be created in the analysis/ folder
 - **Core discovery emphasis**: Make sure the "no personality" insight lands clearly
 - **Coffee personality callback**: Explicitly connect back to the idea from previous-manager-notes.md
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 

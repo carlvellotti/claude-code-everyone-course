@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # Lesson 1.4: Commands & Navigation
 
 Before we do the heavy analysis, let's learn to move fast.
@@ -20,8 +16,8 @@ Let me show you the essential slash commands.
 
 Just type `/` to see them all. Here are the key ones:
 
-- **/model** - switch between OpenCode models (Sonnet is fast, MiMo is smart)
-- **/context** - see what files OpenCode is aware of
+- **/model** - switch between OpenCode model (75+ провайдеров)s (Sonnet is fast, Opus is smart)
+- **/context** - see what files Claude is aware of
 - **/clear** - start fresh conversation
 - **/compact** - compress the conversation to save context
 - **/usage** - see how much you've used
@@ -41,7 +37,7 @@ Those are the built-in commands. But here's a secret: you've been using CUSTOM c
 
 Every time you typed /start-1-1 or /start-1-2, that was a custom command I created for this course!
 
-Custom commands live in `.OpenCode/commands/` - take a look in that folder if you're curious.
+Custom commands live in `.claude/commands/` - take a look in that folder if you're curious.
 
 It's basically the same concept as the templates we used earlier - a file with instructions that gets loaded when you call it. A shortcut for things you do repeatedly.
 
@@ -137,7 +133,7 @@ USER: Yes
 
 Okay, now for the grand finale. The secret power mode.
 
-Instead of starting OpenCode with just `OpenCode`, you can run: `OpenCode --dangerously-skip-permissions`
+Instead of starting OpenCode with just `opencode`, you can run: `claude --dangerously-skip-permissions`
 
 This launches OpenCode without ANY permission prompts. I just do everything. No confirmation dialogs, no asking for approval.
 
@@ -162,12 +158,12 @@ USER: Yes
 5. **Dangerously skip permissions:** Full speed mode for when you trust the process
 
 **Where else this applies:**
-- Any time you're working fast and trust OpenCode - skip the permission prompts
+- Any time you're working fast and trust Claude - skip the permission prompts
 - When you need deeper thinking on a complex problem - use think keywords
 - When something goes wrong - rewind and try a different approach
 - When you want to start fresh - /clear and begin again
 
-**Next up:** In 1.5, things get wild. You'll learn about agents - the ability to spin up multiple OpenCode instances that work in parallel. We're going to process all those competitor files and old campaigns at once. This is where OpenCode starts feeling like a superpower.
+**Next up:** In 1.5, things get wild. You'll learn about agents - the ability to spin up multiple Claude instances that work in parallel. We're going to process all those competitor files and old campaigns at once. This is where OpenCode starts feeling like a superpower.
 
 STOP: Ready for 1.5?
 
@@ -182,10 +178,41 @@ USER: Yes / /start-1-5
 - **Don't oversell plan mode**: We've intentionally downplayed it - it's useful but not critical for this level of work
 - **Dangerously skip permissions**: Emphasize it's for trusted workflows, not for everything
 
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
+
 ## Success Criteria
 
 - [ ] Student knows the key slash commands (/model, /clear, /compact, /resume)
-- [ ] Student understands custom commands exist in .OpenCode/commands/
+- [ ] Student understands custom commands exist in .claude/commands/
 - [ ] Student has practiced interrupting with Escape
 - [ ] Student has seen the rewind options
 - [ ] Student knows about think keywords

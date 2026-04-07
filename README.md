@@ -1,104 +1,178 @@
-# OpenCode for Everyone - Documentation Website
+# OpenCode for Everyone - Курс по AI-оркестрации
 
-This is the Nextra-based documentation website for the OpenCode for Everyone Course - an adaptation of Carl Vellotti's Claude Code course for OpenCode users.
+Адаптация курса "Claude Code for Everyone" от Carl Vellotti для **OpenCode** - open source AI coding agent.
 
-## About This Adaptation
+## Что такое OpenCode?
 
-This repository is a fork of [carlvellotti/claude-code-everyone-course](https://github.com/carlvellotti/claude-code-everyone-course), adapted for OpenCode users. The course content has been modified to reference OpenCode instead of Claude Code, while maintaining the same learning structure and interactive approach.
+[OpenCode](https://opencode.ai) - это open source AI агент для разработки, который работает в терминале, IDE или как desktop приложение. В отличие от Claude Code:
 
-## Development
+- **100% open source** - полностью открытый код
+- **Provider-agnostic** - работает с любыми моделями: Claude, GPT, Gemini, MiMo, локальные модели
+- **Бесплатные модели включены** - можно использовать без дополнительных подписок
+- **Desktop приложение** - доступно на macOS, Windows, Linux
+- **LSP поддержка** - автоматическая загрузка языковых серверов
+- **Мульти-сессии** - параллельная работа над проектом
 
+## Установка OpenCode
+
+### Терминал (рекомендуется)
 ```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Open http://localhost:3000
+curl -fsSL https://opencode.ai/install | bash
 ```
 
-## Building
+### Desktop приложение (бета)
+Скачайте с [opencode.ai/download](https://opencode.ai/download)
 
+### Пакетные менеджеры
 ```bash
-# Build static site
-npm run build
+# macOS/Linux (Homebrew)
+brew install anomalyco/tap/opencode
 
-# The build output will be in the `out/` directory
-# Pagefind will automatically index the content after build
+# npm/pnpm/yarn
+npm i -g opencode-ai@latest
+
+# Windows
+scoop install opencode
 ```
 
-## Deployment to Vercel
+## Модели
 
-### Option 1: Connect via Vercel Dashboard
+OpenCode поддерживает 75+ LLM провайдеров через Models.dev, включая:
+- **Claude** (Opus, Sonnet, Haiku)
+- **GPT** (GPT-4, GPT-4o, O1, O3)
+- **Gemini** (2.5, 2.0 Flash)
+- **MiMo-V2-Pro** (Xiaomi) - через локальный endpoint или кастомный провайдер
+- **Локальные модели** - через Ollama, LM Studio, etc.
 
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click "Add New Project"
-3. Import the GitHub repository: `yossik-vit/claude-code-everyone-course`
-4. Set the Root Directory to `website`
-5. Framework Preset: Next.js
-6. Build Command: `npm run build`
-7. Output Directory: `out`
-8. Deploy!
+### Настройка MiMo-V2-Pro
 
-### Option 2: Deploy via Vercel CLI
+Для использования MiMo-V2-Pro создайте файл конфигурации `~/.opencode.json`:
 
+```json
+{
+  "providers": {
+    "local": {
+      "endpoint": "http://localhost:11434/v1",
+      "apiKey": "not-needed"
+    }
+  },
+  "agents": {
+    "coder": {
+      "model": "mimo-v2-pro",
+      "maxTokens": 8000
+    }
+  }
+}
+```
+
+Или используйте переменную окружения:
 ```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy from the website directory
-cd website
-vercel
-
-# For production
-vercel --prod
+export LOCAL_ENDPOINT=http://localhost:11434/v1
+opencode
 ```
 
-## Project Structure
+## Структура курса
 
+### Модуль 0: Getting Started (15 мин)
+- **0.0** - Введение в OpenCode
+- **0.1** - Установка и аутентификация
+- **0.2** - Скачивание материалов курса
+
+### Модуль 1: Fundamentals (~3 часа)
+- **1.1** - Введение в курс
+- **1.2** - Исследование файлов и визуальное рабочее пространство
+- **1.3** - Работа с файлами
+- **1.4** - Команды и навигация
+- **1.5** - Агенты
+- **1.6** - Пользовательские суб-агенты
+- **1.7** - Память проекта (AGENTS.md)
+- **1.8** - Что дальше
+
+### Модуль 2: Vibe Coding (~2-3 часа)
+- **2.1** - Настройка
+- **2.2** - Планирование
+- **2.3** - Сборка и итерации
+- **2.4** - GitHub
+- **2.5** - Публикация
+
+## Отличия от Claude Code
+
+| Функция | Claude Code | OpenCode |
+|---------|-------------|----------|
+| **Лицензия** | Проприетарный | Open Source (MIT) |
+| **Провайдеры** | Только Anthropic | 75+ провайдеров |
+| **Модели** | Claude Opus/Sonnet | Любые модели |
+| **Стоимость** | $20+/месяц | Бесплатные модели + опциональные подписки |
+| **Desktop** | Нет | Да (бета) |
+| **TUI** | Базовый | Продвинутый (Bubble Tea) |
+| **LSP** | Нет | Да, из коробки |
+| **Мульти-сессии** | Нет | Да |
+| **Share links** | Нет | Да |
+
+## Особенности OpenCode
+
+### Агенты
+OpenCode включает два встроенных агента:
+- **build** - агент с полным доступом для разработки
+- **plan** - read-only агент для анализа и исследования кода
+
+Переключение между ними: `Tab`
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог/вернуться назад
+
+### Инструменты AI
+- **Файлы**: `glob`, `grep`, `ls`, `view`, `write`, `edit`
+- **Код**: `diagnostics`, `patch`
+- **Система**: `bash`, `fetch`
+- **Поиск**: `sourcegraph` (публичные репозитории)
+- **Суб-агенты**: `agent` (для сложных задач)
+
+## Ключевые концепции курса
+
+### 1. AI-оркестрация вместо программирования
+Ты не учишься программировать - ты учишься **оркестрировать AI**. Описывай desired outcome, OpenCode разберётся как это сделать.
+
+### 2. Обучение через практику
+Не видео, не тексты. Прямое применение. Каждый урок - это реальные действия.
+
+### 3. Рабочий процесс
 ```
-website/
-├── pages/               # All content pages (MDX)
-│   ├── company-context/ # TaskFlow company info
-│   ├── getting-started/ # Modules 0.0-0.2
-│   ├── fundamentals/    # Modules 1.1-1.7
-│   ├── advanced/        # Modules 2.1-2.3
-│   ├── _app.jsx         # Next.js app wrapper
-│   ├── _meta.ts         # Navigation config
-│   ├── index.mdx        # Homepage
-│   └── search.mdx       # Search page with Pagefind
-├── public/
-│   └── images/          # Course images
-├── next.config.mjs      # Next.js configuration
-├── theme.config.tsx     # Nextra theme configuration
-└── package.json         # Dependencies
+Файлы (в редакторе) + Терминал (OpenCode) = Визуальная рабочая среда
 ```
 
-## Content Updates
+## Начало работы
 
-Content is automatically converted from the main course `lesson-modules/` directory. To update:
+1. **Установите OpenCode** следуя инструкциям выше
+2. **Клонируйте курс**:
+   ```bash
+   git clone https://github.com/yossik-vit/opencode-for-everyone.git
+   cd opencode-for-everyone
+   ```
+3. **Откройте в OpenCode**:
+   ```bash
+   opencode
+   ```
+4. **Начните с модуля 1.1**:
+   Прочитайте `course-materials/lesson-modules/1.1-introduction/OPENCODE.md`
 
-1. Edit the OPENCODE.md files in `/lesson-modules/` (adapted from CLAUDE.md)
-2. Run the conversion script: `./convert-content.sh`
-3. Build and deploy
+## Ссылки
 
-## Tech Stack
+- **OpenCode**: [opencode.ai](https://opencode.ai)
+- **Документация**: [opencode.ai/docs](https://opencode.ai/docs)
+- **Discord**: [discord.gg/opencode](https://discord.gg/opencode)
+- **GitHub**: [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode)
 
-- **Next.js 14** - Static site generation
-- **Nextra 3** - Documentation theme
-- **Pagefind** - Client-side search
-- **MDX** - Markdown with JSX components
+## Кредиты
 
-## Links
+- **Оригинальный курс**: Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/))
+- **Адаптация для OpenCode**: [Yossik Vit](https://github.com/yossik-vit)
 
-- **Live Site:** TBD (will be deployed to Vercel)
-- **Original Course Repository:** https://github.com/carlvellotti/claude-code-pm-course
-- **OpenCode Adaptation Repository:** https://github.com/yossik-vit/claude-code-everyone-course
-- **Nextra Docs:** https://nextra.site
-- **Pagefind Docs:** https://pagefind.app
+## Лицензия
 
-## Credits
-
-- Original course by [Carl Vellotti](https://www.linkedin.com/in/carlvellotti/)
-- OpenCode adaptation by [Yossik Vit](https://github.com/yossik-vit)
+Адаптация распространяется под той же лицензией, что и оригинальный курс. OpenCode - MIT License.

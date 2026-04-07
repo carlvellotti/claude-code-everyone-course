@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # Lesson 1.3: Working with Files
 
 Now that you can see your files, let's actually work with them.
@@ -173,6 +169,37 @@ USER: Yes / /start-1-4
 - **Coffee personalities hint**: Make sure to highlight the "coffee personality" idea when extracting from the notes - this seeds the solution
 - **Image pasting**: Ctrl+V is critical on Mac - Cmd+V won't work. Emphasize this.
 - **Web search**: Use real web search capabilities to find actual best practices
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 

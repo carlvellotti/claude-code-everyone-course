@@ -1,128 +1,325 @@
-# OpenCode for Everyone - Complete Adaptation
+# OpenCode for Everyone - Полное руководство по адаптации
 
-## Overview
+## Обзор
 
-This repository contains the complete adaptation of Carl Vellotti's "Claude Code for Everyone" course for OpenCode users. The adaptation maintains the original course structure and interactive learning approach while updating all references from Claude Code to OpenCode.
+Этот репозиторий содержит полную адаптацию курса "Claude Code for Everyone" от Carl Vellotti для **OpenCode** - open source AI coding agent.
 
-## What's Included
+## Что такое OpenCode?
 
-### 1. Adapted Lesson Modules
-All 13 lesson modules have been adapted with OPENCODE.md files:
+[OpenCode](https://opencode.ai) - это open source AI агент для разработки с 139K+ звёзд на GitHub. Основные особенности:
 
-**Module 1: Fundamentals (8 lessons)**
-- 1.1 Introduction to OpenCode
-- 1.2 File Exploration & Visual Workspace
-- 1.3 Working with Files
-- 1.4 Commands & Navigation
-- 1.5 Agents
-- 1.6 Custom Sub-agents
-- 1.7 Project Memory (OPENCODE.md)
-- 1.8 What's Next
+- **100% open source** - полностью открытый код под MIT лицензией
+- **Provider-agnostic** - работает с любыми моделями через Models.dev (75+ провайдеров)
+- **Desktop приложение** - доступно на macOS, Windows, Linux (бета)
+- **TUI** - продвинутый терминальный интерфейс на Bubble Tea
+- **LSP поддержка** - автоматическая загрузка языковых серверов
+- **Мульти-сессии** - параллельная работа над проектом
+- **Share links** - публикация сессий для отладки
 
-**Module 2: Vibe Coding (5 lessons)**
-- 2.1 Setup
-- 2.2 Plan
-- 2.3 Build & Iterate
-- 2.4 GitHub
-- 2.5 Go Live
+## Ключевые отличия от Claude Code
 
-### 2. Key Changes Made
+### Архитектурные различия
+| Аспект | Claude Code | OpenCode |
+|--------|-------------|----------|
+| **Лицензия** | Проприетарный | Open Source (MIT) |
+| **Провайдер** | Только Anthropic | 75+ провайдеров |
+| **Модели** | Claude Opus/Sonnet | Любые модели (Claude, GPT, Gemini, MiMo, локальные) |
+| **Стоимость** | $20+/месяц подписка | Бесплатные модели + опциональные подписки |
+| **Desktop** | Нет | Да (бета) |
+| **Архитектура** | Монолит | Клиент-сервер |
 
-#### Terminology Updates
-- "Claude Code" → "OpenCode"
-- "Opus 4.5" → "MiMo model"
-- "Claude account" → "OpenCode account"
-- Terminal command: `claude` → `opencode`
+### Функциональные различия
+| Функция | Claude Code | OpenCode |
+|---------|-------------|----------|
+| **TUI** | Базовый | Продвинутый (Bubble Tea) |
+| **LSP** | Нет | Да, из коробки |
+| **Мульти-сессии** | Нет | Да |
+| **Share links** | Нет | Да |
+| **Агенты** | Нет | build (полный доступ) + plan (read-only) |
+| **Кастомные команды** | Нет | Да, через .md файлы |
+| **MCP** | Нет | Да, поддержка Model Context Protocol |
 
-#### Content Preservation
-- All interactive "STOP" points maintained
-- Learning objectives unchanged
-- Practical exercises preserved
-- File structure and scenarios intact
+## Адаптация курса
 
-#### Additional Adaptations
-- Created OPENCODE-ADAPTATION.md guide
-- Updated README.md for OpenCode context
-- Created adaptation script for future updates
+### Что изменено
 
-## How to Use This Adaptation
+#### 1. Установка и настройка
+**Claude Code:**
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+claude
+```
 
-### For Learners
-1. Clone this repository
-2. Follow the adapted installation instructions
-3. Work through the OPENCODE.md files in each lesson module
-4. Use the interactive prompts as designed
+**OpenCode:**
+```bash
+# Терминал
+curl -fsSL https://opencode.ai/install | bash
 
-### For Contributors
-1. Fork this repository
-2. Create a feature branch
-3. Make changes to OPENCODE.md files
-4. Submit a pull request
+# Desktop
+# Скачать с https://opencode.ai/download
 
-## File Structure
+# Пакетные менеджеры
+brew install anomalyco/tap/opencode
+```
+
+#### 2. Аутентификация
+**Claude Code:** Требуется подписка Claude Pro/Max ($20+/месяц)
+
+**OpenCode:** 
+- Бесплатные модели включены
+- Можно использовать существующие подписки (ChatGPT Plus/Pro, GitHub Copilot)
+- Локальные модели (бесплатно)
+- Кастомные провайдеры (MiMo-V2-Pro через local endpoint)
+
+#### 3. Модели
+**Claude Code:** Только Claude Opus 4.5
+
+**OpenCode:** 75+ моделей через Models.dev:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi) - через local endpoint
+- Локальные модели (Ollama, LM Studio)
+
+#### 4. Конфигурация
+**Claude Code:** Нет конфигурационного файла
+
+**OpenCode:** `~/.opencode.json`
+```json
+{
+  "providers": {
+    "local": {
+      "endpoint": "http://localhost:11434/v1",
+      "apiKey": "not-needed"
+    }
+  },
+  "agents": {
+    "coder": {
+      "model": "mimo-v2-pro",
+      "maxTokens": 8000
+    }
+  },
+  "lsp": {
+    "go": {
+      "disabled": false,
+      "command": "gopls"
+    }
+  }
+}
+```
+
+#### 5. Агенты
+**Claude Code:** Нет агентов
+
+**OpenCode:** Два встроенных агента:
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+#### 6. Команды
+**Claude Code:** Slash commands (`/start-1-1`, `/doctor`, `/help`)
+
+**OpenCode:** 
+- Slash commands поддерживаются
+- Кастомные команды через `.md` файлы
+- Командный диалог: `Ctrl+K`
+
+### Файлы адаптации
+
+Каждый урок оригинального курса имеет два файла:
+- `CLAUDE.md` - оригинальный файл для Claude Code
+- `OPENCODE.md` - адаптированный файл для OpenCode
+
+### Скрипт адаптации
+
+Создан скрипт `adapt-to-opencode.sh` для автоматической адаптации:
+```bash
+./adapt-to-opencode.sh
+```
+
+Скрипт:
+1. Находит все `CLAUDE.md` файлы
+2. Создаёт `OPENCODE.md` версии
+3. Заменяет ссылки на Claude Code → OpenCode
+4. Добавляет заголовок адаптации
+
+## Структура адаптированного курса
 
 ```
-claude-code-everyone-course/
+opencode-for-everyone/
 ├── course-materials/
 │   └── lesson-modules/
 │       ├── 1.1-introduction/
-│       │   ├── CLAUDE.md (original)
-│       │   └── OPENCODE.md (adapted)
+│       │   ├── CLAUDE.md (оригинал)
+│       │   └── OPENCODE.md (адаптация)
 │       ├── 1.2-file-exploration/
-│       │   ├── CLAUDE.md (original)
-│       │   └── OPENCODE.md (adapted)
-│       └── ... (all modules adapted)
-├── OPENCODE-ADAPTATION.md (adaptation guide)
-├── README.md (updated for OpenCode)
-└── adapt-to-opencode.sh (adaptation script)
+│       │   ├── CLAUDE.md
+│       │   └── OPENCODE.md
+│       └── ... (все модули адаптированы)
+├── OPENCODE-ADAPTATION.md (гайд по адаптации)
+├── OPENCODE-FOR-EVERYONE.md (полное руководство)
+├── README.md (обновлён для OpenCode)
+└── adapt-to-opencode.sh (скрипт адаптации)
 ```
 
-## Original Course Credit
+## Как использовать адаптацию
 
-- **Original Creator:** Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/))
-- **Original Repository:** [carlvellotti/claude-code-everyone-course](https://github.com/carlvellotti/claude-code-everyone-course)
-- **Course Website:** [ccforeveryone.com](https://ccforeveryone.com)
+### Для учеников
+1. Клонируйте репозиторий
+2. Установите OpenCode
+3. Следуйте адаптированным инструкциям в `OPENCODE.md` файлах
+4. Используйте интерактивные промпты как задумано
 
-## OpenCode Adaptation
+### Для контрибьюторов
+1. Форкните репозиторий
+2. Создайте feature branch
+3. Внесите изменения в `OPENCODE.md` файлы
+4. Отправьте pull request
 
-- **Adapter:** [Yossik Vit](https://github.com/yossik-vit)
-- **Adaptation Repository:** [yossik-vit/claude-code-everyone-course](https://github.com/yossik-vit/claude-code-everyone-course)
-- **Branch:** opencode-adaptation
+## Настройка MiMo-V2-Pro
 
-## Next Steps
+### Вариант 1: Через local endpoint (Ollama)
+```bash
+# Установите Ollama
+curl -fsSL https://ollama.ai/install.sh | bash
 
-### For This Adaptation
-1. **Test the adapted lessons** - Verify all interactive elements work with OpenCode
-2. **Create OpenCode-specific content** - Add examples unique to OpenCode features
-3. **Build community** - Create OpenCode community around the course
-4. **Expand modules** - Add new modules for OpenCode-specific workflows
+# Загрузите MiMo-V2-Pro
+ollama pull mimo-v2-pro
 
-### For Learners
-1. **Start with Module 1** - Follow the adapted lessons in order
-2. **Practice regularly** - The interactive format requires hands-on practice
-3. **Join the community** - Connect with other OpenCode learners
-4. **Provide feedback** - Help improve the adaptation
+# Настройте OpenCode
+cat > ~/.opencode.json << 'EOF'
+{
+  "providers": {
+    "local": {
+      "endpoint": "http://localhost:11434/v1",
+      "apiKey": "not-needed"
+    }
+  },
+  "agents": {
+    "coder": {
+      "model": "mimo-v2-pro",
+      "maxTokens": 8000
+    }
+  }
+}
+EOF
 
-## Technical Notes
+# Запустите OpenCode
+opencode
+```
 
-### Adaptation Process
-The adaptation was done using a bash script that:
-1. Copies each CLAUDE.md file to OPENCODE.md
-2. Replaces all Claude Code references with OpenCode
-3. Updates terminal commands and account references
-4. Adds adaptation header to each file
+### Вариант 2: Через переменную окружения
+```bash
+export LOCAL_ENDPOINT=http://localhost:11434/v1
+opencode
+```
 
-### Manual Review Required
-While the script handles most replacements, some manual review may be needed for:
-- Context-specific references to Claude features
-- OpenCode-specific capabilities
-- Installation and authentication steps
-- Platform-specific instructions
+### Вариант 3: Через кастомный провайдер
+```json
+{
+  "providers": {
+    "xiaomi": {
+      "endpoint": "https://api.xiaomi.com/v1",
+      "apiKey": "your-api-key"
+    }
+  },
+  "agents": {
+    "coder": {
+      "model": "xiaomi/mimo-v2-pro",
+      "maxTokens": 8000
+    }
+  }
+}
+```
 
-## License
+## Особенности курса
 
-This adaptation follows the same license as the original course. Please refer to the original repository for licensing information.
+### Интерактивный формат
+Каждый урок включает:
+- **STOP** - точки остановки для взаимодействия
+- **ACTION** - конкретные действия
+- **USER** - ожидаемые ответы пользователя
+- **Success Criteria** - критерии завершения урока
 
----
+### Практический подход
+- Не видео, не тексты
+- Прямое применение
+- Реальные задачи
+- Мгновенная обратная связь
 
-**Ready to start learning OpenCode?** Begin with [Lesson 1.1: Introduction](course-materials/lesson-modules/1.1-introduction/OPENCODE.md)
+### Нарративный сценарий
+- Сеттинг: Basecamp Coffee (сеть кофеен)
+- Роль: Новый менеджер
+- Задача: Исправить программу лояльности за 3 месяца
+- Навыки: AI-оркестрация, анализ данных, создание документов
+
+## Бонусные материалы
+
+### Рекомендуемые редакторы
+1. **VS Code** - бесплатно, хорошо интегрируется
+2. **Cursor** - AI-powered, отлично работает с OpenCode
+3. **Zed** - быстрый, современный
+4. **Neovim** - для продвинутых пользователей
+
+### Полезные команды OpenCode
+```bash
+# Запуск
+opencode
+
+# С отладкой
+opencode -d
+
+# С рабочей директорией
+opencode -c /path/to/project
+
+# Неинтерактивный режим
+opencode -p "Your prompt here"
+
+# С JSON выводом
+opencode -p "Your prompt" -f json
+```
+
+### Клавиатурные сокращения
+| Сокращение | Действие |
+|------------|----------|
+| `Ctrl+C` | Выход |
+| `Ctrl+?` | Справка |
+| `Ctrl+A` | Переключение сессий |
+| `Ctrl+K` | Командный диалог |
+| `Ctrl+O` | Выбор модели |
+| `Ctrl+N` | Новая сессия |
+| `Ctrl+X` | Отмена текущей операции |
+| `Esc` | Закрыть диалог |
+
+## Следующие шаги
+
+### Для этого репозитория
+1. **Протестировать адаптированные уроки** - проверить интерактивные элементы
+2. **Создать OpenCode-specific контент** - добавить примеры уникальных возможностей
+3. **Построить сообщество** - Discord сервер для OpenCode learners
+4. **Расширить модули** - добавить уроки по LSP, MCP, кастомным командам
+
+### Для учеников
+1. **Начать с модуля 1.1** - следовать адаптированным урокам
+2. **Практиковаться регулярно** - интерактивный формат требует практики
+3. **Присоединиться к сообществу** - Discord OpenCode
+4. **Делиться фидбеком** - помогать улучшать адаптацию
+
+## Ссылки
+
+- **OpenCode**: [opencode.ai](https://opencode.ai)
+- **Документация**: [opencode.ai/docs](https://opencode.ai/docs)
+- **GitHub**: [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode)
+- **Discord**: [discord.gg/opencode](https://discord.gg/opencode)
+- **Models.dev**: [models.dev](https://models.dev) - 75+ LLM провайдеров
+
+## Кредиты
+
+- **Оригинальный курс**: Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/))
+- **Адаптация для OpenCode**: [Yossik Vit](https://github.com/yossik-vit)
+- **OpenCode**: [Anomaly](https://anoma.ly) - команда разработчиков
+
+## Лицензия
+
+Адаптация распространяется под той же лицензией, что и оригинальный курс. OpenCode - MIT License.

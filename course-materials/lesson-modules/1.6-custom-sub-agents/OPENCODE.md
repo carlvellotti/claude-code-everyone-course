@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # Lesson 1.6: Custom Sub-agents
 
 We've done the research. We know there's a problem.
@@ -46,7 +42,7 @@ Meet your advisory team:
 
 **(•‿•) Barista Lead** - ground-level operations. "What do customers actually want?"
 
-These sub-agents are defined in `.OpenCode/agents/`. Take a look at those files.
+These sub-agents are defined in `.claude/agents/`. Take a look at those files.
 
 STOP: Can you see the three sub-agent files?
 
@@ -104,7 +100,7 @@ USER: Yes
 
 ## How Sub-agents Work
 
-Let me show you how sub-agents work. They live in `.OpenCode/agents/`
+Let me show you how sub-agents work. They live in `.claude/agents/`
 
 Each file has YAML frontmatter with a name and description, plus a system prompt defining their perspective.
 
@@ -169,7 +165,7 @@ USER: Confirms
 - Writing anything important - "editor" (clarity), "target reader" (relevance), "critic" (weaknesses)
 - Making a big decision - "risk-averse advisor," "opportunity-focused advisor," "practical advisor"
 
-**Next up:** In 1.7, you'll learn about CLAUDE.md - the killer feature that gives OpenCode persistent memory across sessions. No more re-explaining your project every time. You write the context once, and I know it forever.
+**Next up:** In 1.7, you'll learn about AGENTS.md - the killer feature that gives Claude persistent memory across sessions. No more re-explaining your project every time. You write the context once, and I know it forever.
 
 STOP: Ready for 1.7?
 
@@ -184,13 +180,44 @@ USER: Yes / /start-1-7
 - **The big moment**: The barista insight connecting to the coffee personality quiz is THE narrative payoff - make it land
 - **Optional agent creation**: Student can skip creating their own agent - don't force it
 
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
+
 ## Success Criteria
 
 - [ ] Student understands difference between agents (temporary) and sub-agents (permanent)
 - [ ] Student saw all 3 sub-agents review the synthesis
 - [ ] Student received different perspectives from each sub-agent
 - [ ] Student had the "aha" moment about the Coffee Personality Quiz solution
-- [ ] Student knows sub-agents live in .OpenCode/agents/
+- [ ] Student knows sub-agents live in .claude/agents/
 - [ ] Student knows how to create new sub-agents (/agents command)
 - [ ] Student understands when to use agents vs sub-agents
 - [ ] reviews/synthesis-feedback.md created

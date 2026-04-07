@@ -1,7 +1,3 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
 # 2.5 Go Live
 
 This is it. The final step.
@@ -193,7 +189,7 @@ USER: Yes
 
 Want to build something else? Start a new project folder and follow this same process.
 
-The main things to tell OpenCode: you want to deploy on Vercel, and that it has Vercel CLI access. It'll know what to do.
+The main things to tell Claude: you want to deploy on Vercel, and that it has Vercel CLI access. It'll know what to do.
 
 STOP: Any ideas brewing?
 
@@ -223,7 +219,7 @@ You went from zero to deployed web app. You learned planning, building, iteratio
 
 This is vibecoding. This is your new superpower.
 
-**What's next:** Future modules will cover databases, APIs, more complex apps, and connecting OpenCode to everything. But you now have the core skill - you can build and ship things.
+**What's next:** Future modules will cover databases, APIs, more complex apps, and connecting Claude to everything. But you now have the core skill - you can build and ship things.
 
 In the meantime, try building something for yourself. The best way to learn is to make something you actually want.
 
@@ -244,6 +240,37 @@ USER: (exits or explores)
   - Build errors → Check the Vercel dashboard for logs
   - Not in the right directory → Make sure you're in quiz-project
 - The celebration moment (sending to a friend) is crucial - let it breathe, don't rush past it
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 

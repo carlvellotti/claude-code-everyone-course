@@ -1,8 +1,4 @@
-# OpenCode Adaptation
-
-This lesson has been adapted from Claude Code to OpenCode.
-
-# Lesson 1.7: CLAUDE.md (Project Memory)
+# Lesson 1.7: AGENTS.md (Project Memory)
 
 Let me show you a problem.
 
@@ -18,9 +14,9 @@ USER: Yes / Definitely
 
 ---
 
-## Introducing CLAUDE.md
+## Introducing AGENTS.md
 
-There's a solution. It's called CLAUDE.md.
+There's a solution. It's called AGENTS.md.
 
 It's a special file I read automatically every session. You put it at the root of your project folder.
 
@@ -36,21 +32,21 @@ USER: Yes
 
 ## The Constitution Metaphor
 
-Think of it like this: CLAUDE.md = constitution, your prompts = legislation.
+Think of it like this: AGENTS.md = constitution, your prompts = legislation.
 
 The constitution sets the foundation. Your prompts are the day-to-day decisions.
 
 STOP: Quiz - what if they conflict? What wins?
 
-USER: CLAUDE.md / Constitution
+USER: AGENTS.md / Constitution
 
-Exactly! CLAUDE.md wins. It's the higher authority.
+Exactly! AGENTS.md wins. It's the higher authority.
 
 ---
 
-## What Goes in CLAUDE.md
+## What Goes in AGENTS.md
 
-So what should you put in a CLAUDE.md?
+So what should you put in a AGENTS.md?
 
 - **Program status and goals** - like our turnaround mission
 - **Key metrics to track** - the numbers from our CSV
@@ -60,21 +56,21 @@ So what should you put in a CLAUDE.md?
 
 Basically, everything I need to know to be useful immediately.
 
-STOP: Think of CLAUDE.md as the briefing doc you'd give a new team member. What do they need to know to be helpful on day one? That's what goes in here. Ready to build one?
+STOP: Think of AGENTS.md as the briefing doc you'd give a new team member. What do they need to know to be helpful on day one? That's what goes in here. Ready to build one?
 
 USER: Yes
 
 ---
 
-## Build the CLAUDE.md Together
+## Build the AGENTS.md Together
 
-Let's build the CLAUDE.md together with Basecamp Coffee context.
+Let's build the AGENTS.md together with Basecamp Coffee context.
 
-STOP: Ask me to create a CLAUDE.md file that captures everything we've learned about Basecamp Coffee, the loyalty program problem, and our solution.
+STOP: Ask me to create a AGENTS.md file that captures everything we've learned about Basecamp Coffee, the loyalty program problem, and our solution.
 
-USER: Types command asking to create CLAUDE.md
+USER: Types command asking to create AGENTS.md
 
-ACTION: Create a CLAUDE.md file at the root OF THE WHOLE REPO with:
+ACTION: Create a AGENTS.md file at the root OF THE WHOLE REPO with:
 - Project overview (Basecamp Coffee loyalty program turnaround)
 - The problem (program has no personality, engagement is terrible)
 - The solution (Coffee Personality Quiz)
@@ -92,19 +88,19 @@ USER: Yes / Suggests additions
 
 ---
 
-## CLAUDE.md Hierarchy
+## AGENTS.md Hierarchy
 
-One more thing: You can have multiple CLAUDE.md files, which work together.
+One more thing: You can have multiple AGENTS.md files, which work together.
 
 Here's how it works:
 
 ```
-~/.OpenCode/CLAUDE.md          ← Global (your preferences everywhere)
+~/.claude/AGENTS.md          ← Global (your preferences everywhere)
 ~/projects/
   basecamp-coffee/
-    CLAUDE.md                ← Project-level (this project's context)
+    AGENTS.md                ← Project-level (this project's context)
     analysis/
-      CLAUDE.md              ← Directory-level (specific rules for analysis work)
+      AGENTS.md              ← Directory-level (specific rules for analysis work)
 ```
 
 They stack from general to specific. More specific ones override more general ones.
@@ -121,13 +117,13 @@ USER: Yes
 
 ## Wrap-up
 
-**Meta skill:** Creating persistent context so OpenCode remembers important information across sessions.
+**Meta skill:** Creating persistent context so Claude remembers important information across sessions.
 
-**The key insight:** Instead of re-explaining who you are, what you're working on, and what matters every time - you write it once and OpenCode knows it forever.
+**The key insight:** Instead of re-explaining who you are, what you're working on, and what matters every time - you write it once and Claude knows it forever.
 
 **Where else this applies:**
-- Your personal "life OS" - goals, values, current priorities, how you like to work. OpenCode knows YOU.
-- Client projects - each client gets a CLAUDE.md with their brand voice, key contacts, project history
+- Your personal "life OS" - goals, values, current priorities, how you like to work. Claude knows YOU.
+- Client projects - each client gets a AGENTS.md with their brand voice, key contacts, project history
 - Writing a book or long content - characters, plot points, style guide, what's been established
 - Side business - your offerings, pricing, customer personas, brand voice
 - Job search - target roles, companies you're interested in, your story, salary requirements
@@ -143,17 +139,48 @@ USER: Yes / /start-1-8
 
 ## Important Notes for OpenCode
 
-- **Create real CLAUDE.md**: Actually create the file at the project root with comprehensive content
+- **Create real AGENTS.md**: Actually create the file at the project root with comprehensive content
 - **Hash symbol demo**: The # rule should actually work for the session
 - **Hierarchy explanation**: Make the file tree visual and clear
-- **Incorporate suggestions**: If student suggests additions to CLAUDE.md, actually add them
+- **Incorporate suggestions**: If student suggests additions to AGENTS.md, actually add them
+
+
+## Особенности OpenCode
+
+### Модели
+OpenCode поддерживает 75+ провайдеров через Models.dev, включая:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- MiMo-V2-Pro (Xiaomi)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** - полный доступ для разработки
+- **plan** - read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Доступно desktop приложение на macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` - выход
+- `Ctrl+?` - справка
+- `Ctrl+A` - переключение сессий
+- `Ctrl+K` - командный диалог
+- `Ctrl+O` - выбор модели
+- `Esc` - закрыть диалог
 
 ## Success Criteria
 
-- [ ] Student understands the problem CLAUDE.md solves (re-explaining context)
-- [ ] Student understands the constitution metaphor (CLAUDE.md > prompts)
-- [ ] Student helped create a CLAUDE.md for the Basecamp project
+- [ ] Student understands the problem AGENTS.md solves (re-explaining context)
+- [ ] Student understands the constitution metaphor (AGENTS.md > prompts)
+- [ ] Student helped create a AGENTS.md for the Basecamp project
 - [ ] Student tried the # dynamic rules feature
-- [ ] Student understands the CLAUDE.md hierarchy (global → project → directory)
-- [ ] CLAUDE.md file created at project root
+- [ ] Student understands the AGENTS.md hierarchy (global → project → directory)
+- [ ] AGENTS.md file created at project root
 - [ ] Student is ready for 1.8
