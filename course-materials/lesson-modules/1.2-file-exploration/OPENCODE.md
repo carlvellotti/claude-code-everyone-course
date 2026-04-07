@@ -133,7 +133,9 @@ Make sure you are in "Editor" view NOT "Agents" - you'll see these options in th
 
 Then you need to open the terminal inside Cursor.
 
-Press `Ctrl+`` (that's the backtick key, usually above Tab, with the squiggle ~). Or go to View → Terminal in the menu.
+**На Mac:** Нажми `Cmd+J` (или `Cmd+``). Также можно: View → Terminal в меню.
+
+**На Windows/Linux:** Нажми `Ctrl+`` (клавиша обратного апострофа над Tab). Или: View → Terminal.
 
 You should see a panel appear at the bottom of Cursor. That's your terminal.
 
