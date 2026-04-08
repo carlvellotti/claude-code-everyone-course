@@ -1,59 +1,56 @@
-# Your Situation
+# Ситуация с курсом
 
-## The Company: Basecamp Coffee
+## Компания: Basecamp Coffee
 
-Basecamp Coffee is a regional coffee chain with **45 locations** across the Pacific Northwest (Seattle, Portland, Boise, and surrounding areas). Founded in 2015, the company has built a loyal following by focusing on:
+Basecamp Coffee — региональная кофейная сеть с **45 точками** по Тихоокеанскому Северо-Западу (Seattle, Portland, Boise и окрестности). Основана в 2015 году, компания построила преданную аудиторию за счёт:
+- Локальной обжарки, этично подобранных зёрен
+- Пространств для сообщества (не только "возьми и уходи")
+- Поддержки местных художников и событий
+- Тёплой аутентичной атмосферы (подумайте: местная лавочка, которая знает ваше имя)
 
-- Locally-roasted, ethically-sourced beans
-- Community gathering spaces (not just grab-and-go)
-- Supporting local artists and events
-- A warm, authentic vibe (think: the local shop that knows your name)
+Компания прибыльная, но рост замедлился. Руководство ищет способы углубить отношения с клиентами и увеличить частоту визитов.
 
-The company is profitable but growth has slowed. Leadership is looking for ways to deepen customer relationships and increase visit frequency.
+## Программа лояльности
 
-## The Loyalty Program
+Шесть месяцев назад руководство запустило **Basecamp Rewards** — программу лояльности на баллах. Надежда была на:
+1. Увеличить частоту визитов (с 2 раз/неделю до 3 раз/неделю для постоянных клиентов)
+2. Захватить данные клиентов для персонализированного маркетинга
+3. Конкурировать с Starbucks Rewards и Dutch Bros
+4. Превратить случайных посетителей в постоянных клиентов
 
-Six months ago, leadership launched **Basecamp Rewards** - a points-based loyalty program. The hope was to:
+**Проблема:** Программа не работает так, как ожидалось.
 
-1. Increase visit frequency (from 2x/week to 3x/week for regulars)
-2. Capture customer data for personalized marketing
-3. Compete with Starbucks Rewards and Dutch Bros loyalty programs
-4. Turn casual visitors into committed regulars
+## Твоя роль
 
-**The problem:** The program isn't working as expected.
+Ты — **новый менеджер** в Basecamp Coffee. Тебя наняли, чтобы принести свежую энергию в компанию и решить некоторые из набравшихся проблем. У тебя много дел — операционка, управление командой, клиентский опыт — но один срочный приоритет постоянно всплывает: провальная программа лояльности.
 
-## Your Role
+Предыдущий менеджер оставил дела в хаосе. Среди бардака, который ты унаследовал:
+- Папка с неаккуратными заметками, наполовину законченными идеями кампаний и рассыпанными данными
+- Программа лояльности с неплохой регистрацией, но ужасным вовлечением
+- Руководство скептическое ("Мы инвестировали $40K — где результаты?")
+- Срок: **3 месяца, чтобы спасти программу лояльности, или руководство рассматривает её убить**
 
-You're the **new manager** at Basecamp Coffee. You were hired to bring fresh energy to the company and tackle some of the problems that have been piling up. You've got a lot on your plate - operations, team management, customer experience - but one urgent priority keeps coming up: the failing loyalty program.
+## Штрафы
 
-The previous manager left things in a mess. Among the chaos you inherited:
-- A folder full of messy notes, half-finished campaign ideas, and scattered data
-- A loyalty program with okay sign-up numbers but terrible engagement
-- Leadership who's skeptical ("We've invested $40K in this - where are the results?")
-- A deadline: **3 months to turn the loyalty program around, or leadership is considering killing it**
+Если программа провалится:
+- $40K инвестиций выброшены
+- Данные клиентов не используются
+- Конкурентное преимущество против Starbucks/Dutch Bros
+- Твоя репутация пострадает (ты не создал проблему, но теперь ты её владелец)
 
-## The Stakes
+Если получится развернуть программу:
+- Докажешь, что можешь взять сложные задачи
+- Построишь что-то, что реально помогает бизнесу
+- Потенциально расширишь свою роль
 
-If the program fails:
-- $40K investment wasted
-- Customer data goes unused
-- Competitive disadvantage vs. Starbucks/Dutch Bros
-- Your reputation takes a hit (you didn't create the problem, but you own it now)
+## Твоя цель
 
-If you can turn it around:
-- Prove yourself as someone who can take on tough problems
-- Build something that actually helps the business
-- Potentially expand your role
+В следующие несколько часов ты будешь использовать Claude Code, чтобы:
+1. **Привести хаос в порядок** — проанализировать, что ты унаследовал
+2. **Понять проблемы** — что именно идёт не так?
+3. **Найти решения** — что успешные программы делают по-другому?
+4. **Создать что-то** — прототип, который может спасти программу
 
-## Your Goal
+К концу ты получишь реальные навыки И реальный деливерабл.
 
-Over the next few hours, you're going to use Claude Code to:
-
-1. **Make sense of the chaos** - Analyze what you inherited
-2. **Understand the problems** - What's actually going wrong?
-3. **Find solutions** - What do successful programs do differently?
-4. **Build something** - Create a prototype that could save the program
-
-By the end, you'll have real skills AND a real deliverable.
-
-Let's get started.
+Давай начнём.

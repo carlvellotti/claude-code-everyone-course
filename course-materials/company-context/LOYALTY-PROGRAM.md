@@ -1,67 +1,67 @@
-# Basecamp Rewards Program
+# Программа лояльности Basecamp Rewards
 
-## Current Structure
+## Текущая структура
 
-**How it works:**
-- Customers sign up via the mobile app or in-store
-- Earn 1 point per $1 spent
-- 100 points = Free drink (any size)
-- 200 points = Free food item
-- Birthday reward: Free drink on your birthday month
+**Как работает:**
+- Клиенты регистрируются через мобильное приложение или в магазине
+- Зарабатывают 1 балл за каждый потраченный $1
+- 100 баллов = Бесплатный напиток (любого размера)
+- 200 баллов = Бесплатная еда
+- Подарок на день рождения: Бесплатный напиток в месяц рождения
 
-**Member tiers (launched month 2):**
-- **Trailblazer** (0-199 lifetime points): Basic rewards
-- **Explorer** (200-499 lifetime points): +10% bonus points
-- **Summit** (500+ lifetime points): +20% bonus points, early access to new drinks
+**Уровни участников (запустили на 2-м месяце):**
+- **Trailblazer** (0-199 баллов за жизнь): Базовые награды
+- **Explorer** (200-499 баллов за жизнь): +10% бонусных баллов
+- **Summit** (500+ баллов за жизнь): +20% бонусных баллов, ранний доступ к новым напиткам
 
-## Current Metrics (as of last month)
+## Текущие метрики (на последний месяц)
 
-| Metric | Current | Target | Status |
-|--------|---------|--------|--------|
-| Total sign-ups | 12,400 | 15,000 | 83% |
-| Monthly active users | 2,100 | 8,000 | 26% |
-| Avg visits/month (members) | 2.3 | 4.0 | 58% |
-| Redemption rate | 18% | 40% | 45% |
-| 30-day retention | 31% | 60% | 52% |
+| Метрика | Сейчас | Цель | Статус |
+|--------|--------|------|--------|
+| Всего регистраций | 12,400 | 15,000 | 83% |
+| Активных пользователей в месяц | 2,100 | 8,000 | 26% |
+| Среднее визитов/месяц (участники) | 2.3 | 4.0 | 58% |
+| Коэффициент обмена | 18% | 40% | 45% |
+| Лояльность 30 дней | 31% | 60% | 52% |
 
-## The Problem in Plain English
+## Проблема простыми словами
 
-People are signing up, but they're not engaging:
-- Only 17% of members have earned any points in the last 30 days
-- Most members forget they're even in the program
-- The app gets downloaded, used once, then ignored
-- Tier progression feels meaningless (no one cares about "Explorer" status)
-- Redemptions are low because people don't accumulate enough points
+Люди регистрируются, но не вовлекаются:
+- Только 17% участников заработали баллы за последние 30 дней
+- Большинство участников забывают, что они в программе
+- Приложение скачивают, используют один раз, потом игнорируют
+- Прогресс по уровням ощущается бессмысленным (никому не интересно "статус Explorer")
+- Обмен наград низкий, потому что у людей не накапливается достаточно баллов
 
-## What We've Tried (and what happened)
+## Что мы пробовали (и что произошло)
 
-1. **Double points weekends** - Slight uptick during promotion, back to normal after
-2. **Push notifications** - Low open rates (8%), some users turned off notifications
-3. **Email campaigns** - 12% open rate, 2% click-through (industry average is 15%/3%)
-4. **Tier celebration emails** - No measurable impact on behavior
+1. **Выходные с удвоенными баллами** — небольшой рост во время промо, потом вернулся к норме
+2. **Push-уведомления** — низкие открытые (8%), некоторые пользователи отключили уведомления
+3. **Email-кампании** — 12% открытий, 2% кликов (среднее по индустрии 15%/3%)
+4. **Email с поздравлением уровня** — нет измеримого влияния на поведение
 
-## Key Stakeholders
+## Ключевые стейкхолдеры
 
-- **Your Manager (Dana)** - Marketing Director, supportive but under pressure from above
-- **Leadership Team** - CFO skeptical of ROI, CEO wants "innovation" but unclear on specifics
-- **Store Managers** - Frustrated with current program, want something their baristas can actually talk about
-- **Customers** - Based on feedback, they find the program "fine but forgettable"
+- **Ваш менеджер (Dana)** — Маркетинговый директор, поддерживает, но под давлением сверху
+- **Команда руководства** — CFO скептичен по поводу ROI, CEO хочет "инновации", но неясно что конкретно
+- **Управляющие магазинами** — Раздражены текущей программой, хотят что-то, что баристы могут действительно обсуждать
+- **Клиенты** — По отзывам, находят программу "нормально, но забываемая"
 
-## Budget & Constraints
+## Бюджет и ограничения
 
-- No additional budget for the program (use what exists)
-- Mobile app can be updated (dev team has bandwidth)
-- Can launch new campaigns/promotions
-- Can add new features within the existing app framework
-- Cannot change the fundamental points structure (legal/accounting reasons)
+- Нет дополнительного бюджета на программу (использовать существующие ресурсы)
+- Мобильное приложение можно обновить (у команды разработки есть свободное время)
+- Можно запустить новые кампании/промо
+- Можно добавить новые функции в рамках существующего фреймворка приложения
+- Нельзя менять фундаментальную структуру баллов (юридические/бухгалтерские причины)
 
-## Files You Inherited
+## Унаследованные файлы
 
-Located in `inherited-chaos/`:
-- `previous-manager-notes.md` - Messy handoff notes
-- `customer-feedback/` - 4 months of compiled feedback
-- `member-data-summary.csv` - Basic engagement metrics
-- `competitor-research/` - Notes on Starbucks, Dutch Bros, local competitors
-- `old-campaigns/` - Half-finished campaign ideas and drafts
+Расположены в `inherited-chaos/`:
+- `previous-manager-notes.md` - Неаккуратные заметки передавания
+- `customer-feedback/` - 4 месяца собранной обратной связи
+- `member-data-summary.csv` - Базовые метрики вовлеченности
+- `competitor-research/` - Заметки о Starbucks, Dutch Bros, местных конкурентах
+- `old-campaigns/` - Наполовину законченные идеи кампаний и черновики
 
-Good luck. You've got 3 months.
+Удачи. У вас 3 месяца.

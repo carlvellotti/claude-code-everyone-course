@@ -1,79 +1,77 @@
-COFFEE
+# Brand Voice — как Basecamp общается
 
-# Basecamp Coffee Brand Voice
+## Наша личность
 
-## Our Personality
+Basecamp Coffee — **тёплая, аутентичная и ориентированная на сообщество**. Мы — местная лавочка, которая знает ваше имя, а не корпоративная цепь, притворяющаяся уютной.
 
-Basecamp Coffee is **warm, authentic, and community-focused**. We're the local shop that knows your name, not a corporate chain pretending to be cozy.
+**Мы — это:**
+- Приветливые (все здесь свои)
+- Искренние (без фальшивого энтузиазма)
+- Осведомлённые (нам не всё равно на хороший кофе)
+- Ориентированные на сообщество (мы часть района)
+- Игривые (не относимся к себе слишком серьёзно)
 
-**We are:**
-- Welcoming (everyone belongs here)
-- Genuine (no fake enthusiasm)
-- Knowledgeable (we care about great coffee)
-- Community-minded (we're part of the neighborhood)
-- Playful (we don't take ourselves too seriously)
+**Мы НЕ — это:**
+- Корпоративные или сухие
+- Чрезмерно восторженные (БЕЗ ВСЕХ ЗАГЛАВНЫХ БУКВ ЭНТУЗИАЗМА)
+- Проповедующие по поводу устойчивости (мы это делаем, но не лекционируем)
+- Общие или забываемые
 
-**We are NOT:**
-- Corporate or stiff
-- Over-the-top enthusiastic (NO ALL CAPS EXCITEMENT)
-- Preachy about sustainability (we do it, we don't lecture)
-- Generic or forgettable
+## Руководства по тону
 
-## Tone Guidelines
+### Для коммуникации с клиентами
 
-### For Customer Communications
+**Стиль приветствия:**
+- "Привет!" или "Привет, [Имя],"
+- НЕ "Уважаемый ценный клиент" или "Здравствуйте!"
 
-**Greeting style:**
-- "Hey there!" or "Hi [Name],"
-- NOT "Dear Valued Customer" or "Greetings!"
+**Стиль завершения:**
+- "Увидимся скоро!" или "Счастливого употребления кофе,"
+- НЕ "С уважением," или "Искренне,"
 
-**Sign-off style:**
-- "See you soon!" or "Happy sipping,"
-- NOT "Best regards," or "Sincerely,"
+**Уровень энтузиазма:**
+- Тёплый и искренний: "Мы рады поделиться чем-то новым"
+- НЕ чрезмерный: "ОГРОМНО МЫ ТАК ВОСХИЩЁНЫ!!!"
 
-**Enthusiasm level:**
-- Warm and genuine: "We're excited to share something new"
-- NOT over-the-top: "OMG WE ARE SO PUMPED!!!"
+### Для внутренней коммуникации
 
-### For Internal Communications
+**Держи:**
+- Ясный и прямой
+- Сфокусированный на важном
+- Уважительный к времени людей
 
-**Keep it:**
-- Clear and direct
-- Focused on what matters
-- Respectful of people's time
+**Избегай:**
+- Жаргона и buzzwords
+- Лишней формальности
+- Стен текста
 
-**Avoid:**
-- Jargon and buzzwords
-- Unnecessary formality
-- Walls of text
+## Ключевые термины для использования
 
-## Key Terms to Use
+| Используй это | Не используй |
+|---------------|--------------|
+| сообщество | клиенты |
+| твоя местная Basecamp | наши магазины |
+| бариста | командные участники |
+| кофейный ритуал | поведение покупки |
+| район | рынок |
 
-| Use This | Not This |
-|----------|----------|
-| community | customers |
-| your local Basecamp | our stores |
-| baristas | team members |
-| coffee ritual | purchase behavior |
-| neighborhood | market |
+## Примеры сообщений
 
-## Sample Messages
+**Хороший push:**
+> Твой бесплатный напиток ждёт! Зайди на этой неделе, мы его подготовим.
 
-**Good push notification:**
-> Your free drink is waiting! Pop in this week and we'll have it ready.
+**Плохой push:**
+> ПРЕДУПРЕЖДЕНИЕ! У тебя БЕСПЛАТНАЯ НАГРАДА! Не упусти! Обменяй СРОЧНО до истечения срока!
 
-**Bad push notification:**
-> ALERT! You have a FREE REWARD! Don't miss out! Redeem NOW before it expires!
+**Хороший email тема:**
+> Что-то новое готовится в твоей Basecamp
 
-**Good email subject:**
-> Something new brewing at your Basecamp
+**Плохой email тема:**
+> ЭКСКЛЮЗИВНОЕ ПРЕДЛОЖЕНИЕ ЧЛЕНА — ДЕЙСТВУЙ СРОЧНО!
 
-**Bad email subject:**
-> EXCLUSIVE MEMBER OFFER - ACT NOW!
+## Визуальный стиль (для справки)
 
-## Visual Style (for reference)
-
-- **Colors:** Forest green, warm cream, natural wood tones
-- **Photography:** Real people, real moments, warm lighting
-- **Illustrations:** Hand-drawn, organic feel
-- **Typography:** Clean but warm, never cold or corporate
+- **Цвета:** Лесной зелёный, тёплая кремовая, натуральные деревянные тона
+- **Фотография:** Реальные люди, реальные моменты, тёплое освещение
+- **Иллюстрации:** От руки, органическое ощущение
+- **Типографика:** Чистый, но тёплый, никогда не холодный или корпоративный
