@@ -1,253 +1,272 @@
-# 2.5 Go Live
+# 2.5 Запуститься в интернет
 
-This is it. The final step.
+Викторина построена, отполирована, сохранена в GitHub. Теперь поместим в интернет.
 
-Your quiz is built, polished, and saved to GitHub. Now we put it on the internet so anyone can visit it.
+Разработчики: "развертывание". Будешь слышать часто.
 
-Developers call this "deploying" - you're deploying your app to the web. You'll hear that word a lot.
+STOP: Готов запуститься?
 
-STOP: Ready to go live?
-
-USER: Yes
+USER: Да
 
 ---
 
-Vercel is a free service that puts your code on the internet.
+Vercel - бесплатный сервис, который помещает код в интернет.
 
-It's basically the home base of vibecoding.
+Даешь проект GitHub, он превращает в сайт с URL.
 
-You give it your GitHub project, and it turns it into a real website with a real URL.
+Создан теми же, что Next.js. Работают идеально.
 
-It's made by the same people who make Next.js (the framework we used), so they work together perfectly.
+STOP: Звучит хорошо?
 
-STOP: Sound good?
-
-USER: Yes
+USER: Да
 
 ---
 
-First, you need a Vercel account.
+Сначала нужен аккаунт Vercel.
 
-STOP: Want me to open vercel.com for you? I recommend signing up with your GitHub account - it makes everything connect automatically.
+STOP: Открыть vercel.com? Регистрируйся через GitHub: автоматически соединит.
 
-USER: Yes / I'll do it myself
+USER: Да / Я сделаю сам
 
-ACTION: If they want it opened, run: `open https://vercel.com`
+ACTION: Если они хотят открыть, запустить: `open https://vercel.com`
 
-STOP: Let me know when you've created an account. Make sure to sign up with GitHub!
+STOP: Дай знать, когда создашь аккаунт. Регистрируйся через GitHub!
 
-USER: Done
+USER: Готово
 
 ---
 
-Just like with GitHub, I'm going to download tools that let me work with Vercel directly.
+Как с GitHub, загружу инструменты для работы с Vercel.
 
-This will open your browser to log in - just follow the prompts.
+Откроет браузер для входа. Следуй подсказкам.
 
-ACTION: Set up Vercel CLI:
+ACTION: Настроить Vercel CLI:
 
-1. Check if already installed:
+1. Проверить, установлен ли уже:
 ```
 vercel --version
 ```
 
-2. If NOT installed:
+2. Если НЕ установлен:
 ```
 npm i -g vercel
 ```
 
-3. Once installed, authenticate (run in background to avoid blocking):
+3. Как только установлен, аутентифицировать (запустить в фоне, чтобы избежать блокировки):
 ```bash
 vercel login > /tmp/vercel-auth.log 2>&1 &
 sleep 3
 cat /tmp/vercel-auth.log
 ```
 
-4. Read the output to get the device URL with code, then open it:
+4. Прочитать вывод, чтобы получить URL устройства с кодом, затем открыть его:
 ```bash
-open "https://vercel.com/oauth/device?user_code=[CODE FROM OUTPUT]"
+open "https://vercel.com/oauth/device?user_code=[КОД ИЗ ВЫВОДА]"
 ```
 
-5. Tell user: "I just opened Vercel in your browser. Click Authorize, then let me know when you're done."
+5. Скажи: "Открыл Vercel в браузере. Нажми Authorize, дай знать, когда закончишь."
 
-STOP: Let me know when you've authorized it.
+STOP: Дай знать, когда авторизуешься.
 
-USER: Done
+USER: Готово
 
-ACTION: Verify authentication worked:
+ACTION: Проверить, что аутентификация сработала:
 ```bash
 vercel whoami
 ```
 
-If successful, continue. If not authenticated, troubleshoot:
-- They may not have completed the browser flow - ask them to try again
-- The background process may have timed out - run the login command again
+Если успешно, продолжить. Если не аутентифицирован, устранить неполадки:
+- Они могли не завершить поток браузера - попросить их попробовать снова
+- Фоновый процесс мог истечь - запустить команду входа снова
 
 ---
 
-Now let's put your quiz on the internet.
+Теперь поместим викторину в интернет.
 
-ACTION: Deploy to Vercel:
+ACTION: Развернуть на Vercel:
 
-1. Navigate to the quiz-project folder:
+1. Перейти в папку quiz-project:
 ```
-cd [path to quiz-project]
+cd [путь к quiz-project]
 ```
 
-2. Deploy to production:
+2. Развернуть в продакшн:
 ```
 vercel --prod --yes
 ```
 
-The `--yes` flag accepts all the defaults so you don't have to answer questions. The `--prod` flag means it goes live immediately.
+Флаг `--yes`: принимает настройки. Флаг `--prod`: запускает немедленно.
 
-Wait for the deploy to complete - it takes about a minute. Watch for the URL in the output.
+Подожди завершения: около минуты. Следи за URL.
 
-Vercel is building your quiz and putting it on the internet now...
+Vercel строит викторину и помещает в интернет...
 
-Done! Look for the URL in the output - it'll look something like `quiz-project-abc123.vercel.app`.
+Готово! Ищи URL: `quiz-project-abc123.vercel.app`.
 
----
+Твой URL: [Скопировать URL из вывода развертывания]
 
-Your URL is: [Copy the URL from the deploy output]
+Это твой сайт. В реальном интернете. Любой может посетить.
 
-That's YOUR website. On the real internet. Anyone can visit it.
+Открою для тебя.
 
-Let me open it for you.
+ACTION: Открыть развернутый URL в браузере, используя bash open
 
-ACTION: Open the deployed URL in the browser using bash open
+STOP: Видишь свою викторину живой в интернете?
 
-STOP: Do you see your quiz live on the internet?
-
-USER: Yes!
+USER: Да!
 
 ---
 
-Open that URL on your phone. It should work there too - same quiz, any device.
+Открой на телефоне. Должно работать: та же викторина.
 
-STOP: Does it work on your phone?
+STOP: Работает на телефоне?
 
-USER: Yes!
-
----
-
-Now for the real test: send that link to a friend. Text it to someone right now. When they react, that's the feeling of shipping something real.
-
-Let's acknowledge what just happened.
-
-You built a real web application. You put it on the internet. You have a URL that works on any device. You did this without writing a single line of code yourself.
-
-That's vibecoding. That's the future.
-
-STOP: How does that feel?
-
-USER: [Response]
+USER: Да!
 
 ---
 
-Here's what you now know:
+Теперь тест: отправь ссылку другу. Когда отреагируют, почувствуешь отправку реальной вещи.
 
-**Plan** → Get clear on what you're building
-**Build** → Let AI create it
-**Iterate** → Refine until it's right
-**Save** → Back it up to GitHub
-**Go Live** → Put it on the internet (deploy)
+Построил реальное веб-приложение. Поместил в интернет. URL работает на любом устройстве. Не написал ни строчки кода.
 
-This is the loop. You can build anything with this loop.
+Это вайб-кодинг. Будущее.
 
-STOP: Make sense?
+STOP: Каково это?
 
-USER: Yes
+USER: [Ответ]
 
 ---
 
-One more thing: what if you want to update your quiz later?
+**План** → Пойми, что строишь
+**Строить** → Пусть AI создаст
+**Итерировать** → Улучшай, пока не станет правильно
+**Сохранить** → Запаси в GitHub
+**Запуститься в интернет** → Помести в интернет
 
-Here's the flow: make changes on your computer, ask me to "push to GitHub," and Vercel will automatically update your live website.
+Это цикл. Можешь построить что угодно.
 
-That's it. Vercel watches your GitHub and auto-deploys whenever you push changes. Magic.
+STOP: Понятно?
 
-STOP: Pretty cool, right?
-
-USER: Yes
-
----
-
-What if you wanted to collect emails from people who take the quiz? You'd need a database to save them. That's a future module.
-
-What if you wanted to make sure it doesn't break? You'd need testing. Also a future module.
-
-What if you wanted a custom domain like yourquiz.com? Totally doable - Vercel makes it easy.
-
-The point is: you now have the foundation. Everything else builds on this.
-
-STOP: Feeling empowered?
-
-USER: Yes
+USER: Да
 
 ---
 
-Want to build something else? Start a new project folder and follow this same process.
+Еще: что если захочешь обновить викторину позже?
 
-The main things to tell Claude: you want to deploy on Vercel, and that it has Vercel CLI access. It'll know what to do.
+Внеси изменения, попроси "отправить в GitHub", Vercel автоматически обновит сайт.
 
-STOP: Any ideas brewing?
+Всё. Vercel следит за GitHub, автоматически развертывает. Магия.
 
-USER: [Response]
+STOP: Довольно круто, правда?
 
----
-
-## Quick Plugs
-
-**To catch future modules:** Subscribe to the Claude Code for Everyone newsletter at ccforeveryone.com. That's also where you'll find in-depth guides and a community of non-technical Claude Code users like yourself.
-
-STOP: Want me to open that site so you can subscribe?
-
-USER: Yes / No
-
-ACTION: If yes, open https://ccforeveryone.com in browser
-
-This course was created by Carl Vellotti. If you have feedback, questions, or just want to say hi, he's always happy to hear from you: [X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)
-
-If you enjoyed this, share it with friends and coworkers who could use these skills!
+USER: Да
 
 ---
 
-**Module 2 Complete!**
+Что если захочешь собирать email? Понадобится база данных. Будущий модуль.
 
-You went from zero to deployed web app. You learned planning, building, iteration, GitHub, and going live.
+Что если захочешь убедиться, что не сломается? Понадобятся тесты. Будущий модуль.
 
-This is vibecoding. This is your new superpower.
+Что если захочешь домен? Возможно, Vercel делает легким.
 
-**What's next:** Future modules will cover databases, APIs, more complex apps, and connecting Claude to everything. But you now have the core skill - you can build and ship things.
+Суть: теперь есть основа. Всё строится на этом.
 
-In the meantime, try building something for yourself. The best way to learn is to make something you actually want.
+STOP: Чувствуешь себя уполномоченным?
 
-STOP: Thanks for building with me. Now go make something cool.
-
-USER: (exits or explores)
+USER: Да
 
 ---
 
-## Important Notes for Claude
+Хочешь построить еще? Начни новую папку, следуй процессу.
 
-- **For CC4PMs version:** Change ccforeveryone.com to ccforpms.com
-- The `vercel --prod --yes` flags are critical - `--yes` skips all interactive prompts, `--prod` deploys to production immediately
-- Vercel auto-connects to the GitHub repo they created in 2.4 - this is why signing up with GitHub was important
-- The URL format is usually `[project-name]-[random].vercel.app`
-- Auto-deploy is set up automatically when they link GitHub during Vercel signup
-- If deploy fails, common issues:
-  - Build errors → Check the Vercel dashboard for logs
-  - Not in the right directory → Make sure you're in quiz-project
-- The celebration moment (sending to a friend) is crucial - let it breathe, don't rush past it
+Главное: скажи Claude, что хочешь развернуть на Vercel, у него есть доступ к Vercel CLI.
 
-## Success Criteria
+STOP: Есть идеи?
 
-- User has a Vercel account (connected to GitHub)
-- Vercel CLI is installed and authenticated
-- Quiz is deployed and live on the internet
-- User can access the quiz from their phone
-- User has sent the link to at least one other person
-- User understands the Plan → Build → Iterate → Save → Go Live loop
-- User knows how to update: make changes → push to GitHub → auto-deploys
-- User feels empowered to build more things
+USER: [Ответ]
+
+---
+
+## Быстрые упоминания
+
+**Чтобы поймать будущие модули:** Подпишись на рассылку: ccforeveryone.com. Руководства, сообщество.
+
+STOP: Открыть сайт курса?
+
+USER: Да / Нет
+
+ACTION: Если да, открыть https://ccforeveryone.com в браузере
+
+Курс создан Карлом Веллотти. Отзывы: [X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)
+
+Понравилось? Поделись с друзьями.
+
+---
+
+**Модуль 2 Завершен!**
+
+Прошел путь от нуля до развернутого приложения. Выучил планирование, строительство, итерацию, GitHub, запуск.
+
+Это вайб-кодинг. Новая суперсила.
+
+**Что дальше:** Будущие модули: базы данных, API, сложные приложения. Но теперь есть ключевой навык: строить и отправлять.
+
+Попробуй построить для себя. Лучший способ учиться: делать то, что реально хочешь.
+
+STOP: Спасибо за строительство. Теперь иди, сделай что-то крутое.
+
+USER: (выходит или исследует)
+
+---
+
+## Важные заметки для OpenCode
+
+- **Для версии CC4PMs:** Измени ccforeveryone.com на ccforpms.com
+- Флаги `vercel --prod --yes`: критически важны
+- Vercel автоматически подключается к GitHub, регистрация через GitHub важна
+- Формат URL: `[имя-проекта]-[случайный].vercel.app`
+- Авто-развертывание настраивается автоматически при регистрации Vercel
+- Если развертывание не удалось, частые проблемы:
+  - Ошибки сборки → Проверить панель Vercel на наличие логов
+  - Не в правильной директории → Убедись, что ты в quiz-project
+- Момент празднования: отправь другу, позволь дышать
+
+## Особенности OpenCode
+
+### Модели
+75+ провайдеров:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** — полный доступ для разработки
+- **plan** — read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Desktop: macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` — выход
+- `Ctrl+?` — справка
+- `Ctrl+A` — переключение сессий
+- `Ctrl+K` — командный диалог
+- `Ctrl+O` — выбор модели
+- `Esc` — закрыть диалог
+
+## Критерии успеха
+
+- Есть аккаунт Vercel (связан с GitHub)
+- Vercel CLI установлен и аутентифицирован
+- Викторина развернута и жива в интернете
+- Доступ к викторине с телефона
+- Отправили ссылку другу
+- Понимаете цикл: План → Строить → Итерировать → Сохранить → Запуститься
+- Знаете, как обновлять: изменения → GitHub → развертывание
+- Чувствуете уполномоченными строить больше

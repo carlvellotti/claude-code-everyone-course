@@ -1,175 +1,200 @@
-# Lesson 1.5: Agents
+# Урок 1.5: Агенты
 
-Remember those competitor files, old campaigns, and the CSV we saw but didn't touch? They're all in `inherited-chaos/` - take a look if you need a refresher.
+Помнишь файлы конкурентов, старые кампании, CSV? Они в `inherited-chaos/`.
 
-Now we handle them.
+Теперь обработаем их.
 
-This is where things get crazy.
+STOP: Готов обработать ВСЁ одновременно?
 
-STOP: Ready to process EVERYTHING at once?
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Big Reveal - Parallel Processing
+## Большое открытие — параллельная обработка
 
-**The Big Reveal:** We have 10 old campaign files to analyze.
+**Открытие:** 10 старых файлов кампаний для анализа.
 
-Normally you'd read them one by one. That would take forever. It would even take me a while.
+Обычно читаешь один за другим. Вечность.
 
-Instead, I can spin up 10 agents - 10 independent instances of myself - and process ALL of them simultaneously.
+Могу запустить 10 агентов. Обработать все одновременно.
 
-Think of it like cloning myself. I give each clone their own task. All clones work at the same time.
+Как клоны. Каждый — свою задачу. Все работают одновременно.
 
-Then I combine their findings.
+Затем объединяю выводы.
 
-STOP: This is one of the most powerful features in Claude Code. Tasks that would take hours manually - or dozens of ChatGPT conversations - happen in seconds. Ready to see it in action?
+STOP: Самая мощная функция. Часы работы — секунды. Готов увидеть?
 
-USER: Yes
-
----
-
-## Decision Quiz
-
-STOP: Quick quiz - when should you use agents? A) One complex task, or B) Many similar tasks?
-
-USER: B / Many similar tasks
-
-Exactly! Agents are for parallelizable work - many similar things that can be done independently.
-
-STOP: Ready to see it in action?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Campaign Salvage - 10 Agents
+## Викторина по решению
 
-Let's start with the 10 old campaigns.
+STOP: Быстрая викторина — когда использовать агентов? A) Одна сложная задача, или B) Многие похожие задачи?
 
-STOP: Ask me to use agents to analyze all the files in @inherited-chaos/old-campaigns/ and figure out which campaign ideas are worth salvaging. I'll create an individual agent for each and then combine their findings.
+USER: B / Многие похожие задачи
 
-USER: Types command about analyzing campaigns
+Именно! Агенты для параллельной работы.
 
-ACTION: Launch agents to analyze each of the 10 campaign files in parallel. Synthesize results into analysis/campaign-salvage-report.md with findings about each campaign.
+STOP: Готов увидеть?
 
-**Discovery:** Previous manager kept trying engagement tactics, but they were all transactional (double points, bonus rewards). Nothing about identity or belonging. Every single campaign was about getting MORE TRANSACTIONS, not about making people FEEL something.
-
-STOP: That just happened in parallel. 10 files, analyzed simultaneously, synthesized into one report. Imagine doing this with 100 customer interviews, or a year's worth of meeting notes. This is where Claude Code starts feeling like a superpower. Ready for more?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Advanced: Cross-Source Analysis
+## Сохранение кампаний — 10 агентов
 
-Now let's do something more advanced. We've analyzed campaigns and competitors separately. Let's connect the dots.
+Начнем с 10 старых кампаний.
 
-We'll use 4 agents, each doing something DIFFERENT:
+STOP: Попроси использовать агентов для анализа @inherited-chaos/old-campaigns/. Выясни, что сохранить.
 
-- **Agent 1:** Analyze the member data CSV - what do the numbers tell us?
-- **Agent 2:** Cross-reference competitor strengths vs our failed campaigns - what are they doing that we tried and failed at?
-- **Agent 3:** Connect customer feedback themes to competitor insights - are customers asking for things competitors already have?
-- **Agent 4:** Identify gaps - what works elsewhere that we haven't even tried?
+USER: Вводит команду об анализе кампаний
 
-Then synthesize into one comprehensive picture.
+ACTION: Запустить агентов для анализа каждого из 10 файлов кампаний параллельно. Синтезировать результаты в analysis/campaign-salvage-report.md с выводами о каждой кампании.
 
-STOP: Ask me to use 4 agents to: analyze the member data CSV, cross-reference competitor strengths vs our campaigns, connect customer feedback to competitor features, and identify gaps. Then synthesize it all together.
+**Открытие:** Менеджер пробовал тактики вовлечения, но транзакционные. Ничего об идентичности. Кампании о транзакциях, не о чувствах.
 
-USER: Types command for the 4-agent analysis
+STOP: 10 файлов, одновременно, один отчет. Представь 100 интервью. Суперсила. Готов к большему?
 
-ACTION: Launch 4 specialized agents:
-1. Analyze member-data-summary.csv for trends
-2. Compare competitor research to our failed campaigns
-3. Connect feedback themes to competitor features
-4. Identify gaps in our approach
-
-Synthesize everything into analysis/comprehensive-research-synthesis.md
-
-**Discoveries:**
-- The CSV shows people sign up, visit 2-3 times, then disappear. They're not leaving angry - they're leaving indifferent.
-- Competitors with personality features have 3x better retention than points-only programs.
-- Customers keep asking for "something more" but can't articulate what.
-- The gap: nobody in our market has a personality-based approach.
-
-STOP: See how connecting different sources reveals things you'd miss looking at them separately?
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Core Discovery
+## Продвинутый уровень: анализ из нескольких источников
 
-Connecting this to the overall story:
+Теперь продвинутый уровень. Свяжем точки.
 
-**THE CORE DISCOVERY:** "The program has no personality. It's transactional. Members don't engage because there's nothing to engage WITH. Points aren't enough - people need identity, belonging, a reason to care."
+4 агента, каждый делает что-то разное:
 
-This connects back to the seed from 1.3: "coffee personalities"... that half-baked idea is starting to make sense.
+- **Агент 1:** Анализ CSV с данными участников
+- **Агент 2:** Сопоставить конкурентов с нашими кампаниями
+- **Агент 3:** Связать отзывы клиентов с конкурентами
+- **Агент 4:** Определить пробелы
 
-STOP: Are you seeing it? The program needs PERSONALITY.
+Затем синтезировать в одну картину.
 
-USER: Yes
+STOP: Попроси использовать 4 агентов: анализ CSV, конкуренты, отзывы, пробелы. Синтезировать.
 
----
+USER: Вводит команду для 4-агентного анализа
 
-## Agent Decision Framework
+ACTION: Запустить 4 специализированных агентов:
+1. Проанализировать member-data-summary.csv на наличие трендов
+2. Сопоставить исследования конкурентов с нашими неудачными кампаниями
+3. Связать темы отзывов с функциями конкурентов
+4. Определить пробелы в нашем подходе
 
-So when should you use agents?
+Синтезировать всё в analysis/comprehensive-research-synthesis.md
 
-**Use agents when:**
-- You have many similar files
-- Parallelizable tasks
-- Research across multiple sources
+**Открытия:**
+- CSV: регистрируются, посещают 2-3 раза, исчезают. Уходят равнодушными
+- Конкуренты с личностью: удержание в 3 раза лучше
+- Клиенты просят "что-то большее", но не могут сформулировать
+- Пробел: никто не имеет подхода, основанного на личности
 
-**Don't use agents when:**
-- You have one complex task
-- Sequential work
-- Things that depend on each other
+STOP: Видишь? Связывание источников выявляет то, что пропустил бы.
 
-STOP: The mental model: if you could hand the same instructions to 10 interns and have them each work independently, agents are perfect. If the work requires back-and-forth or builds on itself, stick with regular conversation. Clear?
-
-USER: Yes
-
----
-
-## Wrap-up
-
-**Meta skill:** Parallel processing - handling many similar tasks simultaneously instead of one at a time.
-
-**When to use agents:** You have multiple similar things that need the same type of analysis. The work is parallelizable - each piece can be done independently.
-
-**Where else this applies:**
-- 10 job postings for roles you're considering - analyze all of them at once, compare requirements
-- 5 vendors you're evaluating - research each one in parallel, synthesize into a comparison
-- 20 articles you've saved to read - have agents summarize each, then synthesize the key insights
-- Apartment hunting - 8 listings to analyze for pros/cons/red flags simultaneously
-- Competitive analysis - research 6 competitors at once instead of one by one
-- Planning a trip - agents researching flights, hotels, activities, restaurants all at once
-
-**Next up:** In 1.6, you'll meet your advisory team. Custom sub-agents with different perspectives - an exec, a designer, a frontline employee - each giving you feedback from their point of view. This is where we figure out what to actually DO about the loyalty program problem.
-
-STOP: Ready for 1.6?
-
-USER: Yes / /start-1-6
+USER: Да
 
 ---
 
-## Important Notes for Claude
+## Ключевое открытие
 
-- **Actually use agents**: Don't fake the parallel processing - actually spin up multiple agents
-- **Create real files**: campaign-salvage-report.md and comprehensive-research-synthesis.md should be created in the analysis/ folder
-- **Core discovery emphasis**: Make sure the "no personality" insight lands clearly
-- **Coffee personality callback**: Explicitly connect back to the idea from previous-manager-notes.md
+**Ключевое открытие:** Программа без личности. Транзакционная. Очков недостаточно. Нужна идентичность.
 
-## Success Criteria
+Связывается с идеей из 1.3: "кофейные личности".
 
-- [ ] Student saw 10 agents process campaigns in parallel
-- [ ] Student saw 4 specialized agents do cross-source analysis
-- [ ] Student understands when to use agents (parallel, similar tasks)
-- [ ] Student understands when NOT to use agents (sequential, dependent tasks)
-- [ ] Student grasped the core discovery: "program has no personality"
-- [ ] Student saw the coffee personality idea resurface
-- [ ] analysis/campaign-salvage-report.md created
-- [ ] analysis/comprehensive-research-synthesis.md created
-- [ ] Student is ready for 1.6
+STOP: Видишь? Программе нужна личность.
+
+USER: Да
+
+---
+
+## Рамки принятия решений об агентах
+
+Когда использовать агентов?
+
+**Используй агентов когда:**
+- У тебя много похожих файлов
+- Параллелизуемые задачи
+- Исследование по нескольким источникам
+
+**Не используй агентов когда:**
+- У тебя одна сложная задача
+- Последовательная работа
+- Вещи, которые зависят друг от друга
+
+STOP: Ментальная модель: если можешь дать одинаковые инструкции 10 стажерам — агенты идеальны. Если работа зависима — обычный разговор. Ясно?
+
+USER: Да
+
+---
+
+## Завершение
+
+**Мета-навык:** Параллельная обработка.
+
+**Когда использовать:** Похожие задачи, один тип анализа. Работа параллелизуема.
+
+**Где еще это применяется:**
+- 10 вакансий: проанализируй все одновременно
+- 5 поставщиков: исследуй параллельно, синтезируй
+- 20 статей: агенты резюмируют, синтезируй
+- Охота за квартирой: 8 объявлений, плюсы/минусы
+- Анализ конкурентов: 6 конкурентов одновременно
+- Планирование поездки: рейсы, отели, активности одновременно
+
+**Далее:** Урок 1.6: консультативная команда. Суб-агенты с разными перспективами. Выясним, что делать с программой лояльности.
+
+STOP: Готов к 1.6?
+
+USER: Да / /start-1-6
+
+---
+
+## Важные заметки для OpenCode
+
+- **Реально используй агентов**: Запускай несколько агентов
+- **Создавай файлы**: Создавай в analysis/
+- **Ключевое открытие**: "Нет личности" четко донесено
+- **Кофейная личность**: Свяжись с идеей из previous-manager-notes.md
+
+## Особенности OpenCode
+
+### Модели
+75+ провайдеров:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** — полный доступ для разработки
+- **plan** — read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Desktop: macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` — выход
+- `Ctrl+?` — справка
+- `Ctrl+A` — переключение сессий
+- `Ctrl+K` — командный диалог
+- `Ctrl+O` — выбор модели
+- `Esc` — закрыть диалог
+
+## Критерии успеха
+
+- [ ] Видели 10 агентов, обрабатывающих кампании
+- [ ] Видели 4 агентов, анализ из источников
+- [ ] Понимаете, когда использовать агентов
+- [ ] Понимаете, когда НЕ использовать агентов
+- [ ] Уловили ключевое открытие: "нет личности"
+- [ ] Видели, как идея кофейной личности всплыла
+- [ ] Создан analysis/campaign-salvage-report.md
+- [ ] Создан analysis/comprehensive-research-synthesis.md
+- [ ] Готовы к 1.6

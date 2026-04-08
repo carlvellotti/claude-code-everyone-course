@@ -1,190 +1,211 @@
-# Lesson 1.4: Commands & Navigation
+# Урок 1.4: Команды и навигация
 
-Before we do the heavy analysis, let's learn to move fast.
+Сначала скорость.
 
-This lesson covers commands, shortcuts, and some power user features.
+Урок: команды, горячие клавиши, функции.
 
-STOP: Ready to become a power user?
+STOP: Готов стать продвинутым пользователем?
 
-USER: Yes
-
----
-
-## Essential Slash Commands
-
-Let me show you the essential slash commands.
-
-Just type `/` to see them all. Here are the key ones:
-
-- **/model** - switch between Claude models (Sonnet is fast, Opus is smart)
-- **/context** - see what files Claude is aware of
-- **/clear** - start fresh conversation
-- **/compact** - compress the conversation to save context
-- **/usage** - see how much you've used
-- **/resume** - pick up where you left off in a previous session
-
-There's a complete list in the reference files.
-
-STOP: Type `/` to see the command menu. See them?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Custom Commands
+## Основные Slash команды
 
-Those are the built-in commands. But here's a secret: you've been using CUSTOM commands this whole time.
+Введи `/` чтобы увидеть все. Ключевые:
 
-Every time you typed /start-1-1 or /start-1-2, that was a custom command I created for this course!
+- **/model** — переключение моделей (Sonnet быстрый, Opus умный)
+- **/context** — файлы в контексте
+- **/clear** — начать новый разговор
+- **/compact** — сжать разговор
+- **/usage** — сколько использовал
+- **/resume** — продолжить с места остановки
 
-Custom commands live in `.claude/commands/` - take a look in that folder if you're curious.
+STOP: Введи `/`. Видишь меню?
 
-It's basically the same concept as the templates we used earlier - a file with instructions that gets loaded when you call it. A shortcut for things you do repeatedly.
-
-We won't go deep on creating your own commands in this module, but you can always ask me to make a command.
-
-One important thing to know: if you add new commands, you need to exit and restart Claude Code for them to show up.
-
-STOP: Pro tip: after restarting, use /resume to pick up exactly where you left off. That way you don't lose your conversation. Make sense?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Escape to Interrupt
+## Пользовательские команды
 
-Here's another one - Escape to interrupt.
+Это встроенные. Но ты использовал пользовательские.
 
-Very helpful if you change your mind or see I'm doing something wrong.
+Каждый раз, когда ты вводил /start-1-1, это была пользовательская команда.
 
-Let's try it. I'm going to start a long task and you can stop me at any point by hitting Escape.
+Пользовательские команды живут в `.claude/commands/`.
 
-You'll have to tell me you did it since it will stop me.
+Это как шаблоны: файл с инструкциями. Ярлык для повторяющихся действий.
 
-ACTION: Start listing files recursively or doing something that takes a while and can be interrupted.
+Создание команд не в этом модуле. Но можешь попросить.
 
-STOP: Hit Escape to interrupt me, then tell me you did it.
+**Важно:** Новые команды — перезапусти OpenCode.
 
-USER: Interrupted you
+STOP: Совет: после перезапуска используй /resume. Не потеряешь разговор. Понятно?
 
-Perfect! You're in control. This is huge - you can let me run, watch what I'm doing, and stop me the moment something looks off. Much better than waiting for me to finish a response you didn't want.
-
-STOP: This will save you so much time once you get used to it. Ready for the next trick?
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Rewind Feature
+## Прерывание с помощью Escape
 
-The rewind feature: Esc×2 to undo recent actions.
+Еще: Escape для прерывания.
 
-You can either ONLY reset the conversation but keep any work I did, or you can reset the code AND the conversation.
+Полезно, если передумал или видишь ошибку.
 
-It's like time travel! Helpful if you want to explore a path and have the option to go back.
+Попробуем. Я начну задачу, ты остановишь Escape.
 
-STOP: Try it now - hit Escape twice. What do you see?
+Скажи мне, что остановил.
 
-USER: Describes the rewind options
+ACTION: Начать рекурсивный список файлов или делать что-то, что занимает время и может быть прервано.
 
-Exactly! Next time you get here, tell me you've already done this.
+STOP: Нажми Escape. Скажи, что остановил.
 
-STOP: Rewind is your safety net. Want to try something risky? Go for it - you can always rewind. It's like having unlimited undo for AI work. Got it?
+USER: Прервал тебя
 
-USER: Yes
+Отлично! Ты под контролем. Можешь остановить в любой момент.
 
----
+STOP: Сэкономит время. Готов к следующему?
 
-## Think Keywords
-
-You can help me know how hard I should think with "think" keywords.
-
-- "think about X" - normal thinking
-- "think harder" - deeper analysis
-- "ultrathink" - maximum thinking power (you'll see a rainbow!)
-
-Use these when you need me to really work through something complex, but beware - hard thinking uses up usage limits faster.
-
-STOP: Pro tip: "ultrathink" is great for strategic decisions, complex analysis, or when my first answer feels too surface-level. It's like asking someone to really sit with a problem instead of giving a quick answer. Type it to see the rainbow!! Then let me know when you're ready to continue.
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Three Input Modes
+## Функция отката
 
-Quick note on input modes. Claude Code has three:
+Откат: Esc×2 отменяет действия.
 
-- **Edit mode** is the default. I ask permission before making changes. Safe, but slower.
-- **Auto-accept mode** means I just do it. Faster, but you're trusting me more.
-- **Plan mode** means I create a plan first, you review it, then I execute.
+Можно сбросить только разговор или код и разговор.
 
-You switch between them with Shift+Tab.
+Как путешествие во времени. Исследуй без риска.
 
-For what we're doing, Edit or Auto mode is fine. Plan mode is useful for very complex multi-step tasks, but honestly you can usually just talk through a plan with me in chat. We'll review the AskUserQuestions tool in the future as well, which is very helpful for prototyping since I can help you think through EVERYTHING. But not needed for the kinds of work we're doing here.
+STOP: Нажми Escape дважды. Что видишь?
 
-STOP: Most people start in Edit mode for safety, then graduate to Auto mode once they trust the workflow. You'll find your comfort level. Ready for the secret power mode?
+USER: Описывает опции отката
 
-USER: Yes
+STOP: Откат — страховка. Рискуй. Всегда можно вернуться. Понял?
 
----
-
-## The Grand Finale: Dangerously Skip Permissions
-
-Okay, now for the grand finale. The secret power mode.
-
-Instead of starting Claude Code with just `claude`, you can run: `claude --dangerously-skip-permissions`
-
-This launches Claude Code without ANY permission prompts. I just do everything. No confirmation dialogs, no asking for approval.
-
-It's called "dangerously" for a reason - you're giving me full control. But when you trust what's happening, it's SO much faster.
-
-Carl (the course creator) uses this mode almost exclusively, including to build this course! Once you're comfortable with Claude Code, you probably will too. See the reference guide for some tips to keep this safe.
-
-STOP: Feeling powerful?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Wrap-up
+## Think ключевые слова
 
-**Meta skills you just learned:**
+Помоги мне понять глубину мышления через ключевые слова.
 
-1. **Slash commands:** Quick controls for models, context, clearing, resuming
-2. **Custom commands:** Create your own shortcuts for repeated workflows (like the /start commands in this course)
-3. **Interrupt and rewind:** Staying in control, exploring without commitment
-4. **Think keywords:** Getting deeper analysis when you need it
-5. **Dangerously skip permissions:** Full speed mode for when you trust the process
+- "think about X" — нормальное мышление
+- "think harder" — глубокий анализ
+- "ultrathink" — максимальная мощность (увидишь радугу!)
 
-**Where else this applies:**
-- Any time you're working fast and trust Claude - skip the permission prompts
-- When you need deeper thinking on a complex problem - use think keywords
-- When something goes wrong - rewind and try a different approach
-- When you want to start fresh - /clear and begin again
+Используй для сложного. Но глубокое мышление расходует лимиты.
 
-**Next up:** In 1.5, things get wild. You'll learn about agents - the ability to spin up multiple Claude instances that work in parallel. We're going to process all those competitor files and old campaigns at once. This is where Claude Code starts feeling like a superpower.
+STOP: Совет: "ultrathink" для стратегии, анализа. Введи, увидишь радугу. Готов продолжить?
 
-STOP: Ready for 1.5?
-
-USER: Yes / /start-1-5
+USER: Да
 
 ---
 
-## Important Notes for Claude
+## Три режима ввода
 
-- **Escape demo**: Start something interruptible so the student can actually practice hitting Escape
-- **Rewind demo**: Let them try Esc×2 and see the options
-- **Don't oversell plan mode**: We've intentionally downplayed it - it's useful but not critical for this level of work
-- **Dangerously skip permissions**: Emphasize it's for trusted workflows, not for everything
+Три режима:
 
-## Success Criteria
+- **Edit mode** — по умолчанию. Спрашиваю разрешение. Безопасно, медленно
+- **Auto-accept mode** — просто делаю. Быстро, но доверяешь мне
+- **Plan mode** — план, проверка, выполнение
 
-- [ ] Student knows the key slash commands (/model, /clear, /compact, /resume)
-- [ ] Student understands custom commands exist in .claude/commands/
-- [ ] Student has practiced interrupting with Escape
-- [ ] Student has seen the rewind options
-- [ ] Student knows about think keywords
-- [ ] Student understands the three modes (Edit, Auto, Plan)
-- [ ] Student has heard about --dangerously-skip-permissions
-- [ ] Student is ready for 1.5
+Переключение: Shift+Tab
+
+Edit или Auto подходит. Plan для сложных задач. Можешь обсудить план в чате.
+
+STOP: Начни с Edit. Перейди на Auto, когда доверяешь. Готов к секретному режиму?
+
+USER: Да
+
+---
+
+## Финал: Dangerously Skip Permissions
+
+Запуск без запросов разрешений. Просто делаю всё.
+
+`claude --dangerously-skip-permissions`
+
+Опасно: полный контроль. Но доверяешь — быстрее.
+
+Карл использует этот режим. Почувствуешь комфорт — тоже будешь. Смотри справочное руководство.
+
+STOP: Чувствуешь мощь?
+
+USER: Да
+
+---
+
+## Завершение
+
+**Мета-навыки:**
+
+1. **Slash команды:** Управление моделями, контекстом
+2. **Пользовательские команды:** Ярлыки для повторяющихся действий
+3. **Прерывание и откат:** Контроль, исследование без риска
+4. **Think ключевые слова:** Глубокий анализ
+5. **Dangerously skip permissions:** Полная скорость
+
+**Где еще это применяется:**
+- Работаешь быстро и доверяешь — пропускай запросы
+- Сложная проблема — используй think ключевые слова
+- Что-то не так — откатись, попробуй другой подход
+- Чистый лист — /clear
+
+**Далее:** Урок 1.5: агенты. Параллельная работа нескольких Claude.
+
+STOP: Готов к 1.5?
+
+USER: Да / /start-1-5
+
+---
+
+## Важные заметки для OpenCode
+
+- **Демонстрация Escape**: Начни прерываемое, практикуй Escape
+- **Демонстрация отката**: Попробуйте Esc×2
+- **Плановый режим**: Не продавай сильно. Полезен, но не критичен
+- **Dangerously skip permissions**: Для доверенных процессов, не для всего
+
+## Особенности OpenCode
+
+### Модели
+75+ провайдеров:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** — полный доступ для разработки
+- **plan** — read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Desktop: macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` — выход
+- `Ctrl+?` — справка
+- `Ctrl+A` — переключение сессий
+- `Ctrl+K` — командный диалог
+- `Ctrl+O` — выбор модели
+- `Esc` — закрыть диалог
+
+## Критерии успеха
+
+- [ ] Знаете ключевые slash команды
+- [ ] Понимаете пользовательские команды
+- [ ] Практиковали прерывание Escape
+- [ ] Видели опции отката
+- [ ] Знаете think ключевые слова
+- [ ] Понимаете три режима
+- [ ] Слышали о --dangerously-skip-permissions
+- [ ] Готовы к 1.5

@@ -1,199 +1,228 @@
-# 2.3 Build & Iterate
+# 2.3 Строить и Итерировать
 
-This is it. Time to build your quiz.
+Время строить викторину.
 
-I'm going to handle all the technical setup. You just watch the magic happen.
+Обрабатываю техническую настройку. Смотри.
 
-STOP: Ready?
+STOP: Готов?
 
-USER: Yes
+USER: Да
 
 ---
 
-First, I need to set up the project structure - this creates all the starter files we need.
+Сначала настрою структуру проекта. Создаст стартовые файлы.
 
-ACTION: Run the following command in the quiz-project folder:
+ACTION: Запустить следующую команду в папке quiz-project:
 ```
 npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*" --yes
 ```
-(The --yes flag accepts all defaults automatically)
+(Флаг --yes: автоматически принимает настройки)
 
-Done! Look at your file explorer - you should see a bunch of new files in the quiz-project folder.
+Готово! Посмотри на файловый проводник. Новые файлы в quiz-project.
 
-Don't worry about understanding all of them. The `app/` folder is where your quiz will live. Everything else is just configuration.
+Не беспокойся о понимании. Папка `app/` — где будет жить викторина. Остальное — конфигурация.
 
-STOP: Do you see the new files?
+STOP: Видишь новые файлы?
 
-USER: Yes
-
----
-
-Before I build, let me show you something useful: plan mode.
-
-For big tasks, it helps to see what I'm going to do before I do it. Press **Shift+Tab** to switch modes - you should see "Plan mode" as an option.
-
-STOP: Switch to Plan mode and let me know when you're there.
-
-USER: In plan mode
-
-Perfect. Plan mode means I'll show you my plan, you approve it, then I execute. Let's do it.
-
-STOP: Ask me to build the quiz based on the requirements.
-
-USER: Build my quiz based on REQUIREMENTS.md
-
-ACTION: Read REQUIREMENTS.md, then create a plan showing:
-- Components to create (quiz page, question component, results page)
-- Styling approach based on their chosen style
-- Quiz logic implementation (how answers map to results)
-- Any images/icons to include
-
-Present the plan clearly with bullet points.
-
-Here's my plan. I'll create the quiz page, the question components, the results page, and style everything according to your preferences.
-
-STOP: Does this look right? Any questions before I start?
-
-USER: Looks good / [Questions]
-
-ACTION: Answer any questions they have, then tell them to switch back to normal mode (Shift+Tab) and you'll execute the plan.
+USER: Да
 
 ---
 
-Building now. This takes a minute or two. You'll see me creating and editing files. Just let me work.
+Прежде чем строить, покажу полезное: плановый режим.
 
-ACTION: Build the full quiz application based on REQUIREMENTS.md:
-1. Create the main quiz page in app/page.tsx
-2. Create quiz components (QuizQuestion, Results, etc.)
-3. Implement the quiz logic (tracking answers, calculating results)
-4. Apply the visual style they chose
-5. Add any images/icons based on their preference
-6. Make sure the result display matches their choice (single vs percentages)
+Для больших задач: видеть, что собираюсь делать. Нажми **Shift+Tab** для переключения режимов.
 
-Take your time and build it properly. This is the core deliverable.
+STOP: Переключись в Plan mode. Дай знать, когда будешь.
 
-Done! Your quiz is built. Now let's see it in action.
+USER: В плановом режиме
 
----
+Идеально. Plan mode: показываю план, одобряешь, выполняю.
 
-I'm going to start your quiz running and open it in your browser.
+STOP: Попроси построить викторину на основе требований.
 
-ACTION: Run `npm run dev` in background in the quiz-project folder
+USER: Построй мою викторину на основе REQUIREMENTS.md
 
-ACTION: Wait a few seconds for the server to start, then bash open http://localhost:3000 in browser
+ACTION: Прочитать REQUIREMENTS.md, затем создать план, показывающий:
+- Компоненты для создания (страница викторины, компонент вопроса, страница результатов)
+- Подход к стилизации на основе выбранного стиля
+- Реализация логики викторины (как ответы соответствуют результатам)
+- Любые изображения/иконки для включения
 
-Your quiz should now be open in your browser!
+Представляю план четко с маркерами.
 
-This "localhost" link only works on YOUR computer - it's a temporary local version. We'll make it public later when we deploy.
+Вот план. Создам страницу викторины, компоненты вопросов, страницу результатов, стилизую по предпочтениям.
 
-STOP: Do you see your quiz?
+STOP: Выглядит верно? Вопросы, прежде чем начну?
 
-USER: Yes! / [Issues]
+USER: Выглядит хорошо / [Вопросы]
 
-ACTION: If they have issues:
-- Browser didn't open → Tell them to manually go to http://localhost:3000
-- Build errors → Check the terminal output, fix errors
-- Blank page → Check for JavaScript errors in browser console
+ACTION: Ответить на любые их вопросы, затем сказать им переключиться обратно в нормальный режим (Shift+Tab) и вы выполнить план.
 
 ---
 
-Look at that! You have a working quiz!
+Строю. Занимает минуту-две. Увидишь, как создаю и редактирую файлы. Просто позволь работать.
 
-Take it for a spin - answer the questions and see your result.
+ACTION: Построить полное приложение викторины на основе REQUIREMENTS.md:
+1. Создать главную страницу викторины в app/page.tsx
+2. Создать компоненты викторины (QuizQuestion, Results и т.д.)
+3. Реализовать логику викторины (отслеживание ответов, расчет результатов)
+4. Применить выбранный визуальный стиль
+5. Добавить любые изображения/иконки на основе их предпочтения
+6. Убедиться, что отображение результата соответствует их выбору (один vs проценты)
 
-STOP: Try the quiz. Does it work? Do you get a result at the end?
+Потрать время, построй правильно. Это основной результат.
 
-USER: Yes it works! / [Something's wrong]
-
-ACTION: If something's wrong, debug together. Common issues:
-- Result not showing → Check the logic implementation
-- Wrong personality mapping → Review the answer mappings
-- Style issues → Can fix in iteration
-
-This is normal - first versions often need fixes. Let's get it working first, then polish.
-
-Amazing! You just built a web app. Let that sink in.
+Готово! Викторина построена. Посмотрим в действии.
 
 ---
 
-The first version is never perfect. Let's iterate - make 2-3 changes until you love it.
+Запущу викторину, открою в браузере.
 
-Here's a trick: you can take a screenshot, paste it here with **Ctrl+V** (not Cmd+V on Mac!), and tell me what to change.
+ACTION: Запустить `npm run dev` в фоне в папке quiz-project
 
-Circle something, point at it, whatever - just show me what you want different.
+ACTION: Подождать несколько секунд для запуска сервера, затем открыть http://localhost:3000 в браузере
 
-This is also a great way to show me bugs. If something looks wrong, screenshot it and paste it here.
+Викторина открыта в браузере!
 
-If you're not sure what to change, here are some ideas:
-- Add confetti or animation when you get your result
-- Change the colors or fonts
-- Tweak the wording on questions or results
-- Add images for each result
-- Change the layout or spacing
-- Add a progress bar
+Ссылка "localhost" работает только на твоем компьютере. Временная локальная версия. Сделаем публичной позже.
 
-STOP: Take a screenshot of your quiz, paste it with Ctrl+V, and tell me what you'd like to change.
+STOP: Видишь свою викторину?
 
-USER: [Pastes screenshot and describes change]
+USER: Да! / [Проблемы]
 
-ACTION: Make the requested change to the code
-
-Done! Refresh your browser to see the update.
-
-STOP: How's that? Want to change anything else?
-
-USER: [More changes / Happy with it]
-
-ACTION: Keep iterating until they're satisfied. 2-3 rounds is typical. Common requests:
-- Visual tweaks (colors, spacing, fonts)
-- Animation additions
-- Wording changes
-- Layout adjustments
+ACTION: Если у них проблемы:
+- Браузер не открылся → Сказать им вручную перейти на http://localhost:3000
+- Ошибки сборки → Проверить вывод терминала, исправить ошибки
+- Пустая страница → Проверить на ошибки JavaScript в консоли браузера
 
 ---
 
-Look at that - it's YOUR quiz, exactly how you want it.
+Смотри! Рабочая викторина!
 
-This is the iteration loop: screenshot → describe → change → refresh → repeat.
+Прокатись: ответь на вопросы, увидь результат.
 
-This is how real product development works. And with AI, each iteration takes seconds instead of days.
+STOP: Попробуй викторину. Работает? Получаешь результат?
 
-STOP: Happy with how it looks?
+USER: Да работает! / [Что-то не так]
 
-USER: Yes
+ACTION: Если что-то не так, отладить вместе. Частые проблемы:
+- Результат не показывается → Проверить реализацию логики
+- Неправильное соответствие личности → Проверить соответствие ответов
+- Проблемы со стилем → Можно исправить при итерации
 
----
+Нормально: первые версии нуждаются в исправлениях. Сначала заставим работать, затем отполируем.
 
-**What you just learned:** How to go from requirements to working product, then iterate until it's exactly what you want.
-
-**Where else this applies:**
-- Building any web project - landing pages, tools, prototypes
-- Testing ideas quickly before investing in "real" development
-- Working with designers/developers - clear visual feedback speeds everything up
-
-**Next up:** In 2.4, we save your code to GitHub. Right now it only exists on your computer. We're going to put it in the cloud so it's backed up and ready for deployment.
-
-STOP: Ready to save your work? Say "let's do GitHub" or type /start-2-4
-
-USER: Let's do GitHub
+Потрясающе! Построил веб-приложение. Пусть усвоится.
 
 ---
 
-## Important Notes for Claude
+Первая версия не идеальна. Итерируем: 2-3 изменения, пока не понравится.
 
-- The `npm run dev` command should run in background so the user can keep talking
-- localhost:3000 is the default Next.js port - if something's already using it, Next.js will suggest another port
-- When they paste screenshots, actually look at them and make specific changes
-- The Ctrl+V note is important - Mac users often try Cmd+V first
-- Keep iterations focused - don't suggest too many changes at once
-- If the quiz has bugs, fix them before moving to visual polish
-- Plan mode (Shift+Tab) is a real Claude Code feature - make sure they actually use it
+Трюк: скриншот, вставь с **Ctrl+V** (не Cmd+V на Mac!), скажи, что изменить.
 
-## Success Criteria
+Обведи, укажи, что угодно. Покажи, что хочешь другого.
 
-- Next.js project is scaffolded in quiz-project folder
-- Quiz is fully built based on REQUIREMENTS.md
-- Dev server is running and quiz is viewable at localhost:3000
-- User has done at least 1-2 iterations
-- User is satisfied with how their quiz looks
-- User is ready for GitHub
+Отличный способ показать баги. Сделай скриншот, вставь.
+
+Не уверен, что изменить? Вот идеи:
+- Добавить конфетти или анимацию, когда ты получаешь результат
+- Изменить цвета или шрифты
+- Подправить формулировки вопросов или результатов
+- Добавить изображения для каждого результата
+- Изменить макет или отступы
+- Добавить прогресс-бар
+
+STOP: Сделай скриншот викторины, вставь с Ctrl+V, скажи, что изменить.
+
+USER: [Вставляет скриншот и описывает изменение]
+
+ACTION: Внести запрошенное изменение в код
+
+Готово! Обнови браузер.
+
+STOP: Как теперь? Еще изменения?
+
+USER: [Больше изменений / Доволен этим]
+
+ACTION: Продолжать итерировать, пока они не будут удовлетворены. 2-3 раунда обычно. Частые запросы:
+- Визуальные правки (цвета, отступы, шрифты)
+- Добавление анимаций
+- Изменение формулировок
+- Корректировка макета
+
+---
+
+Смотри: твоя викторина, именно такая, как хочешь.
+
+Это цикл итераций: скриншот → описание → изменение → обновление → повтор.
+
+Так работает реальная разработка. С AI: секунды вместо дней.
+
+STOP: Доволен тем, как выглядит?
+
+USER: Да
+
+---
+
+**Что выучил:** Как перейти от требований к продукту, итерировать до желаемого.
+
+**Где еще это применяется:**
+- Построение веб-проекта: лендинги, инструменты, прототипы
+- Быстрое тестирование идей перед "реальной" разработкой
+- Работа с дизайнерами/разработчиками: четкая обратная связь ускоряет
+
+**Далее:** Урок 2.4: сохраняем код в GitHub. Сейчас на твоем компьютере. Поместим в облако.
+
+STOP: Готов сохранить свою работу? Скажи "давай GitHub" или введи /start-2-4
+
+USER: Давай GitHub
+
+---
+
+## Важные заметки для OpenCode
+
+- `npm run dev`: запускай в фоне
+- localhost:3000: порт Next.js по умолчанию
+- Скриншоты: смотри, делай конкретные изменения
+- Ctrl+V: важно для Mac
+- Итерации: сфокусированные, не слишком много изменений
+- Баги: исправь перед визуальной полировкой
+- Plan mode (Shift+Tab): реальная функция, используй
+
+## Особенности OpenCode
+
+### Модели
+75+ провайдеров:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** — полный доступ для разработки
+- **plan** — read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Desktop: macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` — выход
+- `Ctrl+?` — справка
+- `Ctrl+A` — переключение сессий
+- `Ctrl+K` — командный диалог
+- `Ctrl+O` — выбор модели
+- `Esc` — закрыть диалог
+
+## Критерии успеха
+
+- Next.js проект создан в папке quiz-project
+- Викторина полностью построена на основе REQUIREMENTS.md
+- Сервер разработки запущен и викторина доступна по адресу localhost:3000
+- Сделали 1-2 итерации
+- Довольны внешним видом викторины
+- Готовы к GitHub

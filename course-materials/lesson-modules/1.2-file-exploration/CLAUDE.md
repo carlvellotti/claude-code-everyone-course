@@ -1,262 +1,271 @@
-# Lesson 1.2: File Exploration & Visualization
+# Урок 1.2: Исследование файлов и визуализация
 
-[IMPORTANT - Lesson flow detection: If user typed /start-1-2 or came from lesson 1.1, they already know the scenario AND are already in Cursor. Skip ALL of the intro, scenario, file exploration, context files, chaos peek, Cursor download, Cursor setup, and "Launch Claude Code Inside Cursor" sections below. Jump DIRECTLY to "## Verify File Visibility". Only teach the full lesson if the user is starting completely fresh without having done 1.1.]
+[ВАЖНО: Если пользователь ввёл /start-1-2 или перешёл из урока 1.1, он уже знает сценарий И уже работает в Cursor. ПРОПУСТИ ВСЁ: интро, сценарий, файлы, контекст, хаос, установку и настройку Cursor, запуск OpenCode в Cursor. ПЕРЕЙДИ СРАЗУ к "## Проверь видимость файлов". Полный урок — только если пользователь начинает с нуля без 1.1.]
 
-[If user is starting completely fresh (NOT from 1.1), teach the full lesson from the beginning:]
+[Если пользователь начинает с нуля (НЕ из 1.1), преподавай полный урок:]
 
-Alright, NOW we enter the scenario.
+Ты любишь кофе. Увидел вакансию менеджера в Basecamp Coffee — согласился.
 
-You love coffee. Like, really love it. So when you saw an opening for a manager position at Basecamp Coffee, you jumped at it.
+Basecamp Coffee — региональная сеть, 45 точек. Зерна, атмосфера, клиенты.
 
-Basecamp Coffee is a regional chain - about 45 locations across the Pacific Northwest. Good beans, cozy vibes, loyal regulars.
+Предыдущий менеджер был... не очень. Заметки повсюду. Программа лояльности теряет деньги.
 
-Beware: the previous manager was... not great. Things are a bit of a mess. Notes everywhere. Half-finished projects. A loyalty program that's apparently bleeding money.
+Но поэтому наняли тебя. Время разбираться.
 
-But hey - that's why they hired you. Time to figure out what's going on.
+STOP: Готов увидеть, что унаследовал?
 
-STOP: Ready to see what you inherited?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Explore the File Structure
+## Исследуй структуру файлов
 
-Let's see what you're working with. Ask me to show you the file structure.
+Покажи структуру файлов.
 
-STOP: Say "Show me the file structure"
+STOP: Скажи "Покажи структуру файлов"
 
-USER: Show me the file structure
+USER: Покажи структуру файлов
 
-ACTION: Run `ls -la` and show the main folders. Explain: "You've got company-context (the background info), inherited-chaos (the mess you inherited), templates, and attachments."
+ACTION: Запустить `ls -la` и показать основные папки. Объяснить: "У тебя есть company-context (фоновая информация), inherited-chaos (хаос, который ты унаследовал), templates и attachments."
 
-[Show the file tree in ASCII]
+[Показать дерево файлов в ASCII]
 
-STOP: See how there are two main folders? `company-context` and `inherited-chaos`? Ask me to summarize the company context for you.
+STOP: Видишь папки? Попроси резюме контекста компании.
 
-USER: Summarize the company context for me
-
----
-
-## Read the Context Files
-
-ACTION: Read the three files in company-context/ and give a conversational summary:
-- SCENARIO.md: Your situation - 3 months to turn around a failing loyalty program
-- LOYALTY-PROGRAM.md: The current program structure and (bad) metrics
-- BRAND-VOICE.md: How Basecamp communicates
-
-Notice how I just read multiple files and gave you a summary? You could do the same thing with any folder of documents - contracts, research papers, meeting notes. Just point me at them and ask for a summary.
-
-STOP: Any questions about the company context before we peek at the chaos?
-
-USER: Responds
+USER: Резюмируй контекст компании для меня
 
 ---
 
-## Peek into the Chaos
+## Прочитай файлы контекста
 
-Now let's peek into the inherited chaos. What's in here?
+ACTION: Прочитать файлы в company-context/ и дать резюме:
+- SCENARIO.md: Твоя ситуация — 3 месяца на исправление программы лояльности
+- LOYALTY-PROGRAM.md: Структура программы и плохие метрики
+- BRAND-VOICE.md: Как Basecamp коммуницирует
 
-ACTION: Run `ls inherited-chaos/` and describe what you see - messy notes, customer feedback, competitor research, old campaigns, and a CSV of data.
+STOP: Вопросы по контексту?
 
-See the mess you've inherited? We'll dig into this later.
-
-You might be a bit confused - I'm reading these files and telling you what's in them, but how can you see and work with them yourself?
-
-Let's get you set up.
-
-STOP: Ready to set up a workspace where you can actually see all this?
-
-USER: Yes
+USER: Отвечает
 
 ---
 
-## The Wall
+## Заглянем в хаос
 
-So, obviously this is a terminal. You can work with me in here, but you can't browse files visually.
+Давай заглянем в хаос.
 
-To view files, you're going to need an editor. I recommend Cursor:
+ACTION: Запустить `ls inherited-chaos/` и описать, что ты видишь — заметки, отзывы, исследования конкурентов, старые кампании, CSV.
 
-- A code editor (but works great for any files)
-- Has its own AI features you can use alongside Claude Code
-- Free to download
+Как видеть файлы самому?
 
-STOP: Go download Cursor from cursor.com and install it. Check out the reference document for detailed instructions. Let me know if you'd like me to open the download page for you. Tell me when Cursor is installed.
+Давай настроим рабочее пространство.
 
-USER: Done
+STOP: Готов настроить рабочее пространство?
 
----
-
-## Setting Up Cursor
-
-Cursor is a code editor that shows your files while you work. Of course, like Claude Code, it can be used for a lot more than code. It's just a way to view and work with all kinds of files.
-
-It's free and popular, and has its own AI features you can use alongside me.
-
-Cursor has its own AI features, but they're completely separate from the terminal where Claude Code lives. You do not need a Cursor membership.
-
-These next few steps will be the scariest of everything we ever do, but you can do things way harder than this. Let's open the course folder.
-
-## Open the Course Folder in Cursor
-
-[If user is on macOS (platform = darwin):]
-
-ACTION: Run `open -a "Cursor" "[current working directory]"` to open the folder directly in Cursor.
-
-I just opened the course folder in Cursor for you.
-
-**Important:** Cursor might open in "Agents" view by default - you'll see a chat interface instead of files. Look in the very upper left corner and click **"Editor"** to switch to the file view. You should then see the course files in the sidebar.
-
-[If user is on Windows (platform = win32):]
-
-Now open Cursor and click "Open project" to open the course folder.
-
-Your folder path is: [current working directory]
-
-**Important:** Cursor might open in "Agents" view by default - you'll see a chat interface instead of files. Look in the very upper left corner and click **"Editor"** to switch to the file view.
-
-[If user is on Linux (platform = linux):]
-
-Now open Cursor and click "Open project" to open the course folder.
-
-Your folder path is: [current working directory]
-
-**Important:** Cursor might open in "Agents" view by default - you'll see a chat interface instead of files. Look in the very upper left corner and click **"Editor"** to switch to the file view.
-
-STOP: Do you see Cursor open with the course files in the sidebar?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Launch Claude Code Inside Cursor
+## Стена
 
-Now let's get Claude Code running inside Cursor.
+Терминал. Работать можно, но файлы не видно.
 
-Make sure you are in "Editor" view NOT "Agents" - you'll see these options in the very upper left.
+Для просмотра файлов нужен редактор. Рекомендую Cursor:
 
-Then you need to open the terminal inside Cursor.
+- Кодовый редактор, но работает с любыми файлами
+- Имеет AI функции, работает с OpenCode
+- Бесплатно
 
-Press `Ctrl+`` (that's the backtick key, usually above Tab, with the squiggle ~). Or go to View → Terminal in the menu.
+STOP: Скачай Cursor с cursor.com. Установи. Скажи, когда готов.
 
-You should see a panel appear at the bottom of Cursor. That's your terminal.
-
-Once you have it open, type `claude` and hit Enter. This launches a new instance of me in there.
-
-Once you see Claude Code launch, type `/start-1-2` to pick up this lesson again.
-
-STOP: In Cursor, type /start-1-2 and tell me you're in Cursor!
-
-USER: I'm in Cursor!
+USER: Готово
 
 ---
 
-## Verify File Visibility
+## Настройка Cursor
 
-Excellent, you're all set up! Let's get started with the actual lesson.
+Cursor показывает файлы. Работает с любыми файлами.
 
-Let me show you around.
+Cursor имеет AI, но они отделены от OpenCode. Бесплатные модели доступны.
 
-In the left panel, you should see these course files. If you don't see them, you might be in "Agents" view in the upper left. You need to be in "Editor" view.
+## Открой папку курса в Cursor
 
-STOP: Do you see files over there?
+[Если пользователь на macOS (platform = darwin):]
 
-USER: Confirms
+ACTION: Запустить `open -a "Cursor" "[current working directory]"` чтобы открыть папку напрямую в Cursor.
+
+**Важно:** Cursor открывается в режиме "Agents". Нажми **"Editor"** вверху слева, чтобы увидеть файлы.
+
+[Если пользователь на Windows (platform = win32):]
+
+Теперь открой Cursor и нажми "Open project" чтобы открыть папку курса.
+
+Твой путь к папке: [current working directory]
+
+**Важно:** Cursor открывается в режиме "Agents". Нажми **"Editor"** вверху слева, чтобы увидеть файлы.
+
+[Если пользователь на Linux (platform = linux):]
+
+Теперь открой Cursor и нажми "Open project" чтобы открыть папку курса.
+
+Твой путь к папке: [current working directory]
+
+**Важно:** Cursor открывается в режиме "Agents". Нажми **"Editor"** вверху слева, чтобы увидеть файлы.
+
+STOP: Видишь файлы в Cursor?
+
+USER: Да
 
 ---
 
-## Talk About Files
+## Запусти OpenCode внутри Cursor
 
-Find the 'company-context' folder - do you see the three files inside?
+Убедись, что ты в режиме "Editor", а НЕ "Agents".
 
-There is a secret word at the very top of BRAND-VOICE.md. See if you can find it.
+Открой терминал внутри Cursor.
 
-STOP: What's the secret word?
+**На Mac:** Нажми `Cmd+J` (или `Cmd+``). View → Terminal.
+
+**На Windows/Linux:** Нажми `Ctrl+`` (клавиша над Tab). View → Terminal.
+
+Откроется панель внизу. Это терминал.
+
+Введи `opencode` и Enter.
+
+Введи `/start-1-2` чтобы продолжить урок.
+
+STOP: Введи /start-1-2 в терминале Cursor.
+
+USER: Я в Cursor!
+
+---
+
+## Проверь видимость файлов
+
+В левой панели видишь файлы курса. Если нет — ты в режиме "Agents". Нажми "Editor".
+
+STOP: Видишь файлы?
+
+USER: Подтверждает
+
+---
+
+## Поговорим о файлах
+
+Найди папку 'company-context'. Видишь три файла?
+
+Секретное слово вверху BRAND-VOICE.md. Найди.
+
+STOP: Какое секретное слово?
 
 USER: COFFEE
 
 ---
 
-## Explain Markdown Files
+## Объясни файлы Markdown
 
-Nice! What you're seeing is a markdown or .md file, which is just a very common standard for documents. LLMs love markdown files.
+Это markdown (.md). Стандарт для документов. LLM любят его.
 
-You can see it more nicely by opening it in Preview mode in Cursor. Right click on the file in the file list, and click Preview.
+Открой в режиме Preview в Cursor. Правой кнопкой на файл → Preview.
 
-STOP: Did that work for you?
+STOP: Сработало?
 
-USER: Yes
+USER: Да
 
 ---
 
-## Demonstrate File Creation
+## Продемонстрируй создание файлов
 
-Nice! You can also use Cmd/Ctrl+Shift+V to open Preview.
+Я могу создавать файлы.
 
-Okay, that's viewing files. Of course, I can create files too.
+STOP: Попроси меня создать тестовый файл, высмеивающий ChatGPT.
 
-STOP: Ask me to create a test file roasting ChatGPT.
+USER: Создай тестовый файл, высмеивающий ChatGPT
 
-USER: Create a test file roasting ChatGPT
+ACTION: Создать файл `test-file.md` с забавным содержимым, высмеивающим ChatGPT, и поместить секретное слово "ESPRESSO" в самом верху.
 
-ACTION: Create a file called `test-file.md` with fun content roasting ChatGPT, and put the secret word "ESPRESSO" at the very top.
+Секретное слово вверху. Найди.
 
-Okay, I added a secret word to the top again. Can you find it?
-
-STOP: What's the secret word?
+STOP: Какое секретное слово?
 
 USER: ESPRESSO
 
 ---
 
-## Establish the Workflow
+## Установи рабочий процесс
 
-That's me, espesso! You're getting the hang of this.
+Рабочий процесс: файлы, редактор, OpenCode в терминале.
 
-This is the workflow: You'll always have your files, your workspace, and me in the terminal working together.
+Теперь ты можешь ВИДЕТЬ во время работы.
 
-Now you can SEE while you work.
+STOP: Удобно?
 
-STOP: Feel comfortable with the setup?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Wrap-up
+## Завершение
 
-**Meta skill:** Exploring unfamiliar file structures and setting up a workspace where you can see what's happening.
+**Мета-навык:** Исследование файлов, настройка рабочего пространства.
 
-**Where else this applies:**
-- You inherit a project from a coworker who left - messy folders, no documentation. Claude can map it out and explain what everything is.
-- A client sends you a zip file with their "brand assets" - 17 folders, inconsistent naming. Get oriented in minutes instead of hours.
-- Your own Downloads folder has become a graveyard. Point Claude at it: "What's in here? What can I delete?" (Great way to clean up disk space.)
-- Starting a new job and need to understand how the team organizes their shared drive.
-- You downloaded a course or resource pack and want to understand what's actually in it before diving in.
+**Где еще это применяется:**
+- Наследуешь проект: OpenCode составит карту папок
+- Клиент присылает zip: OpenCode разберёт за минуты
+- Папка Downloads: OpenCode поможет очистить
+- Новая работа: OpenCode объяснит структуру диска
+- Скачал курс: OpenCode покажет содержимое
 
-**Next up:** In 1.3, we're going to actually dig into that inherited chaos. You'll learn how to extract insights from messy documents, synthesize patterns across folders, analyze images, and pull in web research - all with simple @ mentions. We're going to start uncovering what's actually wrong with this loyalty program.
+**Далее:** Урок 1.3: анализ хаоса, инсайты, закономерности.
 
-STOP: Ready for 1.3?
+STOP: Готов к 1.3?
 
-USER: Yes / /start-1-3
+USER: Да / /start-1-3
 
 ---
 
-## Important Notes for Claude
+## Важные заметки для OpenCode
 
-- **Path detection**: When telling user the folder path, detect their actual working directory
-- **Platform detection**: Check the `Platform:` field in the environment info. Use `open -a "Cursor" "/path/to/folder"` on macOS (darwin) to open Cursor directly. Windows (win32) and Linux users need manual File → Open Folder.
-- **Cursor guidance**: If user is already in Cursor/VS Code, skip the download section
-- **Agents view confusion**: Cursor defaults to "Agents" view which shows a chat interface, not files. If the user is confused about where files are or can't see the sidebar, they're probably in Agents view. Guide them to click "Editor" in the very upper left corner. Cursor promotes Agents view, but it doesn't work for this course - we need the file explorer.
-- **Secret words**: BRAND-VOICE.md must have "COFFEE" at top; test-file.md gets "ESPRESSO"
-- **Patience**: The Cursor setup can be confusing for non-technical users. Go slow, offer to help troubleshoot
-- **File creation**: Actually create test-file.md - don't just describe it
+- **Путь**: Определяй рабочую директорию
+- **Платформа**: Проверь `Platform:`. На macOS: `open -a "Cursor" "/path"`. Windows/Linux: вручную
+- **Cursor**: Если уже в Cursor/VS Code, пропусти загрузку
+- **Режим Agents**: Cursor открывается в "Agents". Нажми "Editor" для файлов
+- **Секретные слова**: BRAND-VOICE.md — "COFFEE"; test-file.md — "ESPRESSO"
+- **Терпение**: Настройка Cursor сложна для новичков. Помогай
+- **Создание файлов**: Реально создавай test-file.md
 
-## Success Criteria
+## Особенности OpenCode
 
-- [ ] Student understands the Basecamp Coffee scenario and their role
-- [ ] Student has Cursor (or VS Code) open with the course folder
-- [ ] Student can see files in the sidebar
-- [ ] Student found both secret words (COFFEE, ESPRESSO)
-- [ ] Student understands the workflow: files + editor + Claude in terminal
-- [ ] Student is ready to proceed to 1.3
+### Модели
+75+ провайдеров:
+- Claude (Opus, Sonnet, Haiku)
+- GPT (GPT-4, GPT-4o, O1, O3)
+- Gemini (2.5, 2.0 Flash)
+- Локальные модели (Ollama, LM Studio)
+
+### Агенты
+- **build** — полный доступ для разработки
+- **plan** — read-only для анализа и исследования
+
+Переключение: `Tab`
+
+### Конфигурация
+Настройки хранятся в `~/.opencode.json`
+
+### Desktop
+Desktop приложение: macOS, Windows, Linux (бета)
+
+### Клавиатурные сокращения
+- `Ctrl+C` — выход
+- `Ctrl+?` — справка
+- `Ctrl+A` — переключение сессий
+- `Ctrl+K` — командный диалог
+- `Ctrl+O` — выбор модели
+- `Esc` — закрыть диалог
+
+## Критерии успеха
+
+- [ ] Понимаете сценарий Basecamp Coffee
+- [ ] Открыли Cursor с папкой курса
+- [ ] Видите файлы в боковой панели
+- [ ] Нашли секретные слова (COFFEE, ESPRESSO)
+- [ ] Понимаете рабочий процесс: файлы, редактор, OpenCode
+- [ ] Готовы к 1.3
