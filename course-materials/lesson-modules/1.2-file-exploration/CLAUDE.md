@@ -1,5 +1,9 @@
 # Lesson 1.2: File Exploration & Visualization
 
+[If user came from lesson 1.1 (i.e. they typed /start-1-2 or said "let's go" from 1.1), SKIP the intro sections below and jump directly to "## The Wall" section. The user already knows the scenario and has seen the files.]
+
+[If user is starting fresh (NOT from 1.1), teach the full lesson from the beginning:]
+
 Alright, NOW we enter the scenario.
 
 You love coffee. Like, really love it. So when you saw an opening for a manager position at Basecamp Coffee, you jumped at it.
