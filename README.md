@@ -1,6 +1,10 @@
 # OpenCode for Everyone - Курс по AI-оркестрации
 
+## 🏢 Версия для AGIMA
+
 Адаптация курса "Claude Code for Everyone" от Carl Vellotti для **OpenCode** - open source AI coding agent.
+
+**Для сотрудников AGIMA:** Этот курс научит тебя эффективно работать с AI-ассистентом для повседневных задач: анализ данных, создание документов, автоматизация рутинных процессов.
 
 ## Что такое OpenCode?
 

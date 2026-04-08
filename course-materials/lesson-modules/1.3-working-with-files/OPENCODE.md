@@ -1,176 +1,176 @@
-# Lesson 1.3: Working with Files
+# Урок 1.3: Работа с файлами
 
-Now that you can see your files, let's actually work with them.
+Теперь, когда ты можешь видеть свои файлы, давай реально будем с ними работать.
 
-This lesson is about the @ symbol for referencing files and folders.
+Этот урок о символе @ для ссылок на файлы и папки.
 
-We're going to do 5 scenarios that cover the main ways you'll use OpenCode with files.
+Мы сделаем 5 сценариев, которые охватывают основные способы использования OpenCode с файлами.
 
-> **⚠️ Важно:** Для анализа изображений (Scenario 4) убедитесь, что выбрана модель **MiMo-V2-Omni**. Нажмите Ctrl+O или кликните на селектор модели внизу и выберите MiMo-V2-Omni.
+> **⚠️ Важно:** Для анализа изображений (Сценарий 4) убедись, что выбрана модель **MiMo-V2-Omni**. Нажми Ctrl+O или кликни на селектор модели внизу и выбери MiMo-V2-Omni.
 
-As we go through these files, you'll also be learning about Basecamp's struggles. This information will be helpful in future lessons. We're unraveling the mystery.
+Пока мы работаем с этими файлами, ты также будешь узнавать о проблемах Basecamp. Эта информация будет полезна в будущих уроках. Мы разгадываем тайну.
 
-STOP: Ready?
+STOP: Готов?
 
-USER: Yes
-
----
-
-## Scenario 1: Single File → Extract
-
-First up: reading one file, extracting structured info from it, and creating new files.
-
-The previous manager left messy notes. Let's see what's useful.
-
-STOP: Ask me to read @inherited-chaos/previous-manager-notes.md and extract the action items and key insights into a new file.
-
-USER: Types command referencing the file
-
-ACTION: Read previous-manager-notes.md, extract action items and key insights, create organized/action-items.md with the structured output.
-
-**Discovery:** Among the chaos, there's a note: "What if we helped people find their coffee personality? Like a quiz or something. Could be fun. Never had time to figure it out."
-
-Interesting... let's keep that in mind for later.
-
-STOP: See how we pulled structure from chaos? You could also have the action items added to that document instead of creating a new one.
-
-USER: Yes
+USER: Да
 
 ---
 
-## Scenario 2: Folder → Synthesize
+## Сценарий 1: Один файл → Извлечь
 
-Next: pointing at a WHOLE folder and finding patterns across multiple files.
+Сначала: чтение одного файла, извлечение структурированной информации из него и создание новых файлов.
 
-We've been collecting customer feedback for months. What are they telling us?
+Предыдущий менеджер оставил беспорядочные заметки. Давай посмотрим, что полезно.
 
-STOP: Ask me to look at the @inherited-chaos/customer-feedback/ folder and synthesize themes across all the files.
+STOP: Попроси меня прочитать @inherited-chaos/previous-manager-notes.md и извлечь пункты действий и ключевые инсайты в новый файл.
 
-USER: Types command referencing the folder
+USER: Вводит команду, ссылаясь на файл
 
-ACTION: Read all four feedback files (january.md through april.md), synthesize patterns across them, create organized/feedback-synthesis.md with the themes.
+ACTION: Прочитать previous-manager-notes.md, извлечь пункты действий и ключевые инсайты, создать organized/action-items.md со структурированным выводом.
 
-**Discovery:** Recurring theme - "fine but forgettable." People sign up, earn a few points, forget about it. The phrase "fine but forgettable" appears multiple times across different months.
+**Открытие:** Среди хаоса есть заметка: "Что если мы поможем людям найти их кофейную личность? Как викторина или что-то вроде. Может быть весело. Никогда не было времени разобраться."
 
-STOP: Imagine doing that manually - opening 4 files, reading each one, taking notes, finding patterns. This took seconds. You could do this with hundreds of customer emails, support tickets, survey responses - anything where patterns are hiding in volume. Ready for the next one?
+Интересно... давай запомним это на потом.
 
-USER: Yes
+STOP: Видишь, как мы извлекли структуру из хаоса? Ты также мог бы попросить добавить пункты действий в тот документ вместо создания нового.
 
----
-
-## Scenario 3: Apply Template
-
-So far you've just been asking me to take actions and I'm doing them the way I think is best. (Which is usually pretty good 💅)
-
-But you might have a particular format, template, or instructions you want me to follow. Instead of prompting those every time, you can just save those instructions in a file and then reference it when asking me to do something.
-
-This is where you start to see the power of being on your computer instead of in a chatbot. It's just way easier for you to give me relevant context.
-
-Leadership needs an update. We have a template we use: @templates/leadership-update-template.md
-
-STOP: Ask me to create a leadership update using @organized/feedback-synthesis.md and following the format in @templates/leadership-update-template.md
-
-USER: Types command referencing both files
-
-ACTION: Read both files, create organized/leadership-update.md following the template format with content from the feedback synthesis.
-
-Key learning: You can reference files as format guides, not just content sources. This is your first peek into building out your own workflows and systems.
-
-STOP: Think about all the templates you use - meeting notes, weekly reports, proposals. Save them as files, and I'll always follow that format. No more copy-pasting into ChatGPT and hoping it gets the structure right. Make sense?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Scenario 4: Image → Analyze
+## Сценарий 2: Папка → Синтезировать
 
-I can also view images!
+Далее: указание на ВСЮ папку и поиск закономерностей по нескольким файлам.
 
-Here's our current loyalty program flyer: attachments/loyalty-flyer.jpg
+Мы собирали отзывы клиентов месяцами. Что они нам говорят?
 
-Let's see if I can find any improvements.
+STOP: Попроси меня посмотреть на папку @inherited-chaos/customer-feedback/ и синтезировать темы по всем файлам.
 
-CRITICAL: Use Ctrl+V to paste images, NOT Cmd+V on Mac!
+USER: Вводит команду, ссылаясь на папку
 
-STOP: Open the file `attachments/loyalty-flyer.jpg` in Cursor, copy the image, and then paste it here with Ctrl+V and ask me to review it.
+ACTION: Прочитать все четыре файла отзывов (january.md через april.md), синтезировать закономерности между ними, создать organized/feedback-synthesis.md с темами.
 
-USER: Pastes image and asks for review
+**Открытие:** Повторяющаяся тема - "нормально, ноforgettable". Люди регистрируются, зарабатывают несколько очков, забывают об этом. Фраза "нормально, ноforgettable" появляется несколько раз в разных месяцах.
 
-ACTION: Analyze the image - note that it's generic, says "the Coffee Shop" instead of Basecamp Coffee, has no personality or brand identity, could be any chain's flyer.
+STOP: Представь, что делать это вручную - открывать 4 файла, читать каждый, делать заметки, искать закономерности. Это заняло секунды. Ты мог бы делать это со сотнями клиентских писем, тикетами поддержки, ответами на опросы - всем, где закономерности скрываются в объеме. Готов к следующему?
 
-**Discovery:** Generic offer. Nothing that says "Basecamp Coffee." Could be any chain. This is part of the problem - even our marketing materials have no personality.
-
-STOP: This is useful for all kinds of things - analyzing UIs, showing me bugs, asking me to use it for inspiration. And you can provide multiple images at once. Make sense?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Scenario 5: Web → Research
+## Сценарий 3: Применить шаблон
 
-Last one: pulling in external information from the web.
+До сих пор ты просто просил меня выполнять действия, и я делал их так, как считаю лучшим. (Что обычно довольно хорошо 💅)
 
-What are successful loyalty programs doing that we're not?
+Но у тебя может быть определенный формат, шаблон или инструкции, которые ты хочешь, чтобы я следовал. Вместо того чтобы указывать их каждый раз, ты можешь просто сохранить эти инструкции в файле, а затем ссылаться на него, когда просишь меня что-то сделать.
 
-STOP: Ask me to search the web for best practices in coffee shop loyalty programs.
+Здесь ты начинаешь видеть силу того, что ты на своем компьютере, а не в чат-боте. Тебе просто гораздо проще давать мне релевантный контекст.
 
-USER: Types command asking for web research
+Руководству нужно обновление. У нас есть шаблон, который мы используем: @templates/leadership-update-template.md
 
-ACTION: Search the web, find relevant articles about successful loyalty programs, synthesize key findings.
+STOP: Попроси меня создать обновление для руководства, используя @organized/feedback-synthesis.md и следуя формату в @templates/leadership-update-template.md
 
-**Discovery:** Best programs create identity and community, not just transactions. Starbucks uses gamification and personalization. Dutch Bros focuses on relationships. The programs that work make people feel like they belong to something.
+USER: Вводит команду, ссылаясь на оба файла
 
-STOP: Web search is incredibly powerful for research tasks. Need to understand a new industry? Research competitors? Find best practices for anything? Just ask. I'll search, read, and synthesize - no more 97 browser tabs. Cool, right?
+ACTION: Прочитать оба файла, создать organized/leadership-update.md, следуя формату шаблона с содержимым из синтеза отзывов.
 
-USER: Yes
+Ключевое обучение: Ты можешь ссылаться на файлы как на руководства по формату, а не только как на источники содержимого. Это твой первый взгляд на создание собственных рабочих процессов и систем.
 
----
+STOP: Подумай обо всех шаблонах, которые ты используешь - заметки встреч, еженедельные отчеты, предложения. Сохраняй их как файлы, и я всегда буду следовать этому формату. Больше никакого копирования в ChatGPT и надежды, что он правильно структурирует. Понятно?
 
-## End of Lesson Reflection
-
-Something's wrong with this program. We've seen symptoms - forgettable, generic, no engagement.
-
-But we need to go deeper to find the real problem.
-
-That's what we'll do in the next lessons.
-
-STOP: See how we've started to piece together a picture?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Wrap-up
+## Сценарий 4: Изображение → Проанализировать
 
-**Meta skills you just learned:**
+Я также могу просматривать изображения!
 
-1. **Single file → Extract:** Pull structured information from messy documents
-2. **Folder → Synthesize:** Find patterns across multiple files
-3. **Apply template:** Use one file to control the format of output
-4. **Image → Analyze:** Get insights from visual content
-5. **Web → Research:** Pull in external information on demand
+Вот наш текущий флаер программы лояльности: attachments/loyalty-flyer.jpg
 
-**Where else this applies:**
-- Meeting notes from the last quarter - extract every action item assigned to you
-- 50 customer support tickets - synthesize into themes for your product team
-- Your company has a specific format for proposals - use it as a template for any new proposal
-- Screenshot a competitor's pricing page - get instant analysis of their positioning
-- Research best practices for anything: hiring, onboarding, presentation design, whatever you're working on
+Давай посмотрим, смогу ли я найти какие-либо улучшения.
 
-**Next up:** In 1.4, you'll learn to move fast. Slash commands, keyboard shortcuts, think keywords, and a secret power mode that removes all the speed bumps. You're about to become a power user.
+КРИТИЧНО: Используй Ctrl+V для вставки изображений, НЕ Cmd+V на Mac!
 
-STOP: Ready for 1.4?
+STOP: Открой файл `attachments/loyalty-flyer.jpg` в Cursor, скопируй изображение и затем вставь его здесь с помощью Ctrl+V и попроси меня его проверить.
 
-USER: Yes / /start-1-4
+USER: Вставляет изображение и просит проверить
+
+ACTION: Проанализировать изображение - отметить, что оно.generic, говорит "the Coffee Shop" вместо Basecamp Coffee, нет личности или брендинга, могло бы быть флаером любой сети.
+
+**Открытие:** .generic предложение. Ничего, что говорит "Basecamp Coffee". Могло бы быть любой сетью. Это часть проблемы - даже наши маркетинговые материалы не имеют личности.
+
+STOP: Это полезно для всех видов вещей - анализа UI, показа мне багов, просьбы использовать это для вдохновения. И ты можешь предоставить несколько изображений одновременно. Понятно?
+
+USER: Да
 
 ---
 
-## Important Notes for OpenCode
+## Сценарий 5: Веб → Исследование
 
-- **File creation**: Actually create the output files (action-items.md, feedback-synthesis.md, leadership-update.md) in the organized/ folder
-- **Coffee personalities hint**: Make sure to highlight the "coffee personality" idea when extracting from the notes - this seeds the solution
-- **Image pasting**: Ctrl+V is critical on Mac - Cmd+V won't work. Emphasize this.
-- **Web search**: Use real web search capabilities to find actual best practices
+Последний: привлечение внешней информации из веба.
+
+Что делают успешные программы лояльности, чего не делаем мы?
+
+STOP: Попроси меня поискать в вебе лучшие практики программ лояльности кофеен.
+
+USER: Вводит команду, прося веб-исследование
+
+ACTION: Поиск в вебе, найти релевантные статьи об успешных программах лояльности, синтезировать ключевые выводы.
+
+**Открытие:** Лучшие программы создают идентичность и сообщество, а не просто транзакции. Starbucks использует геймификацию и персонализацию. Dutch Bros фокусируется на отношениях. Работающие программы заставляют людей чувствовать, что они принадлежат к чему-то.
+
+STOP: Веб-поиск невероятно мощный для исследовательских задач. Нужно понять новую индустрию? Исследовать конкурентов? Найти лучшие практики для чего угодно? Просто спроси. Я буду искать, читать и синтезировать - больше никаких 97 вкладок браузера. Круто, правда?
+
+USER: Да
+
+---
+
+## Размышления в конце урока
+
+Что-то не так с этой программой. Мы видели симптомы -forgettable, .generic, нет вовлеченности.
+
+Но нам нужно углубиться, чтобы найти настоящую проблему.
+
+Это то, что мы сделаем в следующих уроках.
+
+STOP: Видишь, как мы начали собирать картину?
+
+USER: Да
+
+---
+
+## Завершение
+
+**Мета-навыки, которые ты только что выучил:**
+
+1. **Один файл → Извлечь:** Извлекать структурированную информацию из беспорядочных документов
+2. **Папка → Синтезировать:** Находить закономерности по нескольким файлам
+3. **Применить шаблон:** Использовать один файл для управления форматом вывода
+4. **Изображение → Проанализировать:** Получать инсайты из визуального содержимого
+5. **Веб → Исследование:** Привлекать внешнюю информацию по запросу
+
+**Где еще это применяется:**
+- Заметки встреч за последний квартал - извлечь каждый пункт действий, назначенный тебе
+- 50 тикетов поддержки клиентов - синтезировать в темы для твоей продуктовой команды
+- Твоя компания имеет определенный формат для предложений - используй его как шаблон для любого нового предложения
+- Скриншот страницы цен конкурента - мгновенный анализ их позиционирования
+- Исследуй лучшие практики для чего угодно: найм, онбординг, дизайн презентаций, что бы ты ни делал
+
+**Далее:** В 1.4 ты научишься двигаться быстро. Slash команды, горячие клавиши, think ключевые слова и секретный режим мощности, который убирает все тормоза. Ты становишься power-пользователем.
+
+STOP: Готов к 1.4?
+
+USER: Да / /start-1-4
+
+---
+
+## Важные заметки для OpenCode
+
+- **Создание файлов**: Реально создавай выходные файлы (action-items.md, feedback-synthesis.md, leadership-update.md) в папке organized/
+- **Подсказка о кофейных личностях**: Обязательно выдели идею "кофейной личности" при извлечении из заметок - это закладывает решение
+- **Вставка изображений**: Ctrl+V критически важен на Mac - Cmd+V не сработает. Подчеркни это.
+- **Веб-поиск**: Используй реальные возможности веб-поиска для нахождения фактических лучших практик
 
 
 ## Особенности OpenCode
@@ -203,13 +203,13 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- [ ] Student extracted action items from messy notes into structured file
-- [ ] Student synthesized 4 months of feedback into themes
-- [ ] Student created a leadership update using a template
-- [ ] Student analyzed the loyalty flyer image
-- [ ] Student saw web research in action
-- [ ] Student noticed the "fine but forgettable" theme
-- [ ] Student heard about the "coffee personality" idea (seed for later)
-- [ ] Student is ready for 1.4
+- [ ] Студент извлек пункты действий из беспорядочных заметок в структурированный файл
+- [ ] Студент синтезировал 4 месяца отзывов в темы
+- [ ] Студент создал обновление для руководства, используя шаблон
+- [ ] Студент проанализировал изображение флаера лояльности
+- [ ] Студент увидел веб-исследование в действии
+- [ ] Студент заметил тему "нормально, ноforgettable"
+- [ ] Студент услышал об идее "кофейной личности" (закладка на потом)
+- [ ] Студент готов к 1.4

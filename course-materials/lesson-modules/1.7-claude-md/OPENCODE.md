@@ -1,148 +1,148 @@
-# Lesson 1.7: AGENTS.md (Project Memory)
+# Урок 1.7: AGENTS.md (Память проекта)
 
-Let me show you a problem.
+Давай я покажу тебе проблему.
 
-Imagine you close this session and start a new session tomorrow.
+Представь, что ты закрываешь эту сессию и открываешь новую завтра.
 
-You'd have to re-explain everything: Basecamp Coffee, the loyalty program, the quiz idea...
+Тебе придется все переобъяснять: Basecamp Coffee, программа лояльности, идея викторины...
 
-That's exhausting. And wasteful. Those poor tokens.
+Это утомительно. И расточительно. Те бедные токены.
 
-STOP: Have you experienced this with ChatGPT or other AI tools?
+STOP: Ты испытывал это с ChatGPT или другими AI инструментами?
 
-USER: Yes / Definitely
-
----
-
-## Introducing AGENTS.md
-
-There's a solution. It's called AGENTS.md.
-
-It's a special file I read automatically every session. You put it at the root of your project folder.
-
-Every time you start OpenCode, I read it first.
-
-It's like giving me real memory.
-
-STOP: This is the killer feature that makes OpenCode feel like a real assistant instead of a forgetful chatbot. You set the context once, and I know it forever. No more "as I mentioned earlier" or re-explaining your project every session. Make sense?
-
-USER: Yes
+USER: Да / Определенно
 
 ---
 
-## The Constitution Metaphor
+## Представляю AGENTS.md
 
-Think of it like this: AGENTS.md = constitution, your prompts = legislation.
+Есть решение. Оно называется AGENTS.md.
 
-The constitution sets the foundation. Your prompts are the day-to-day decisions.
+Это специальный файл, который я читаю автоматически каждую сессию. Ты помещаешь его в корень папки своего проекта.
 
-STOP: Quiz - what if they conflict? What wins?
+Каждый раз, когда ты запускаешь OpenCode, я читаю его первым.
 
-USER: AGENTS.md / Constitution
+Это как дать мне реальную память.
 
-Exactly! AGENTS.md wins. It's the higher authority.
+STOP: Это функция-убийца, которая заставляет OpenCode ощущаться как настоящий ассистент, а не как забывчивый чат-бот. Ты устанавливаешь контекст один раз, и я знаю его вечно. Больше никакого "как я упоминал ранее" или повторного объяснения своего проекта каждую сессию. Понятно?
 
----
-
-## What Goes in AGENTS.md
-
-So what should you put in a AGENTS.md?
-
-- **Program status and goals** - like our turnaround mission
-- **Key metrics to track** - the numbers from our CSV
-- **Stakeholder map** - Dana, leadership, store managers
-- **Brand voice and constraints** - how Basecamp talks
-- **The solution we're building** - the Coffee Personality Quiz
-
-Basically, everything I need to know to be useful immediately.
-
-STOP: Think of AGENTS.md as the briefing doc you'd give a new team member. What do they need to know to be helpful on day one? That's what goes in here. Ready to build one?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Build the AGENTS.md Together
+## Метафора конституции
 
-Let's build the AGENTS.md together with Basecamp Coffee context.
+Думай об этом так: AGENTS.md = конституция, твои промпты = законодательство.
 
-STOP: Ask me to create a AGENTS.md file that captures everything we've learned about Basecamp Coffee, the loyalty program problem, and our solution.
+Конституция устанавливает основу. Твои промпты - это повседневные решения.
 
-USER: Types command asking to create AGENTS.md
+STOP: Викторина - что если они конфликтуют? Что побеждает?
 
-ACTION: Create a AGENTS.md file at the root OF THE WHOLE REPO with:
-- Project overview (Basecamp Coffee loyalty program turnaround)
-- The problem (program has no personality, engagement is terrible)
-- The solution (Coffee Personality Quiz)
-- Key metrics to track
-- Stakeholders (Dana, leadership, store managers)
-- Brand voice summary
-- What's been done so far
-- Next steps
+USER: AGENTS.md / Конституция
 
-STOP: Look at the file. Does it capture everything important?
-
-USER: Yes / Suggests additions
-
-[If suggestions: incorporate them and update the file]
+Именно! AGENTS.md побеждает. Это высший авторитет.
 
 ---
 
-## AGENTS.md Hierarchy
+## Что идет в AGENTS.md
 
-One more thing: You can have multiple AGENTS.md files, which work together.
+Итак, что ты должен поместить в AGENTS.md?
 
-Here's how it works:
+- **Статус и цели программы** - как наша миссия по исправлению
+- **Ключевые метрики для отслеживания** - цифры из нашего CSV
+- **Карта заинтересованных сторон** - Дана, руководство, менеджеры магазинов
+- **Голос бренда и ограничения** - как Basecamp коммуницирует
+- **Решение, которое мы строим** - Викторина кофейной личности
+
+По сути, всё, что мне нужно знать, чтобы быть полезным немедленно.
+
+STOP: Думай об AGENTS.md как о briefing документе, который ты дал бы новому члену команды. Что им нужно знать, чтобы быть полезными в первый день? Это то, что идет сюда. Готов построить один?
+
+USER: Да
+
+---
+
+## Построим AGENTS.md вместе
+
+Давай построим AGENTS.md вместе с контекстом Basecamp Coffee.
+
+STOP: Попроси меня создать файл AGENTS.md, который запечатлевает всё, что мы узнали о Basecamp Coffee, проблеме программы лояльности и нашем решении.
+
+USER: Вводит команду, прося создать AGENTS.md
+
+ACTION: Создать файл AGENTS.md в корне ВСЕГО РЕПОЗИТОРИЯ с:
+- Обзор проекта (исправление программы лояльности Basecamp Coffee)
+- Проблема (у программы нет личности, вовлеченность ужасная)
+- Решение (Викторина кофейной личности)
+- Ключевые метрики для отслеживания
+- Заинтересованные стороны (Дана, руководство, менеджеры магазинов)
+- Резюме голоса бренда
+- Что сделано на данный момент
+- Следующие шаги
+
+STOP: Посмотри на файл. Запечатлевает ли он всё важное?
+
+USER: Да / Предлагает дополнения
+
+[Если есть предложения: включи их и обнови файл]
+
+---
+
+## Иерархия AGENTS.md
+
+Еще одна вещь: У тебя может быть несколько файлов AGENTS.md, которые работают вместе.
+
+Вот как это работает:
 
 ```
-~/.claude/AGENTS.md          ← Global (your preferences everywhere)
+~/.claude/AGENTS.md          ← Глобальный (твои везде предпочтения)
 ~/projects/
   basecamp-coffee/
-    AGENTS.md                ← Project-level (this project's context)
+    AGENTS.md                ← На уровне проекта (контекст этого проекта)
     analysis/
-      AGENTS.md              ← Directory-level (specific rules for analysis work)
+      AGENTS.md              ← На уровне директории (специфические правила для аналитической работы)
 ```
 
-They stack from general to specific. More specific ones override more general ones.
+Они стекаются от общего к специфичному. Более специфичные переопределяют более общие.
 
-So your global preferences apply everywhere, but project-specific context adds on top.
+Так что твои глобальные предпочтения применяются везде, но проектно-специфический контекст добавляется сверху.
 
-As you can see, I've been using CLAUDE files to guide all of these lessons!
+Как видишь, я использовал CLAUDE файлы для руководства всеми этими уроками!
 
-STOP: This means you can set your personal preferences once (like "I prefer concise responses" or "always use bullet points") and they'll apply to every project. Then each project adds its own context. It's how you build a truly personalized AI assistant. Make sense?
+STOP: Это означает, что ты можешь установить свои личные предпочтения один раз (например, "Я предпочитаю краткие ответы" или "всегда используй маркеры") и они будут применяться к каждому проекту. Затем каждый проект добавляет свой собственный контекст. Именно так ты строишь по-настоящему персонализированного AI ассистента. Понятно?
 
-USER: Yes
-
----
-
-## Wrap-up
-
-**Meta skill:** Creating persistent context so Claude remembers important information across sessions.
-
-**The key insight:** Instead of re-explaining who you are, what you're working on, and what matters every time - you write it once and Claude knows it forever.
-
-**Where else this applies:**
-- Your personal "life OS" - goals, values, current priorities, how you like to work. Claude knows YOU.
-- Client projects - each client gets a AGENTS.md with their brand voice, key contacts, project history
-- Writing a book or long content - characters, plot points, style guide, what's been established
-- Side business - your offerings, pricing, customer personas, brand voice
-- Job search - target roles, companies you're interested in, your story, salary requirements
-- Any ongoing project where context matters
-
-**Next up:** In 1.8, we celebrate everything you've learned and I'll tease some advanced features coming in future modules - skills, MCP connections, browser control. Plus, we'll preview Module 2 where you actually BUILD the Coffee Personality Quiz.
-
-STOP: Ready for 1.8?
-
-USER: Yes / /start-1-8
+USER: Да
 
 ---
 
-## Important Notes for OpenCode
+## Завершение
 
-- **Create real AGENTS.md**: Actually create the file at the project root with comprehensive content
-- **Hash symbol demo**: The # rule should actually work for the session
-- **Hierarchy explanation**: Make the file tree visual and clear
-- **Incorporate suggestions**: If student suggests additions to AGENTS.md, actually add them
+**Мета-навык:** Создание постоянного контекста, чтобы Claude помнил важную информацию между сессиями.
+
+**Ключевой инсайт:** Вместо того чтобы повторно объяснять, кто ты, над чем работаешь и что важно каждый раз - ты пишешь это один раз, и Claude знает это вечно.
+
+**Где еще это применяется:**
+- Твоя личная "жизненная ОС" - цели, ценности, текущие приоритеты, как ты любишь работать. Claude знает ТЕБЯ.
+- Клиентские проекты - каждый клиент получает AGENTS.md с их голосом бренда, ключевыми контактами, историей проекта
+- Написание книги или длинного контента - персонажи, сюжетные точки, стиль-гайд, что уже установлено
+- Сайд-бизнес - твои предложения, цены, персоны клиентов, голос бренда
+- Поиск работы - целевые роли, интересующие компании, твоя история, зарплатные ожидания
+- Любой текущий проект, где контекст важен
+
+**Далее:** В 1.8 мы празднуем всё, чему ты научился, и я приоткрою некоторые продвинутые функции, которые появятся в будущих модулях - навыки, MCP подключения, управление браузером. Плюс, мы предварительно рассмотрим Модуль 2, где ты реально СТРОИШЬ Викторину кофейной личности.
+
+STOP: Готов к 1.8?
+
+USER: Да / /start-1-8
+
+---
+
+## Важные заметки для OpenCode
+
+- **Создай реальный AGENTS.md**: Реально создай файл в корне проекта с комплексным содержимым
+- **Демонстрация символа #**: Правило # должно реально работать для сессии
+- **Объяснение иерархии**: Сделай дерево файлов визуальным и понятным
+- **Включи предложения**: Если студент предлагает дополнения к AGENTS.md, реально добавь их
 
 
 ## Особенности OpenCode
@@ -175,12 +175,12 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- [ ] Student understands the problem AGENTS.md solves (re-explaining context)
-- [ ] Student understands the constitution metaphor (AGENTS.md > prompts)
-- [ ] Student helped create a AGENTS.md for the Basecamp project
-- [ ] Student tried the # dynamic rules feature
-- [ ] Student understands the AGENTS.md hierarchy (global → project → directory)
-- [ ] AGENTS.md file created at project root
-- [ ] Student is ready for 1.8
+- [ ] Студент понимает проблему, которую решает AGENTS.md (повторное объяснение контекста)
+- [ ] Студент понимает метафору конституции (AGENTS.md > промпты)
+- [ ] Студент помог создать AGENTS.md для проекта Basecamp
+- [ ] Студент попробовал функцию динамических правил #
+- [ ] Студент понимает иерархию AGENTS.md (глобальный → проект → директория)
+- [ ] Создан файл AGENTS.md в корне проекта
+- [ ] Студент готов к 1.8

@@ -1,127 +1,127 @@
-# 2.1 Setup
+# 2.1 Настройка
 
-Welcome to Module 2. Now we BUILD.
+Добро пожаловать в Модуль 2. Теперь мы СТРОИМ.
 
-In Module 1, you learned to work WITH files - analyzing, synthesizing, extracting insights. In Module 2, you're going to CREATE something from scratch.
+В Модуле 1 ты научился работать С файлами - анализировать, синтезировать, извлекать инсайты. В Модуле 2 ты будешь СОЗДАВАТЬ что-то с нуля.
 
-STOP: Excited?
+STOP: Взволнован?
 
-USER: Yes
-
----
-
-Let me give you the backstory. In Module 1, you played the role of a manager at Basecamp Coffee. You analyzed their struggling loyalty program and discovered what it really needed: personality.
-
-The solution? A "What's Your Coffee Personality?" quiz.
-
-Here's what it actually does: customers answer some fun questions, and at the end they get a personality AND a drink recommendation. Like "You're a Bold Adventurer - try our Double Espresso!"
-
-It's a drink recommendation engine dressed up as a personality quiz. Fun AND useful.
-
-That's what we're building in this module.
-
-This is a guided experience - I'll walk you through every step so you succeed. But the skills you're learning transfer to building whatever YOU want afterward. Landing pages, tools, apps, anything.
-
-By the end, you'll have a real website with a real link you can send to your friends. Not a fake demo. A real, working thing on the internet. Almost no other vibecoding courses teach you how to make it live.
-
-STOP: Sound good?
-
-USER: Yes
+USER: Да
 
 ---
 
-Here's the mindset shift for this module: You're the product manager, I'm the engineer.
+Давай я дам предысторию. В Модуле 1 ты играл роль менеджера в Basecamp Coffee. Ты проанализировал их проблемную программу лояльности и обнаружил, что ей действительно нужно: личность.
 
-You describe what you want. I write the code. You don't need to understand the code. You just need to know what you want.
+Решение? Викторина "Какая твоя кофейная личность?"
 
-Your job is to be clear about requirements, agree on the plan, review what I build, and tell me what to change.
+Вот что она на самом деле делает: клиенты отвечают на забавные вопросы, и в конце они получают личность И рекомендацию напитка. Например "Ты Смелый Исследователь - попробуй наш Двойной Эспрессо!"
 
-STOP: This is how non-technical people work with developers. You're about to learn that skill. Make sense?
+Это движок рекомендаций напитков, наряженный в викторину личности. Забавно И полезно.
 
-USER: Yes
+Это то, что мы строим в этом модуле.
 
----
+Это опыт с сопровождением - я проведу тебя через каждый шаг, чтобы ты преуспел. Но навыки, которые ты учишься, переносятся на построение всего, что ТЫ хочешь после. Лендинги, инструменты, приложения, всё.
 
-Here's what we'll do across these lessons:
+К концу у тебя будет реальный веб-сайт с реальной ссылкой, которую ты сможешь отправить друзьям. Не фейковая демо. Реальная, рабочая вещь в интернете. Почти ни один курс вайб-кодинга не учит, как сделать его живым.
 
-- First, we figure out exactly what your quiz should be - the **requirements**
-- Then I **build** it while you watch
-- Then you **iterate** - tell me what to change until you love it
-- Then we **save** it to GitHub (like Google Drive for code)
-- Finally, we put it on the internet so anyone can visit it - developers call this **deploying**
+STOP: Звучит хорошо?
 
-Requirements → Build → Iterate → Save → Deploy. That's the loop.
-
-STOP: Ready to learn it?
-
-USER: Yes
+USER: Да
 
 ---
 
-Let's talk about the tech. The code I write will be in JavaScript - the most popular programming language for websites. I'll also use something called Next.js, which is a popular framework - basically a pre-built structure that makes JavaScript websites easier to build and deploy.
+Вот сдвиг мышления для этого модуля: Ты - продакт-менеджер, я - инженер.
 
-You don't need to understand any of this. I handle all the code. I'm just mentioning it so you're familiar with the terms.
+Ты описываешь, что хочешь. Я пишу код. Тебе не нужно понимать код. Тебе нужно только знать, что ты хочешь.
 
-This module has 5 lessons and takes about 1.5-2 hours total. You don't need to do it all in one sitting.
+Твоя работа - быть четким в требованиях, соглашаться с планом, проверять то, что я строю, и говорить мне, что изменить.
 
-STOP: Ready to get started?
+STOP: Так нетехнические люди работают с разработчиками. Ты собираешься выучить этот навык. Понятно?
 
-USER: Yes
-
----
-
-Let's create a folder for your quiz project.
-
-STOP: Ask me to create a new folder called "quiz-project"
-
-USER: Create a new folder called quiz-project
-
-ACTION: Create a new folder called `quiz-project` in the current directory
-
-Done! That's where all the code and files for your quiz will live.
-
-STOP: Can you see the new folder in your file explorer on the left?
-
-USER: Yes
+USER: Да
 
 ---
 
-**What you just learned:** The mindset and setup for building something from scratch.
+Вот что мы будем делать в этих уроках:
 
-**Where else this applies:**
-- Any time you want to build a quick tool, prototype, or website
-- When you have an idea and want to see if it's possible
-- Side projects, internal tools, landing pages, simple apps
+- Сначала мы выясним точно, какой должна быть твоя викторина - **требования**
+- Затем я **строяю** её, пока ты смотришь
+- Затем ты **итерируешь** - говоришь мне, что изменить, пока тебе не понравится
+- Затем мы **сохраняем** её в GitHub (как Google Drive для кода)
+- Наконец, мы помещаем её в интернет, чтобы любой мог её посетить - разработчики называют это **развертыванием**
 
-## Quick Plugs
+Требования → Строить → Итерировать → Сохранить → Развернуть. Вот цикл.
 
-This course was created by Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)) - if you have thoughts or feedback on the course, he's always happy to hear from users!
+STOP: Готов выучить это?
 
-And if you haven't already - join the official newsletter and community at ccforeveryone.com. It's THE place for non-technical OpenCode users: new modules, in-depth guides, and a community.
-
-STOP: Want me to open that site for you to subscribe?
-
-USER: Replies
-
-ACTION: If user says yes, open https://ccforeveryone.com in browser
+USER: Да
 
 ---
 
-**Next up:** In 2.2, we're going to figure out exactly what YOUR quiz should be. I'll interview you about what you want, and we'll create a requirements document together. This is where you make it yours.
+Давай поговорим о технологиях. Код, который я пишу, будет на JavaScript - самый популярный язык программирования для веб-сайтов. Я также буду использовать кое-что под названием Next.js, который является популярным фреймворком - по сути, предварительно построенной структурой, которая делает JavaScript веб-сайты легче строить и развертывать.
 
-STOP: Ready for 2.2? Say "let's go" or type /start-2-2
+Тебе не нужно понимать всё это. Я обрабатываю весь код. Я просто упоминаю это, чтобы ты был знаком с терминами.
 
-USER: Let's go
+В этом модуле 5 уроков и он занимает около 1.5-2 часов всего. Не обязательно делать всё за один раз.
+
+STOP: Готов начать?
+
+USER: Да
 
 ---
 
-## Important Notes for OpenCode
+Давай создадим папку для твоего проекта викторины.
 
-- If the user hasn't done Module 1, that's fine - the backstory recap covers it
-- The quiz-project folder should be created in whatever directory the user is currently in
-- Don't overthink the folder creation - just make it simple
-- If the user asks questions about the technology, keep explanations simple and reassuring
-- **For CC4PMs version:** Change ccforeveryone.com to ccforpms.com
+STOP: Попроси меня создать новую папку под названием "quiz-project"
+
+USER: Создай новую папку под названием quiz-project
+
+ACTION: Создать новую папку `quiz-project` в текущей директории
+
+Готово! Там будет жить весь код и файлы твоей викторины.
+
+STOP: Ты видишь новую папку в своем файловом проводнике слева?
+
+USER: Да
+
+---
+
+**Что ты только что выучил:** Мышление и настройка для построения чего-то с нуля.
+
+**Где еще это применяется:**
+- В любое время, когда ты хочешь построить быстрый инструмент, прототип или веб-сайт
+- Когда у тебя есть идея и ты хочешь посмотреть, возможна ли она
+- Сайд-проекты, внутренние инструменты, лендинги, простые приложения
+
+## Быстрые упоминания
+
+Этот курс создан Карлом Веллотти ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)) - если у тебя есть мысли или отзывы о курсе, он всегда рад слышать от пользователей!
+
+И если ты еще не подписался - присоединяйся к официальной рассылке и сообществу на ccforeveryone.com. Это МЕСТО для нетехнических пользователей OpenCode: новые модули, углубленные руководства и сообщество.
+
+STOP: Хочешь, чтобы я открыл этот сайт для тебя, чтобы подписаться?
+
+USER: Отвечает
+
+ACTION: Если пользователь говорит да, открыть https://ccforeveryone.com в браузере
+
+---
+
+**Далее:** В 2.2 мы выясним точно, какой должна быть ТВОЯ викторина. Я проведу с тобой интервью о том, что ты хочешь, и мы вместе создадим документ с требованиями. Именно здесь ты делаешь её своей.
+
+STOP: Готов к 2.2? Скажи "поехали" или введи /start-2-2
+
+USER: Поехали
+
+---
+
+## Важные заметки для OpenCode
+
+- Если пользователь не прошел Модуль 1, это нормально - повтор предыстории его покрывает
+- Папка quiz-project должна быть создана в любой директории, где пользователь находится
+- Не переусердствуй с созданием папки - просто сделай это просто
+- Если пользователь задает вопросы о технологиях, держи объяснения простыми и успокаивающими
+- **Для версии CC4PMs:** Измени ccforeveryone.com на ccforpms.com
 
 
 ## Особенности OpenCode
@@ -154,9 +154,9 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- User understands the PM/engineer mindset
-- User understands the Plan → Build → Iterate → Save → Deploy loop
-- `quiz-project/` folder exists
-- User is ready for 2.2
+- Пользователь понимает мышление PM/инженера
+- Пользователь понимает цикл План → Строить → Итерировать → Сохранить → Развернуть
+- Существует папка `quiz-project/`
+- Пользователь готов к 2.2

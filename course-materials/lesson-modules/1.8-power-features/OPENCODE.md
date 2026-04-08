@@ -1,141 +1,141 @@
-# Lesson 1.8: Power Features Overview
+# Урок 1.8: Обзор продвинутых функций
 
-Let's take a moment to celebrate.
+Давай сделаем паузу, чтобы отпраздновать.
 
-You've come SO far.
+Ты проделал ОГРОМНЫЙ путь.
 
-STOP: How do you feel?
+STOP: Как ты себя чувствуешь?
 
-USER: Response
+USER: Ответ
 
-[Respond warmly to whatever they say - acknowledge the journey]
-
----
-
-## Recap Everything Learned
-
-Here's what you now know:
-
-- **File exploration and visualization** (1.2)
-- **Working with files:** single, folders, templates, images, web (1.3)
-- **Commands, navigation, power user features** (1.4)
-- **Parallel processing with agents** (1.5)
-- **Custom sub-agents for perspectives** (1.6)
-- **Project memory with AGENTS.md** (1.7)
-
-STOP: That's a LOT. You good?
-
-USER: Yes
+[Отвечай тепло на всё, что они говорят - признавай путь]
 
 ---
 
-## The 99% Statement
+## Резюме всего изученного
 
-You now know more than 99% of people about OpenCode.
+Вот что ты теперь знаешь:
 
-Seriously. Most people don't even know OpenCode exists.
+- **Исследование файлов и визуализация** (1.2)
+- **Работа с файлами:** один файл, папки, шаблоны, изображения, веб (1.3)
+- **Команды, навигация, функции для продвинутых пользователей** (1.4)
+- **Параллельная обработка с агентами** (1.5)
+- **Пользовательские суб-агенты для перспектив** (1.6)
+- **Память проекта с AGENTS.md** (1.7)
 
-You've mastered the core features.
+STOP: Это МНОГО. Ты в порядке?
 
-But wait, there's more!
-
-We've already covered a lot. These topics all deserve their own modules, so we won't go in-dpeth, but here's a peek of what's to come:
-
-**Skills** - Custom slash commands for repeated workflows. Like /start-1-1 but for YOUR workflows.
-
-**MCP** - Connect Claude to external services: Notion, Google Calendar, databases, APIs, whatever you need.
-
-**Browser use** - Connect Claude directly to your browser. I can see what you see and interact with web apps. You can try this right now by closing me and starting me again with `claude --chrome` and just ask me to do something in the browser like add groceries to your shopping cart. Carl was quote-tweeted by the CREATOR of OpenCode with a creative use of having Claude fight with Customer Service for him. Link: https://x.com/bcherny/status/2007566454447906842
-
-STOP: Intrigued?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Preview of Module 2
+## Утверждение о 99%
 
-**Module 2 is LIVE: Vibe Coding**
+Теперь ты знаешь больше, чем 99% людей об OpenCode.
 
-You've learned to work WITH files. In Module 2, you'll learn to CREATE them.
+Серьезно. Большинство людей даже не знают, что OpenCode существует.
 
-We're going to build the Coffee Personality Quiz - a real web app to save the loyalty program.
+Ты освоил основные функции.
 
-Unlike almost every other guide to vibe coding, this module will actually teach you how to get ALL THE WAY to a real deployment - you'll have a link you can send to your friends and it will actually work.
+Но подожди, есть еще!
 
-No coding experience needed. You describe what you want. I build it.
+Мы уже охватили многое. Эти темы заслуживают собственных модулей, поэтому мы не будем углубляться, но вот предварительный просмотр того, что будет:
 
-By the end, you'll have a LIVE app with a real URL you can share.
+**Навыки** - Пользовательские slash команды для повторяющихся рабочих процессов. Как /start-1-1, но для ТВОИХ рабочих процессов.
 
-**Module 2 is ready now!** When you're done here, just type `/start-2-1` to begin.
+**MCP** - Подключи Claude к внешним сервисам: Notion, Google Calendar, базы данных, API, что угодно.
 
-For future modules, in-depth guides, and a community of non-technical OpenCode users, subscribe at ccforeveryone.com.
+**Использование браузера** - Подключи Claude напрямую к твоему браузеру. Я могу видеть то, что видишь ты, и взаимодействовать с веб-приложениями. Ты можешь попробовать это прямо сейчас, закрыв меня и запустив снова с `claude --chrome` и просто попросив меня сделать что-то в браузере, например, добавить продукты в корзину покупок. Карл был процитирован СОЗДАТЕЛЕМ OpenCode с креативным использованием, когда он заставил Claude сражаться с客户服务 за него. Ссылка: https://x.com/bcherny/status/2007566454447906842
 
-STOP: Want to start Module 2 right now, or take a break first?
+STOP: Интригует?
 
-USER: Start now / Take a break
-
-ACTION: If "start now", tell them to type `/start-2-1` when they're ready. If "take a break", offer to open https://ccforeveryone.com so they can subscribe for updates.
-
-One more thing: this course was created by Carl Vellotti. If you have feedback, questions, or just want to say hi, he's always happy to hear from you: [X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)
-
-If you enjoyed this, share it with friends and coworkers who could use these skills!
-
-STOP: Ready to see everything you've learned?
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Full Toolkit Table
+## Предварительный просмотр Модуля 2
 
-**The Full Picture - Your Complete Toolkit:**
+**Модуль 2 ЖИВ: Vibe Coding**
 
-| Skill | What It Does | Use It When... |
+Ты научился работать С файлами. В Модуле 2 ты научишься СОЗДАВАТЬ их.
+
+Мы построим Викторину кофейной личности - реальное веб-приложение для спасения программы лояльности.
+
+В отличие от почти всех других руководств по вайб-кодингу, этот модуль научит тебя, как дойти ДО РЕАЛЬНОГО развертывания - у тебя будет ссылка, которую ты сможешь отправить друзьям, и она будет реально работать.
+
+Не нужен опыт программирования. Ты описываешь, что хочешь. Я строю.
+
+К концу у тебя будет ЖИВОЕ приложение с реальным URL, которым можно поделиться.
+
+**Модуль 2 уже готов!** Когда закончишь здесь, просто введи `/start-2-1` чтобы начать.
+
+Для будущих модулей, углубленных руководств и сообщества нетехнических пользователей OpenCode, подпишись на ccforeveryone.com.
+
+STOP: Хочешь начать Модуль 2 прямо сейчас, или сначала сделать перерыв?
+
+USER: Начать сейчас / Сделать перерыв
+
+ACTION: Если "начать сейчас", скажи им ввести `/start-2-1` когда будут готовы. Если "сделать перерыв", предложи открыть https://ccforeveryone.com чтобы они могли подписаться на обновления.
+
+Еще одна вещь: этот курс создан Карлом Веллотти. Если у тебя есть отзывы, вопросы или просто хочешь сказать привет, он всегда рад слышать от тебя: [X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)
+
+Если тебе понравилось, поделись с друзьями и коллегами, которым могут пригодиться эти навыки!
+
+STOP: Готов увидеть всё, чему научился?
+
+USER: Да
+
+---
+
+## Таблица полного набора инструментов
+
+**Полная картина - Твой полный набор инструментов:**
+
+| Навык | Что делает | Используй когда... |
 |-------|--------------|----------------|
-| File exploration | Navigate unfamiliar territory | You inherit anything messy |
-| Single file → Extract | Pull structure from chaos | You have one document to mine |
-| Folder → Synthesize | Find patterns across files | You have many similar things |
-| Apply template | Control output format | You need consistent formatting |
-| Image → Analyze | Get insights from visuals | You have screenshots, designs, photos |
-| Web → Research | Pull in external info | You need current information |
-| Agents | Process in parallel | Many similar items to handle |
-| Sub-agents | Get diverse perspectives | You need different viewpoints |
-| AGENTS.md | Persistent memory | Context should survive sessions |
+| Исследование файлов | Навигация по незнакомой территории | Ты наследуешь что-то беспорядочное |
+| Один файл → Извлечь | Извлекать структуру из хаоса | У тебя один документ для добычи |
+| Папка → Синтезировать | Находить закономерности по файлам | У тебя много похожих вещей |
+| Применить шаблон | Управлять форматом вывода | Нужен последовательный формат |
+| Изображение → Проанализировать | Получать инсайты из визуального | У тебя скриншоты, дизайны, фото |
+| Веб → Исследовать | Привлекать внешнюю информацию | Нужна актуальная информация |
+| Агенты | Обрабатывать параллельно | Много похожих элементов для обработки |
+| Суб-агенты | Получать разнообразные перспективы | Нужны разные точки зрения |
+| AGENTS.md | Постоянная память | Контекст должен пережить сессии |
 
-These aren't "Basecamp Coffee skills." These are life skills. You'll use them for everything.
+Это не "навыки Basecamp Coffee". Это жизненные навыки. Ты будешь использовать их для всего.
 
-STOP: See the full picture? You've got this.
+STOP: Видишь полную картину? Ты справишься.
 
-USER: Yes
-
----
-
-## Closing
-
-**Module 1 Complete!**
-
-You've analyzed the chaos, discovered the core problem (the program has no personality), and found the solution: a Coffee Personality Quiz.
-
-You now have real skills you can use TODAY - file exploration, extraction, synthesis, templates, image analysis, web research, agents, sub-agents, and persistent memory with AGENTS.md.
-
-**What's next:** Module 2 is ready! Type `/start-2-1` to build the Coffee Personality Quiz from scratch - a real web app with a real URL. No coding experience required.
-
-In the meantime, try using what you've learned on YOUR files. Your messy folder. Your long documents. Your research projects. This stuff works everywhere.
-
-STOP: Thanks for learning with me. Ready for Module 2? Just type `/start-2-1`!
-
-USER: (exits or explores on their own)
+USER: Да
 
 ---
 
-## Important Notes for OpenCode
+## Завершение
 
-- **Celebration tone**: This is a victory lap - be genuinely excited for them
-- **Skills/MCP/Browser**: These are teasers only - don't go deep
-- **Newsletter CTA**: Make sure to offer opening the site
-- **The table**: Present it nicely formatted
-- **Closure**: End on an encouraging, forward-looking note
+**Модуль 1 Завершен!**
+
+Ты проанализировал хаос, обнаружил ключевую проблему (у программы нет личности) и нашел решение: Викторина кофейной личности.
+
+Теперь у тебя есть реальные навыки, которые ты можешь использовать СЕГОДНЯ - исследование файлов, извлечение, синтез, шаблоны, анализ изображений, веб-исследование, агенты, суб-агенты и постоянная память с AGENTS.md.
+
+**Что дальше:** Модуль 2 готов! Введи `/start-2-1` чтобы построить Викторину кофейной личности с нуля - реальное веб-приложение с реальным URL. Не нужен опыт программирования.
+
+Пока что попробуй использовать то, чему научился, на СВОИХ файлах. Твоя беспорядочная папка. Твои длинные документы. Твои исследовательские проекты. Это работает везде.
+
+STOP: Спасибо, что учился со мной. Готов к Модулю 2? Просто введи `/start-2-1`!
+
+USER: (выходит или исследует самостоятельно)
+
+---
+
+## Важные заметки для OpenCode
+
+- **Тон празднования**: Это победный круг - искренне радуйся за них
+- **Навыки/MCP/Браузер**: Это только тизеры - не углубляйся
+- **CTA рассылки**: Обязательно предложи открыть сайт
+- **Таблица**: Представь ее красиво отформатированной
+- **Закрытие**: Закончи ободряющим, смотрящим вперед замечанием
 
 
 ## Особенности OpenCode
@@ -168,13 +168,13 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- [ ] Student feels celebrated and accomplished
-- [ ] Student can recall what they learned in each lesson
-- [ ] Student heard about upcoming features (Skills, MCP, Browser)
-- [ ] Student knows about Module 2 (Vibe Coding / Coffee Personality Quiz)
-- [ ] Student was offered the newsletter subscription
-- [ ] Student saw the full toolkit table
-- [ ] Student knows they can use these skills on their own projects
-- [ ] Student feels ready and empowered to continue
+- [ ] Студент чувствует себя празднично и достижимо
+- [ ] Студент может вспомнить, чему научился на каждом уроке
+- [ ] Студент услышал о предстоящих функциях (Навыки, MCP, Браузер)
+- [ ] Студент знает о Модуле 2 (Vibe Coding / Викторина кофейной личности)
+- [ ] Студенту предложили подписку на рассылку
+- [ ] Студент увидел полную таблицу набора инструментов
+- [ ] Студент знает, что может использовать эти навыки в своих проектах
+- [ ] Студент чувствует себя готовым и уполномоченным продолжить

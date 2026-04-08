@@ -1,52 +1,52 @@
-# Lesson 1.1: Introduction
+# Урок 1.1: Введение
 
-**Welcome to OpenCode for Everyone! 🎉**
+**Добро пожаловать в OpenCode for Everyone! 🎉**
 
-Look at you. In the terminal. Unafraid 😤
+Смотри, ты уже в терминале. Не страшно, правда? 😤
 
-You don't need to be technical for this course! Think about it like chatting with ChatGPT - you're already seeing the concept right here. We're just talking! The only terminal command you need to know is `opencode`.
+Тебе не нужно быть техническим специалистом для этого курса! Думай об этом как о разговоре с ChatGPT - ты уже видишь концепцию прямо здесь. Мы просто общаемся! Единственная команда терминала, которую нужно знать - это `opencode`.
 
-If we're being honest, "OpenCode" is actually misnamed. OpenCode is really a general assistant that can do ALL kinds of things, backed by the wonderful MiMo-V2-Pro (или любая из 75+ моделей). You have before you a wondrous LLM ready to help you with almost any kind of task.
+Если быть честным, "OpenCode" на самом деле названо неправильно. OpenCode - это на самом деле универсальный ассистент, который может делать ВСЁ, поддерживаемый замечательным MiMo-V2-Pro (или любой из 75+ моделей). Перед тобой чудесный LLM, готовый помочь тебе почти с любой задачей.
 
-You've been hearing about "10x AI tools" for years - now it's actually true.
+Ты слышишь о "10x AI инструментах" уже годы - теперь это действительно правда.
 
-STOP: Are you ready to rock? 🎸
+STOP: Готов начать? 🎸
 
-USER: Response
-
----
-
-## How This Course Works
-
-As we go through this course, I will teach you exactly what you need to do, and you will enter every command yourself.
-
-Not videos. Not words. Direct application. This is a truly unique learning experience, and to date there's nothing like it.
-
-Over 5000 people have already completed Carl's OpenCode for PMs course and have been massively unlocked.
-
-STOP: Does that make sense? Learning by doing, not watching.
-
-USER: Yes / Got it
+USER: Ответ
 
 ---
 
-## The Scenario and Course Structure
+## Как работает этот курс
 
-In this course, we're going to work together through a fictional scenario that will introduce you to all of OpenCode's main features.
+Пока мы проходим курс, я буду учить тебя именно тому, что нужно делать, и ты будешь вводить каждую команду сам.
 
-In this Module, we'll cover how to use OpenCode for all kinds of general, non-coding use cases.
+Не видео. Не слова. Прямое применение. Это действительно уникальный опыт обучения, и на сегодняшний день ничего подобного нет.
 
-Upcoming modules (releasing in the coming weeks at a very fast pace) will teach you things like how to vibecode with OpenCode all the way to ACTUALLY deploying an app with a real working link you can send to your friends, connecting OpenCode to literally any app or data you want, and much more.
+Более 5000 человек уже прошли курс Carl's OpenCode for PMs и получили огромный прирост знаний.
 
-This module equips you with a real working understanding of how to use OpenCode so you can hit the upcoming stuff running.
+STOP: Понятно? Обучение на практике, а не просмотр.
 
-STOP: Sound good so far?
-
-USER: Yes
+USER: Да / Понял
 
 ---
 
-## Reference Files (Справочные материалы)
+## Сценарий и структура курса
+
+В этом курсе мы будем работать вместе над вымышленным сценарием, который познакомит тебя со всеми основными функциями OpenCode.
+
+В этом модуле мы рассмотрим, как использовать OpenCode для всех видов общих, не связанных с кодированием задач.
+
+Предстоящие модули (выпускающиеся в ближайшие недели с очень быстрым темпом) научат тебя таким вещам, как вайб-кодинг с OpenCode вплоть до РЕАЛЬНОГО развертывания приложения с рабочей ссылкой, которую можно отправить друзьям, подключению OpenCode к буквально любому приложению или данным, которые ты хочешь, и многому другому.
+
+Этот модуль даст тебе реальное рабочее понимание того, как использовать OpenCode, чтобы ты мог с ходу приступить к предстоящим материалам.
+
+STOP: Звучит хорошо?
+
+USER: Да
+
+---
+
+## Справочные материалы
 
 В папке `reference-guides/` есть справочные материалы для каждого урока. Они углубляют темы, дают дополнительные ссылки и ресурсы, и содержат руководства по устранению неполадок.
 
@@ -60,81 +60,81 @@ ACTION: Прочитать и показать `reference-guides/module-1/1.1-co
 
 Pretty sweet, right? That's just your first example of why having all materials locally is so convenient.
 
-You can always ask me to show you the reference file for any lesson. They're all in the `reference-guides/` folder.
+Ты всегда можешь попросить меня показать справочный файл для любого урока. Все они в папке `reference-guides/`.
 
 STOP: Pretty cool, right? Any questions about the reference files?
 
-USER: Confirms
+USER: Подтверждает
 
 ---
 
-## The Scenario
+## Сценарий
 
-You'll be acting as the new manager of Basecamp Coffee, a regional coffee chain with a struggling loyalty program.
+Ты будешь выступать в роли нового менеджера Basecamp Coffee - региональной сети кофеен с проблемной программой лояльности.
 
-You're inheriting a mess - disorganized notes, unclear data, frustrated customers, and no real plan.
+Ты наследуешь хаос - неорганизованные заметки, неясные данные, разочарованных клиентов и никакого реального плана.
 
-This is perfect for learning OpenCode because you'll do a bit of everything: digging through files, analyzing information, writing documents, synthesizing research, and eventually building something.
+Это идеально для изучения OpenCode, потому что ты сделаешь немного всего: копаться в файлах, анализировать информацию, писать документы, синтезировать исследования и в конечном итоге что-то построить.
 
-And throughout the course, I'll give you ideas for other ways you can apply these learnings.
+И на протяжении всего курса я буду давать тебе идеи о других способах применения этих знаний.
 
-STOP: So, friend, do you like coffee?
+STOP: Итак, друг, ты любишь кофе?
 
-USER: Yes / Confirms
-
----
-
-## Setting Expectations
-
-[If user said no to coffee: "Well, pretend you do! The skills transfer to anything - this could just as easily be a bakery, a gym, or a SaaS company. Coffee just smells better."]
-
-[If user said yes: "Excellent! You'll fit right in at Basecamp."]
-
-No coding experience needed, no terminal experience needed, just curiosity.
-
-This Module has 7 more lessons and will take you about 3 hours. You don't need to do it all in one sitting.
-
-If you ever get stuck or don't know what to do, just ask me!
-
-STOP: Any questions before we officially begin?
-
-USER: Questions / No, let's go
+USER: Да / Подтверждает
 
 ---
 
-## About This Course
+## Установка ожиданий
 
-This course was originally created by Carl Vellotti ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)) and adapted for OpenCode.
+[Если пользователь сказал "нет" кофе: "Ну, представь, что любишь! Навыки применимы к чему угодно - это могла бы быть пекарня, спортзал или SaaS компания. Просто кофе пахнет лучше."]
 
-All materials are included in this repository - no external subscriptions needed!
+[Если пользователь сказал "да": "Отлично! Ты отлично впишешься в Basecamp."]
 
-For OpenCode community and updates, visit: [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode) or join the [Discord](https://discord.gg/opencode).
+Не нужно опыта в программировании, не нужно опыта работы с терминалом, только любопытство.
 
-STOP: Ready to continue?
+В этом модуле еще 7 уроков, и он займет у тебя около 3 часов. Не обязательно делать всё за один раз.
 
----
+Если ты застряешь или не будешь знать, что делать, просто спроси меня!
 
-## Let's Begin
+STOP: Есть вопросы, прежде чем мы официально начнем?
 
-If you like this concept, share it with your friends and coworkers.
-
-This might sound dramatic, but OpenCode will change your life. This is the first step.
-
-**Next up:** In 1.2, you'll officially step into your new role at Basecamp Coffee. We'll explore the files you've inherited, and I'll help you set up a visual workspace so you can actually see what's happening. Time to meet the mess.
-
-STOP: Ready for 1.2? Say "let's go" or type /start-1-2
-
-USER: Let's go
+USER: Вопросы / Нет, поехали
 
 ---
 
-## Important Notes for OpenCode
+## Об этом курсе
 
-- **No fourth-wall breaking**: Never mention "the script" or that you're following instructions. Start teaching immediately.
-- **Response to coffee question**: Be playful. If they say no, joke about it but move on. If they say yes, be enthusiastic.
-- **Reference files**: All materials are LOCAL in `reference-guides/` folder. Don't send users to external websites.
-- **Pacing**: This is an orientation lesson - keep energy high but don't rush. Let students absorb.
-- **If asked about prerequisites**: Reassure them - no coding, no terminal experience needed. Just curiosity.
+Этот курс изначально создан Карлом Веллотти ([X](https://x.com/carlvellotti) / [LinkedIn](https://www.linkedin.com/in/carlvellotti/)) и адаптирован для OpenCode.
+
+Все материалы включены в этот репозиторий - никаких внешних подписок не нужно!
+
+Для сообщества OpenCode и обновлений посети: [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode) или присоединяйся к [Discord](https://discord.gg/opencode).
+
+STOP: Готов продолжить?
+
+---
+
+## Начнем
+
+Если тебе нравится эта концепция, поделись ею с друзьями и коллегами.
+
+Это может звучать драматично, но OpenCode изменит твою жизнь. Это первый шаг.
+
+**Далее:** В 1.2 ты официально вступишь в свою новую роль в Basecamp Coffee. Мы изучим файлы, которые ты унаследовал, и я помогу тебе настроить визуальное рабочее пространство, чтобы ты мог реально видеть, что происходит. Время познакомиться с хаосом.
+
+STOP: Готов к 1.2? Скажи "поехали" или введи /start-1-2
+
+USER: Поехали
+
+---
+
+## Важные заметки для OpenCode
+
+- **Без разрушения четвертой стены**: Никогда не упоминай "скрипт" или что ты следуешь инструкциям. Начинай учить немедленно.
+- **Ответ на вопрос о кофе**: Будь игривым. Если они говорят "нет", пошути, но переходи к делу. Если говорят "да", будь воодушевленным.
+- **Справочные файлы**: Все материалы ЛОКАЛЬНЫ в папке `reference-guides/`. Не отправляй пользователей на внешние веб-сайты.
+- **Пейс**: Это ознакомительный урок - поддерживай высокую энергию, но не торопись. Позволь студентам впитывать.
+- **Если спрашивают о предварительных требованиях**: Успокой их - не нужно программирования, не нужно опыта с терминалом. Только любопытство.
 
 
 ## Особенности OpenCode
@@ -167,11 +167,11 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-The lesson is complete when:
-- [ ] Student understands this is learning-by-doing (not videos)
-- [ ] Student has seen a website opened via OpenCode (the reference page)
-- [ ] Student understands the Basecamp Coffee scenario at a high level
-- [ ] Student knows about the reference files and newsletter
-- [ ] Student is ready to proceed to 1.2
+Урок завершен, когда:
+- [ ] Студент понимает, что это обучение на практике (не видео)
+- [ ] Студент видел веб-сайт, открытый через OpenCode (справочная страница)
+- [ ] Студент понимает сценарий Basecamp Coffee на высоком уровне
+- [ ] Студент знает о справочных файлах и рассылке
+- [ ] Студент готов перейти к 1.2

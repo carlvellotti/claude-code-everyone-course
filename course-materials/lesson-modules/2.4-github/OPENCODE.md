@@ -1,160 +1,160 @@
 # 2.4 GitHub
 
-Right now, your quiz only exists on your computer.
+Сейчас твоя викторина существует только на твоем компьютере.
 
-If your laptop stops working or you delete the files, it's gone. And we can't put it on the internet yet.
+Если твой ноутбук перестанет работать или ты удалишь файлы, она исчезнет. И мы не можем поместить её в интернет пока.
 
-We need to save it to the cloud first. That's what GitHub is for.
+Нам нужно сначала сохранить её в облако. Для этого нужен GitHub.
 
-STOP: Have you used GitHub before?
+STOP: Ты раньше использовал GitHub?
 
-USER: Yes / No / A little
-
----
-
-GitHub is like Google Drive, but for code.
-
-It saves your code to the cloud, keeps a history of every change, and lets you undo mistakes.
-
-It's also how we'll get your quiz onto the internet - the service we use needs to grab your code from somewhere.
-
-Your project on GitHub is called a "repository" (or "repo" for short). You'll hear developers use that word a lot.
-
-STOP: Make sense?
-
-USER: Yes
+USER: Да / Нет / Немного
 
 ---
 
-First, you need a GitHub account.
+GitHub - это как Google Drive, но для кода.
 
-STOP: Do you have a GitHub account? If not, I can open the signup page for you.
+Он сохраняет твой код в облако, хранит историю каждого изменения и позволяет отменять ошибки.
 
-USER: I have one / Open it for me / I'll do it myself
+Это также способ, которым мы поместим твою викторину в интернет - сервис, который мы используем, должен получить твой код откуда-то.
 
-ACTION: If they want it opened, run: `open https://github.com` (or bash open on Mac)
+Твой проект на GitHub называется "repository" (или "repo" для краткости). Ты будешь слышать, как разработчики используют это слово часто.
 
-STOP: Let me know when you have an account and are ready to continue.
+STOP: Понятно?
 
-USER: Ready
+USER: Да
 
 ---
 
-Now I need to connect to your GitHub account so I can save your code there.
+Сначала тебе нужен аккаунт GitHub.
 
-I'm going to download some tools that let me work with GitHub directly - so you never have to type scary commands.
+STOP: У тебя есть аккаунт GitHub? Если нет, я могу открыть страницу регистрации для тебя.
 
-This might open your browser to log in - just follow the prompts and come back when it's done.
+USER: У меня есть / Открой для меня / Я сделаю сам
 
-ACTION: Set up GitHub CLI:
+ACTION: Если они хотят открыть, запустить: `open https://github.com` (или bash open на Mac)
 
-1. Check if already installed:
+STOP: Дай мне знать, когда у тебя будет аккаунт и будешь готов продолжить.
+
+USER: Готов
+
+---
+
+Теперь мне нужно подключиться к твоему аккаунту GitHub, чтобы я мог сохранить твой код там.
+
+Я загружу некоторые инструменты, которые позволяют мне работать с GitHub напрямую - чтобы тебе никогда не приходилось вводить страшные команды.
+
+Это может открыть твой браузер для входа - просто следуй подсказкам и вернись, когда будет сделано.
+
+ACTION: Настроить GitHub CLI:
+
+1. Проверить, установлен ли уже:
 ```
 gh --version
 ```
 
-2. If NOT installed:
-   - On Mac: `brew install gh`
-   - If brew fails or not on Mac: Tell user to go to https://cli.github.com and download manually, then come back
+2. Если НЕ установлен:
+   - На Mac: `brew install gh`
+   - Если brew не работает или не на Mac: Сказать пользователю перейти на https://cli.github.com и скачать вручную, затем вернуться
 
-3. Once installed, authenticate (run in background to avoid blocking):
+3. Как только установлен, аутентифицировать (запустить в фоне, чтобы избежать блокировки):
 ```bash
 gh auth login --web --git-protocol https > /tmp/gh-auth.log 2>&1 &
 sleep 2
 cat /tmp/gh-auth.log
 ```
 
-4. Read the output to get the one-time code, then open the device auth page:
+4. Прочитать вывод, чтобы получить одноразовый код, затем открыть страницу аутентификации устройства:
 ```bash
 open https://github.com/login/device
 ```
 
-5. Tell user: "I just opened a page in your browser. Enter this code: [CODE FROM OUTPUT]. Click Authorize, then let me know when you're done."
+5. Сказать пользователю: "Я только что открыл страницу в твоем браузере. Введи этот код: [КОД ИЗ ВЫВОДА]. Нажми Authorize, затем дай мне знать, когда закончишь."
 
-STOP: Let me know when you've authorized it.
+STOP: Дай мне знать, когда авторизуешься.
 
-USER: Done
+USER: Готово
 
-ACTION: Verify authentication worked:
+ACTION: Проверить, что аутентификация сработала:
 ```bash
 gh auth status
 ```
 
-If successful, continue. If not authenticated, troubleshoot:
-- They may not have completed the browser flow - ask them to try again
-- The background process may have timed out - run the auth command again
+Если успешно, продолжить. Если не аутентифицирован, устранить неполадки:
+- Они могли не завершить поток браузера - попросить их попробовать снова
+- Фоновый процесс мог истечь - запустить команду аутентификации снова
 
 ---
 
-Now let's save your code to GitHub. I'll make it private by default so only you can see it.
+Теперь давай сохраним твой код в GitHub. Я сделаю его приватным по умолчанию, чтобы только ты мог его видеть.
 
-ACTION: Run the following commands in order:
+ACTION: Запустить следующие команды по порядку:
 
-1. Navigate to the quiz-project folder:
+1. Перейти в папку quiz-project:
 ```
-cd [path to quiz-project]
+cd [путь к quiz-project]
 ```
 
-2. Initialize git (if not already done):
+2. Инициализировать git (если еще не сделано):
 ```
 git init
 ```
 
-3. Add all files:
+3. Добавить все файлы:
 ```
 git add .
 ```
 
-4. Create initial commit:
+4. Создать начальный коммит:
 ```
 git commit -m "Initial commit - coffee personality quiz"
 ```
 
-5. Create GitHub repo and push:
+5. Создать репозиторий GitHub и отправить:
 ```
 gh repo create quiz-project --private --source=. --push
 ```
 
-Done! Your code is now saved to GitHub. Developers call this "pushing" your code - you're pushing it up to the cloud.
+Готово! Твой код теперь сохранен в GitHub. Разработчики называют это "отправкой" своего кода - ты отправляешь его в облако.
 
-Let me open it for you so you can see it.
+Давай я открою его для тебя, чтобы ты мог его увидеть.
 
-ACTION: Get the repo URL and open it:
+ACTION: Получить URL репозитория и открыть его:
 ```
 gh repo view --web
 ```
-(This opens the GitHub repo in your browser)
+(Это откроет репозиторий GitHub в твоем браузере)
 
-STOP: Do you see your project on GitHub?
+STOP: Ты видишь свой проект на GitHub?
 
-USER: Yes!
-
----
-
-Your quiz is now backed up and ready to go live.
-
-From now on, whenever you want to save your work, just ask me to "push to GitHub" and I'll save your latest changes.
-
-There's a lot more to GitHub - collaboration, version history, branching - and there will be a full module on it in the future. But for now, the important thing is: your code lives somewhere it can be accessed to put on the internet.
-
-That's exactly what we're doing next.
-
-**Next up:** In 2.5, we put your quiz on the internet! We're going to connect GitHub to a service called Vercel, and you'll get a real URL you can share with anyone. This is the finish line.
-
-STOP: Ready to go live? Say "let's go" or type /start-2-5
-
-USER: Let's go
+USER: Да!
 
 ---
 
-## Important Notes for OpenCode
+Твоя викторина теперь запасена и готова к запуску в интернет.
 
-- GitHub CLI (gh) is the easiest way to handle auth - avoid asking users to set up SSH keys
-- The `--private` flag is important - users don't want their quiz code public by default
-- If they already have a repo named quiz-project, gh will error - help them pick a different name
-- The `gh repo view --web` command is much cleaner than trying to construct the URL
-- If brew isn't available, cli.github.com has installers for all platforms
-- Next.js projects already have a .gitignore so node_modules won't be committed
+С этого момента, когда ты хочешь сохранить свою работу, просто попроси меня "отправить в GitHub" и я сохраню твои последние изменения.
+
+В GitHub гораздо больше - совместная работа, история версий, ветвление - и будет полный модуль об этом в будущем. Но сейчас важно: твой код живет где-то, где он может быть доступен для помещения в интернет.
+
+Это именно то, что мы делаем дальше.
+
+**Далее:** В 2.5 мы поместим твою викторину в интернет! Мы подключим GitHub к сервису под названием Vercel, и ты получишь реальный URL, которым сможешь поделиться с кем угодно. Это финишная черта.
+
+STOP: Готов запуститься? Скажи "поехали" или введи /start-2-5
+
+USER: Поехали
+
+---
+
+## Важные заметки для OpenCode
+
+- GitHub CLI (gh) - самый простой способ обработки аутентификации - избегай просьбы пользователям настраивать SSH ключи
+- Флаг `--private` важен - пользователи не хотят, чтобы их код викторины был публичным по умолчанию
+- Если у них уже есть репозиторий с именем quiz-project, gh выдаст ошибку - помоги им выбрать другое имя
+- Команда `gh repo view --web` намного чище, чем попытка сконструировать URL
+- Если brew недоступен, cli.github.com имеет инсталляторы для всех платформ
+- Проекты Next.js уже имеют .gitignore, поэтому node_modules не будут закоммичены
 
 
 ## Особенности OpenCode
@@ -187,10 +187,10 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- User has a GitHub account
-- GitHub CLI is installed and authenticated
-- Code is committed and pushed to a private GitHub repository
-- User can see their repo on github.com
-- User understands they can ask to "push to GitHub" to save future changes
+- У пользователя есть аккаунт GitHub
+- GitHub CLI установлен и аутентифицирован
+- Код закоммичен и отправлен в приватный репозиторий GitHub
+- Пользователь может видеть свой репозиторий на github.com
+- Пользователь понимает, что может просить "отправить в GitHub" для сохранения будущих изменений

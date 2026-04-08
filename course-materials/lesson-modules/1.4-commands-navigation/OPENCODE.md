@@ -1,182 +1,182 @@
-# Lesson 1.4: Commands & Navigation
+# Урок 1.4: Команды и навигация
 
-Before we do the heavy analysis, let's learn to move fast.
+Прежде чем мы займемся тяжелым анализом, давай научимся двигаться быстро.
 
-This lesson covers commands, shortcuts, and some power user features.
+Этот урок охватывает команды, горячие клавиши и некоторые функции для продвинутых пользователей.
 
-STOP: Ready to become a power user?
+STOP: Готов стать power-пользователем?
 
-USER: Yes
-
----
-
-## Essential Slash Commands
-
-Let me show you the essential slash commands.
-
-Just type `/` to see them all. Here are the key ones:
-
-- **/model** - switch between OpenCode model (75+ провайдеров)s (Sonnet is fast, Opus is smart)
-- **/context** - see what files Claude is aware of
-- **/clear** - start fresh conversation
-- **/compact** - compress the conversation to save context
-- **/usage** - see how much you've used
-- **/resume** - pick up where you left off in a previous session
-
-There's a complete list in the reference files.
-
-STOP: Type `/` to see the command menu. See them?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Custom Commands
+## Основные Slash команды
 
-Those are the built-in commands. But here's a secret: you've been using CUSTOM commands this whole time.
+Давай я покажу тебе основные slash команды.
 
-Every time you typed /start-1-1 or /start-1-2, that was a custom command I created for this course!
+Просто введи `/` чтобы увидеть все. Вот ключевые из них:
 
-Custom commands live in `.claude/commands/` - take a look in that folder if you're curious.
+- **/model** - переключение между моделями OpenCode (75+ провайдеров) (Sonnet быстрый, Opus умный)
+- **/context** - увидеть, какие файлы знает Claude
+- **/clear** - начать новый разговор
+- **/compact** - сжать разговор для экономии контекста
+- **/usage** - посмотреть, сколько ты использовал
+- **/resume** - продолжить с того места, где остановился в предыдущей сессии
 
-It's basically the same concept as the templates we used earlier - a file with instructions that gets loaded when you call it. A shortcut for things you do repeatedly.
+Полный список есть в справочных файлах.
 
-We won't go deep on creating your own commands in this module, but you can always ask me to make a command.
+STOP: Введи `/` чтобы увидеть меню команд. Видишь их?
 
-One important thing to know: if you add new commands, you need to exit and restart OpenCode for them to show up.
-
-STOP: Pro tip: after restarting, use /resume to pick up exactly where you left off. That way you don't lose your conversation. Make sense?
-
-USER: Yes
-
----
-
-## Escape to Interrupt
-
-Here's another one - Escape to interrupt.
-
-Very helpful if you change your mind or see I'm doing something wrong.
-
-Let's try it. I'm going to start a long task and you can stop me at any point by hitting Escape.
-
-You'll have to tell me you did it since it will stop me.
-
-ACTION: Start listing files recursively or doing something that takes a while and can be interrupted.
-
-STOP: Hit Escape to interrupt me, then tell me you did it.
-
-USER: Interrupted you
-
-Perfect! You're in control. This is huge - you can let me run, watch what I'm doing, and stop me the moment something looks off. Much better than waiting for me to finish a response you didn't want.
-
-STOP: This will save you so much time once you get used to it. Ready for the next trick?
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Rewind Feature
+## Пользовательские команды
 
-The rewind feature: Esc×2 to undo recent actions.
+Это встроенные команды. Но вот секрет: ты все время использовал ПОЛЬЗОВАТЕЛЬСКИЕ команды.
 
-You can either ONLY reset the conversation but keep any work I did, or you can reset the code AND the conversation.
+Каждый раз, когда ты вводил /start-1-1 или /start-1-2, это была пользовательская команда, которую я создал для этого курса!
 
-It's like time travel! Helpful if you want to explore a path and have the option to go back.
+Пользовательские команды живут в `.claude/commands/` - загляни в эту папку, если интересно.
 
-STOP: Try it now - hit Escape twice. What do you see?
+Это по сути та же концепция, что и шаблоны, которые мы использовали ранее - файл с инструкциями, который загружается при вызове. Ярлык для вещей, которые ты делаешь повторно.
 
-USER: Describes the rewind options
+Мы не будем углубляться в создание собственных команд в этом модуле, но ты всегда можешь попросить меня создать команду.
 
-Exactly! Next time you get here, tell me you've already done this.
+Одна важная вещь: если ты добавишь новые команды, тебе нужно перезапустить OpenCode, чтобы они появились.
 
-STOP: Rewind is your safety net. Want to try something risky? Go for it - you can always rewind. It's like having unlimited undo for AI work. Got it?
+STOP: Совет профи: после перезапуска используй /resume чтобы продолжить ровно с того места, где остановился. Так ты не потеряешь свой разговор. Понятно?
 
-USER: Yes
-
----
-
-## Think Keywords
-
-You can help me know how hard I should think with "think" keywords.
-
-- "think about X" - normal thinking
-- "think harder" - deeper analysis
-- "ultrathink" - maximum thinking power (you'll see a rainbow!)
-
-Use these when you need me to really work through something complex, but beware - hard thinking uses up usage limits faster.
-
-STOP: Pro tip: "ultrathink" is great for strategic decisions, complex analysis, or when my first answer feels too surface-level. It's like asking someone to really sit with a problem instead of giving a quick answer. Type it to see the rainbow!! Then let me know when you're ready to continue.
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Three Input Modes
+## Прерывание с помощью Escape
 
-Quick note on input modes. OpenCode has three:
+Вот еще одна вещь - Escape для прерывания.
 
-- **Edit mode** is the default. I ask permission before making changes. Safe, but slower.
-- **Auto-accept mode** means I just do it. Faster, but you're trusting me more.
-- **Plan mode** means I create a plan first, you review it, then I execute.
+Очень полезно, если ты передумал или видишь, что я делаю что-то неправильное.
 
-You switch between them with Shift+Tab.
+Давай попробуем. Я начну длинную задачу, и ты сможешь остановить меня в любой момент, нажав Escape.
 
-For what we're doing, Edit or Auto mode is fine. Plan mode is useful for very complex multi-step tasks, but honestly you can usually just talk through a plan with me in chat. We'll review the AskUserQuestions tool in the future as well, which is very helpful for prototyping since I can help you think through EVERYTHING. But not needed for the kinds of work we're doing here.
+Тебе придется сказать мне, что ты это сделал, потому что это остановит меня.
 
-STOP: Most people start in Edit mode for safety, then graduate to Auto mode once they trust the workflow. You'll find your comfort level. Ready for the secret power mode?
+ACTION: Начать рекурсивный список файлов или делать что-то, что занимает время и может быть прервано.
 
-USER: Yes
+STOP: Нажми Escape чтобы прервать меня, затем скажи мне, что ты это сделал.
 
----
+USER: Прервал тебя
 
-## The Grand Finale: Dangerously Skip Permissions
+Отлично! Ты под контролем. Это огромно - ты можешь позволить мне работать, наблюдать за тем, что я делаю, и остановить меня в тот момент, когда что-то покажется неправильным. Гораздо лучше, чем ждать, пока я закончу ответ, который ты не хотел.
 
-Okay, now for the grand finale. The secret power mode.
+STOP: Это сэкономит тебе столько времени, как только ты привыкнешь. Готов к следующему трюку?
 
-Instead of starting OpenCode with just `opencode`, you can run: `claude --dangerously-skip-permissions`
-
-This launches OpenCode without ANY permission prompts. I just do everything. No confirmation dialogs, no asking for approval.
-
-It's called "dangerously" for a reason - you're giving me full control. But when you trust what's happening, it's SO much faster.
-
-Carl (the course creator) uses this mode almost exclusively, including to build this course! Once you're comfortable with OpenCode, you probably will too. See the reference guide for some tips to keep this safe.
-
-STOP: Feeling powerful?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Wrap-up
+## Функция отката
 
-**Meta skills you just learned:**
+Функция отката: Esc×2 чтобы отменить последние действия.
 
-1. **Slash commands:** Quick controls for models, context, clearing, resuming
-2. **Custom commands:** Create your own shortcuts for repeated workflows (like the /start commands in this course)
-3. **Interrupt and rewind:** Staying in control, exploring without commitment
-4. **Think keywords:** Getting deeper analysis when you need it
-5. **Dangerously skip permissions:** Full speed mode for when you trust the process
+Ты можешь либо ТОЛЬКО сбросить разговор, но сохранить любую работу, которую я сделал, либо ты можешь сбросить код И разговор.
 
-**Where else this applies:**
-- Any time you're working fast and trust Claude - skip the permission prompts
-- When you need deeper thinking on a complex problem - use think keywords
-- When something goes wrong - rewind and try a different approach
-- When you want to start fresh - /clear and begin again
+Это как путешествие во времени! Полезно, если ты хочешь исследовать путь и иметь возможность вернуться.
 
-**Next up:** In 1.5, things get wild. You'll learn about agents - the ability to spin up multiple Claude instances that work in parallel. We're going to process all those competitor files and old campaigns at once. This is where OpenCode starts feeling like a superpower.
+STOP: Попробуй сейчас - нажми Escape дважды. Что ты видишь?
 
-STOP: Ready for 1.5?
+USER: Описывает опции отката
 
-USER: Yes / /start-1-5
+Именно! В следующий раз, когда попадешь сюда, скажи мне, что ты уже это делал.
+
+STOP: Откат - это твоя страховка. Хочешь попробовать что-то рискованное? Делай - ты всегда можешь откатиться. Это как иметь неограниченное.undo для AI работы. Понял?
+
+USER: Да
 
 ---
 
-## Important Notes for OpenCode
+## Think ключевые слова
 
-- **Escape demo**: Start something interruptible so the student can actually practice hitting Escape
-- **Rewind demo**: Let them try Esc×2 and see the options
-- **Don't oversell plan mode**: We've intentionally downplayed it - it's useful but not critical for this level of work
-- **Dangerously skip permissions**: Emphasize it's for trusted workflows, not for everything
+Ты можешь помочь мне понять, насколько глубоко я должен думать, с помощью "think" ключевых слов.
+
+- "think about X" - нормальное мышление
+- "think harder" - более глубокий анализ
+- "ultrathink" - максимальная мощность мышления (ты увидишь радугу!)
+
+Используй эти, когда тебе нужно, чтобы я действительно проработал что-то сложное, но будь осторожен - глубокое мышление быстрее расходует лимиты использования.
+
+STOP: Совет профи: "ultrathink" отлично подходит для стратегических решений, сложного анализа или когда мой первый ответ кажется слишком поверхностным. Это как попросить кого-то действительно задуматься над проблемой, вместо того чтобы дать быстрый ответ. Введи его чтобы увидеть радугу!! Затем дай мне знать, когда будешь готов продолжить.
+
+USER: Да
+
+---
+
+## Три режима ввода
+
+Быстрая заметка о режимах ввода. OpenCode имеет три:
+
+- **Edit mode** - это по умолчанию. Я спрашиваю разрешение перед внесением изменений. Безопасно, но медленнее.
+- **Auto-accept mode** означает, что я просто делаю. Быстрее, но ты больше доверяешь мне.
+- **Plan mode** означает, что я сначала создаю план, ты его проверяешь, затем я выполняю.
+
+Ты переключаешься между ними с помощью Shift+Tab.
+
+Для того, что мы делаем, Edit или Auto mode подходит. Plan mode полезен для очень сложных многошаговых задач, но, честно говоря, ты обычно можешь просто обсудить план со мной в чате. Мы также рассмотрим инструмент AskUserQuestions в будущем, который очень полезен для прототипирования, поскольку я могу помочь тебе продумать ВСЁ. Но это не нужно для того типа работы, который мы здесь делаем.
+
+STOP: Большинство людей начинают в Edit mode для безопасности, затем переходят в Auto mode, как только доверяют рабочему процессу. Ты найдешь свой уровень комфорта. Готов к секретному режиму мощности?
+
+USER: Да
+
+---
+
+## Финал: Dangerously Skip Permissions
+
+Хорошо, теперь финал. Секретный режим мощности.
+
+Вместо того чтобы запускать OpenCode просто с помощью `opencode`, ты можешь запустить: `claude --dangerously-skip-permissions`
+
+Это запускает OpenCode БЕЗ каких-либо запросов разрешений. Я просто делаю всё. Никаких диалогов подтверждения, никаких запросов на одобрение.
+
+Это называется "опасно" не просто так - ты даешь мне полный контроль. Но когда ты доверяешь тому, что происходит, это НАМНОГО быстрее.
+
+Карл (создатель курса) использует этот режим почти исключительно, включая создание этого курса! Как только ты почувствуешь себя комфортно с OpenCode, ты, вероятно, тоже будешь так делать. Смотри справочное руководство для некоторых советов, как оставить это безопасным.
+
+STOP: Чувствуешь мощь?
+
+USER: Да
+
+---
+
+## Завершение
+
+**Мета-навыки, которые ты только что выучил:**
+
+1. **Slash команды:** Быстрые управления для моделей, контекста, очистки, возобновления
+2. **Пользовательские команды:** Создавай свои собственные ярлыки для повторяющихся рабочих процессов (как команды /start в этом курсе)
+3. **Прерывание и откат:** Оставаться под контролем, исследовать без обязательств
+4. **Think ключевые слова:** Получать более глубокий анализ, когда он нужен
+5. **Dangerously skip permissions:** Режим полной скорости, когда ты доверяешь процессу
+
+**Где еще это применяется:**
+- В любое время, когда ты работаешь быстро и доверяешь Claude - пропускай запросы разрешений
+- Когда тебе нужно более глубокое мышление над сложной проблемой - используй think ключевые слова
+- Когда что-то идет не так - откатись и попробуй другой подход
+- Когда хочешь начать с чистого листа - /clear и начни заново
+
+**Далее:** В 1.5 всё становится интересным. Ты узнаешь об агентах - возможности запускать несколько экземпляров Claude, которые работают параллельно. Мы будем обрабатывать все эти файлы конкурентов и старые кампании одновременно. Именно здесь OpenCode начинает ощущаться как суперсила.
+
+STOP: Готов к 1.5?
+
+USER: Да / /start-1-5
+
+---
+
+## Важные заметки для OpenCode
+
+- **Демонстрация Escape**: Начни что-то прерываемое, чтобы студент мог практиковать нажатие Escape
+- **Демонстрация отката**: Позволь им попробовать Esc×2 и увидеть опции
+- **Не продавай плановый режим слишком сильно**: Мы намеренно его занизили - он полезен, но не критичен для этого уровня работы
+- **Dangerously skip permissions**: Подчеркни, что это для доверенных рабочих процессов, а не для всего
 
 
 ## Особенности OpenCode
@@ -209,13 +209,13 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- [ ] Student knows the key slash commands (/model, /clear, /compact, /resume)
-- [ ] Student understands custom commands exist in .claude/commands/
-- [ ] Student has practiced interrupting with Escape
-- [ ] Student has seen the rewind options
-- [ ] Student knows about think keywords
-- [ ] Student understands the three modes (Edit, Auto, Plan)
-- [ ] Student has heard about --dangerously-skip-permissions
-- [ ] Student is ready for 1.5
+- [ ] Студент знает ключевые slash команды (/model, /clear, /compact, /resume)
+- [ ] Студент понимает, что пользовательские команды существуют в .claude/commands/
+- [ ] Студент практиковал прерывание с помощью Escape
+- [ ] Студент видел опции отката
+- [ ] Студент знает о think ключевых словах
+- [ ] Студент понимает три режима (Edit, Auto, Plan)
+- [ ] Студент слышал о --dangerously-skip-permissions
+- [ ] Студент готов к 1.5

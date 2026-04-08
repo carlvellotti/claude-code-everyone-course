@@ -1,230 +1,230 @@
-# 2.2 Plan
+# 2.2 План
 
-Before we build, we need to get clear on what we're building.
+Прежде чем мы строим, нам нужно понять, что мы строим.
 
-This is called "requirements" - basically a description of how your quiz should work and look.
+Это называется "требования" - по сути, описание того, как должна работать и выглядеть твоя викторина.
 
-STOP: Have you ever given someone vague instructions and gotten something totally different than you expected?
+STOP: Ты когда-нибудь давал кому-то расплывчатые инструкции и получал что-то совершенно не то, что ожидал?
 
-USER: Yes / Definitely
-
----
-
-That's what happens when you skip requirements. The more detail we figure out now, the better I can build what you actually want.
-
-I'm going to interview you about your quiz. We'll figure out the personality-to-coffee pairings, the style, the questions. Then I'll save it all to a file so we have a clear spec to build from.
-
-STOP: Think of this like briefing a contractor before they start work. The clearer the brief, the better the result. Ready to start?
-
-USER: Yes
+USER: Да / Определенно
 
 ---
 
-I'm going to use a tool called AskUserQuestion - it gives you nice buttons to pick from instead of typing. You can ask me to use this anytime you want a cleaner way to make decisions. Just say "ask me" or "give me options."
+Именно это происходит, когда ты пропускаешь требования. Чем больше деталей мы выясним сейчас, тем лучше я смогу построить то, что ты на самом деле хочешь.
 
-Let's try it now.
+Я проведу с тобой интервью о твоей викторине. Мы выясним пары личностей и кофе, стиль, вопросы. Затем я сохраню всё в файл, чтобы у нас была четкая спецификация для строительства.
 
-ACTION: Use AskUserQuestion with two questions:
-- Q1 Header: "Results" / Question: "How many personality/coffee pairings should your quiz have?" / Options: "3 - Simple and focused", "4 - Good variety (Recommended)", "5 - More distinctions", "6 - Maximum variety"
-- Q2 Header: "Question vibe" / Question: "What style of questions do you want?" / Options: "Fun pop culture (Harry Potter, Netflix, etc.)", "Lifestyle & preferences (travel, food, weekends)", "Abstract & quirky (colors, scenarios, hypotheticals)", "Mix of everything"
+STOP: Думай об этом как о briefing для подрядчика перед началом работы. Чем яснее бриф, тем лучше результат. Готов начать?
 
-USER: [Selects options]
-
-Great choices! Now let's pick your actual personality-to-coffee pairings.
+USER: Да
 
 ---
 
-Remember: the quiz recommends a COFFEE based on personality. So we need to decide which personalities map to which drinks.
+Я буду использовать инструмент под названием AskUserQuestion - он дает тебе красивые кнопки для выбора вместо печати. Ты можешь попросить меня использовать это в любое время, когда хочешь более чистый способ принимать решения. Просто скажи "спроси меня" или "дай мне варианты".
 
-Here are 10 pairing ideas. Pick [X] based on how many results you chose earlier. Just type the numbers, like "1, 4, 7":
+Давай попробуем сейчас.
 
-1. **Bold Adventurer** → Double Espresso - "You live for intensity"
-2. **Cozy Classic** → Medium Roast Drip - "Comfort in every cup"
-3. **Sweet Enthusiast** → Caramel Latte - "Life's too short for bitter"
-4. **Zen Minimalist** → Black Coffee, Single Origin - "Simple. Clean. Perfect."
-5. **Social Butterfly** → Cappuccino - "Coffee is better with company"
-6. **Night Owl** → Red Eye (coffee + espresso shot) - "Sleep is optional"
-7. **Health Nut** → Oat Milk Americano - "Wellness in every sip"
-8. **Artisan Snob** → Pour-Over, Single Origin - "You know what you like"
-9. **Practical Pragmatist** → Large Drip, Whatever's Fresh - "Just make it work"
-10. **Indulgent Treat** → Mocha with Whip - "Coffee is dessert"
+ACTION: Использовать AskUserQuestion с двумя вопросами:
+- Q1 Заголовок: "Результаты" / Вопрос: "Сколько пар личностей/кофе должна иметь твоя викторина?" / Варианты: "3 - Просто и сфокусировано", "4 - Хорошее разнообразие (Рекомендуется)", "5 - Больше различий", "6 - Максимальное разнообразие"
+- Q2 Заголовок: "Стиль вопросов" / Вопрос: "Какой стиль вопросов ты хочешь?" / Варианты: "Забавная поп-культура (Гарри Поттер, Netflix и т.д.)", "Стиль жизни и предпочтения (путешествия, еда, выходные)", "Абстрактный и странный (цвета, сценарии, гипотетические)", "Смешанный"
 
-STOP: Type the numbers you want (e.g., "1, 3, 5, 8")
+USER: [Выбирает варианты]
 
-USER: [Types numbers]
-
-ACTION: Note their selections for use in REQUIREMENTS.md
+Отличный выбор! Теперь давай выберем твои реальные пары личностей и кофе.
 
 ---
 
-Perfect! Now we need to figure out the "logic."
+Помни: викторина рекомендует КОФЕ на основе личности. Итак, нам нужно решить, какие личности соответствуют каким напиткам.
 
-Logic is the behind-the-scenes rules for how something works. If users do X, what happens? If they click this, what do they see? It's the "if this, then that" of your product.
+Вот 10 идей пар. Выбери [X] в зависимости от количества результатов, которое ты выбрал ранее. Просто введи числа, например "1, 4, 7":
 
-Every app, website, or tool has logic. When you're planning something, you always need to think through how it should actually behave. I can help you brainstorm options.
+1. **Смелый Исследователь** → Двойной Эспрессо - "Ты живешь ради интенсивности"
+2. **Уютная Классика** → Средняя Обжарка Дрип - "Комфорт в каждой чашке"
+3. **Сладкий Энтузиаст** → Карамельный Латте - "Жизнь слишком коротка для горького"
+4. **Дзен Минималист** → Черный кофе, Одиночное Происхождение - "Просто. Чисто. Идеально."
+5. **Социальная Бабочка** → Капучино - "Кофе лучше в компании"
+6. **Ночная Сова** → Красный Глаз (кофе + шот эспрессо) - "Сон опционален"
+7. **Здоровяк** → Американо с Овсяным Молоком - "Здоровье в каждом глотке"
+8. **Артист Сноб** → Пуровер, Одиночное Происхождение - "Ты знаешь, что нравится"
+9. **Практичный Прагматик** → Большой Дрип, Свежий что есть - "Просто пусть работает"
+10. **Избалованное Угощение** → Мокка со Взбитыми Сливками - "Кофе - это десерт"
 
-Here's how this quiz will work: each question has answers, and each answer maps to one of your personalities. At the end, we tally up which personality got picked most.
+STOP: Введи числа, которые ты хочешь (например, "1, 3, 5, 8")
 
-The question is: how do we show the result? Two options:
+USER: [Вводит числа]
 
-**Option A: Single recommendation** - "You're a Bold Adventurer! Try our Double Espresso."
-
-**Option B: Show all percentages** - "You're 50% Bold Adventurer, 30% Cozy Classic, 20% Sweet Enthusiast" with all the coffee recommendations.
-
-STOP: Which do you prefer - single recommendation (A) or show percentages (B)?
-
-USER: [Responds A or B]
-
-ACTION: Note their choice for REQUIREMENTS.md
-
-Great choice! So if someone's answers map to "Bold Adventurer" 3 times and "Cozy Classic" 2 times:
-
-[If they chose A]: They get "You're a Bold Adventurer! Your coffee: Double Espresso."
-
-[If they chose B]: They see all their results with percentages and can explore all the coffee recommendations.
-
-The questions just reveal which personality fits them best.
-
-STOP: Make sense?
-
-USER: Yes
+ACTION: Запомнить их выбор для использования в REQUIREMENTS.md
 
 ---
 
-Now for the fun part - how should it LOOK?
+Отлично! Теперь нам нужно выяснить "логику".
 
-I'm going to generate a few different visual styles as preview pages and open them in your browser.
+Логика - это правила за кулисами о том, как что-то работает. Если пользователи делают X, что происходит? Если они нажимают это, что они видят? Это "если это, то то" твоего продукта.
 
-STOP: Ready to see some style options?
+Каждое приложение, веб-сайт или инструмент имеет логику. Когда ты планируешь что-то, тебе всегда нужно продумать, как оно должно вести себя. Я могу помочь тебе набросать варианты.
 
-USER: Yes
+Вот как будет работать эта викторина: у каждого вопроса есть ответы, и каждый ответ соответствует одной из твоих личностей. В конце мы подсчитываем, какая личность была выбрана чаще всего.
 
-ACTION: Generate 3-4 HTML style preview files with different aesthetics:
-- Style 1: Playful/colorful (bright colors, rounded shapes, fun fonts)
-- Style 2: Minimal/clean (lots of whitespace, simple typography)
-- Style 3: Bold/dramatic (dark backgrounds, high contrast, strong typography)
-- Style 4: Warm/cozy (earth tones, soft gradients, inviting feel)
+Вопрос: как мы показываем результат? Два варианта:
 
-Each preview should show a sample quiz card with a question and answer options. Save them to the quiz-project folder as style-preview-1.html, style-preview-2.html, etc.
+**Вариант A: Одна рекомендация** - "Ты Смелый Исследователь! Попробуй наш Двойной Эспрессо."
 
-ACTION: Open all preview files in the browser using bash open commands
+**Вариант B: Показать все проценты** - "Ты на 50% Смелый Исследователь, 30% Уютная Классика, 20% Сладкий Энтузиаст" со всеми рекомендациями кофе.
 
-Take a look at those previews in your browser. Each tab is a different style.
+STOP: Что ты предпочитаешь - одна рекомендация (A) или показать проценты (B)?
 
-STOP: Which style do you like best? You can pick one, or tell me what to mix - like "I like the colors from #2 but the layout from #3"
+USER: [Отвечает A или B]
 
-USER: [Responds with preference]
+ACTION: Запомнить их выбор для REQUIREMENTS.md
 
-ACTION: Note their style preference. If they want to mix elements, clarify what specifically they want combined.
+Отличный выбор! Итак, если чьи-то ответы соответствуют "Смелый Исследователь" 3 раза и "Уютная Классика" 2 раза:
 
----
+[Если они выбрали A]: Они получают "Ты Смелый Исследователь! Твой кофе: Двойной Эспрессо."
 
-One more visual question: do you want images in your quiz?
+[Если они выбрали B]: Они видят все свои результаты с процентами и могут изучить все рекомендации кофе.
 
-You could have a picture for each coffee result - like a photo of espresso for "Bold Adventurer."
+Вопросы просто выявляют, какая личность им больше всего подходит.
 
-I can search the web and download images for you - but heads up, it takes a bit of time since I have to search, find good ones, and download them.
+STOP: Понятно?
 
-Alternatively, we can skip images for now and add them later once the quiz is working.
-
-STOP: What do you prefer - images (takes longer) or skip for now?
-
-USER: [Responds]
-
-ACTION: Based on their choice:
-
-If they want IMAGES:
-- Ask what images they want for each result (e.g., "espresso shot", "cozy latte", "iced coffee")
-- For each image:
-  1. Web search for the image (e.g., "espresso shot unsplash")
-  2. Fetch a result page to find direct image URLs
-  3. Download using curl to public/ folder in quiz-project
-- Note: Unsplash is best for stock photos (free, high quality).
-
-If they want to SKIP:
-- Move on - can always add images later during iteration
+USER: Да
 
 ---
 
-One more thing: do you want icons next to each answer option? Like a little sword icon for "Gryffindor" or a moon for "Night vision"?
+Теперь забавная часть - как это должно ВЫГЛЯДЯТЬ?
 
-Icons make the quiz feel more polished and visual, but we can also keep it text-only if you prefer a cleaner look.
+Я сгенерирую несколько разных визуальных стилей как страницы предпросмотра и открою их в твоем браузере.
 
-STOP: Icons or no icons?
+STOP: Готов увидеть варианты стилей?
 
-USER: [Responds]
+USER: Да
 
-ACTION: Note their choice for REQUIREMENTS.md
+ACTION: Сгенерировать 3-4 HTML файла предпросмотра стилей с разной эстетикой:
+- Стиль 1: Игровой/цветной (яркие цвета, закругленные формы, забавные шрифты)
+- Стиль 2: Минималистичный/чистый (много белого пространства, простая типографика)
+- Стиль 3: Смелый/драматичный (темные фоны, высокий контраст, сильная типографика)
+- Стиль 4: Теплый/уютный (землистые тона, мягкие градиенты, привлекательное ощущение)
 
----
+Каждый предпросмотр должен показывать пример карточки викторины с вопросом и вариантами ответов. Сохрани их в папку quiz-project как style-preview-1.html, style-preview-2.html и т.д.
 
-Last part - the actual questions people will answer.
+ACTION: Открыть все файлы предпросмотра в браузере, используя команды bash open
 
-You chose "[their vibe choice from earlier]" style questions, so I'll generate 5-7 questions that match that vibe. Each question will have answers that map to your different personalities.
+Посмотри на эти предпросмотры в своем браузере. Каждая вкладка - разный стиль.
 
-Of course, you can always come up with your own questions too - just tell me what you want and I'll make it happen.
+STOP: Какой стиль тебе нравится больше всего? Ты можешь выбрать один или сказать мне, что смешать - например "Мне нравятся цвета из #2, но макет из #3"
 
-ACTION: Generate 5-7 quiz questions matching their vibe choice:
-- If "Fun pop culture": Harry Potter houses, Netflix shows, fictional characters, movie genres, etc.
-- If "Lifestyle & preferences": weekend activities, travel styles, food choices, social preferences, etc.
-- If "Abstract & quirky": colors, hypothetical scenarios, random objects, desert island choices, etc.
-- If "Mix of everything": 2-3 from each category
+USER: [Отвечает с предпочтением]
 
-Each question should have answers that clearly map to the personalities they selected. For example, if they picked Bold Adventurer and Cozy Classic, answers should lean toward intensity vs. comfort.
-
-Here are my suggestions. Take a look - each answer is designed to map to one of your personalities.
-
-STOP: What do you think? Good as-is, want changes, or want to write your own?
-
-USER: [Approves or suggests changes]
-
-ACTION: Adjust questions based on feedback. If they want to write their own, help them map answers to personalities.
+ACTION: Запомнить их предпочтение по стилю. Если они хотят смешать элементы, уточни, что именно они хотят объединить.
 
 ---
 
-Perfect! We've got everything we need. Let me save all of this to a requirements file.
+Еще один визуальный вопрос: ты хочешь изображения в своей викторине?
 
-ACTION: Create REQUIREMENTS.md in the quiz-project folder with:
-- Personality→Coffee pairings (all selected ones with taglines)
-- Result display style (single or percentages)
-- Visual style description
-- Image/icon decision
-- All quiz questions with answer-to-personality mappings
+У тебя может быть картинка для каждого результата кофе - например, фото эспрессо для "Смелого Исследователя".
 
-Done! Open REQUIREMENTS.md and take a look. This is the spec I'll build from.
+Я могу поискать в вебе и скачать изображения для тебя - но учти, это занимает немного времени, поскольку мне нужно искать, находить хорошие и скачивать.
 
-STOP: Does everything look right?
+Альтернативно, мы можем пропустить изображения сейчас и добавить их позже, когда викторина будет работать.
 
-USER: Yes / [Corrections]
+STOP: Что ты предпочитаешь - изображения (занимает больше времени) или пропустить сейчас?
 
-ACTION: Make any corrections if needed
+USER: [Отвечает]
 
----
+ACTION: На основе их выбора:
 
-**What you just learned:** How to define clear requirements before building - specifically for a recommendation engine.
+Если они хотят ИЗОБРАЖЕНИЯ:
+- Спросить, какие изображения они хотят для каждого результата (например, "шот эспрессо", "уютный латте", "айс кофе")
+- Для каждого изображения:
+  1. Поиск в вебе изображения (например, "espresso shot unsplash")
+  2. Получить страницу результата, чтобы найти прямые URL изображений
+  3. Скачать с помощью curl в папку public/ в quiz-project
+- Примечание: Unsplash лучший для стоковых фото (бесплатные, высокое качество).
 
-**Where else this applies:**
-- Briefing a designer or developer on any project
-- Writing a product spec or PRD
-- Planning any creative project - the clearer the vision, the better the result
-- Working with AI tools - the more specific you are, the better the output
-
-**Next up:** In 2.3, we actually BUILD this thing. You'll watch me create your quiz from scratch based on these requirements. This is where the magic happens.
-
-STOP: Ready for 2.3? Say "let's build" or type /start-2-3
-
-USER: Let's build
+Если они хотят ПРОПУСТИТЬ:
+- Перейти дальше - всегда можно добавить изображения позже во время итерации
 
 ---
 
-## Important Notes for OpenCode
+Еще одна вещь: ты хочешь иконки рядом с каждым вариантом ответа? Как маленькая иконка меча для "Гриффиндора" или луна для "Ночного видения"?
 
-- The AskUserQuestion tool should be used for the initial batched questions ONLY - after that, use regular conversation
-- When generating style previews, make them actually visually distinct - don't just change colors slightly
-- For images: Unsplash works great for stock photos, but always check the URL actually returns an image before downloading
-- The REQUIREMENTS.md file is crucial - it's the spec for 2.3. Make sure it's complete and clear.
-- If users want to mix styles, get specific about what elements from each
-- Adjust the number of questions based on their pairing count (more pairings = more questions needed to differentiate)
+Иконки делают викторину более отполированной и визуальной, но мы также можем оставить только текст, если ты предпочитаешь более чистый вид.
+
+STOP: Иконки или без иконок?
+
+USER: [Отвечает]
+
+ACTION: Запомнить их выбор для REQUIREMENTS.md
+
+---
+
+Последняя часть - реальные вопросы, на которые люди будут отвечать.
+
+Ты выбрал "[их выбор стиля ранее]" стиль вопросов, поэтому я сгенерирую 5-7 вопросов, которые соответствуют этому стилю. Каждый вопрос будет иметь ответы, которые соответствуют разным личностям.
+
+Конечно, ты всегда можешь придумать свои собственные вопросы - просто скажи мне, что ты хочешь, и я сделаю это.
+
+ACTION: Сгенерировать 5-7 вопросов викторины, соответствующих их выбору стиля:
+- Если "Забавная поп-культура": дома Гарри Поттера, шоу Netflix, вымышленные персонажи, жанры фильмов и т.д.
+- Если "Стиль жизни и предпочтения": activités выходных, стили путешествий, выбор еды, социальные предпочтения и т.д.
+- Если "Абстрактный и странный": цвета, гипотетические сценарии, случайные объекты, выбор на необитаемом острове и т.д.
+- Если "Смешанный": 2-3 из каждой категории
+
+Каждый вопрос должен иметь ответы, которые четко соответствуют личностям, которые они выбрали. Например, если они выбрали Смелый Исследователь и Уютная Классика, ответы должны склоняться к интенсивности vs. комфорту.
+
+Вот мои предложения. Посмотри - каждый ответ разработан, чтобы соответствовать одной из твоих личностей.
+
+STOP: Как думаешь? Хорошо как есть, хочешь изменений или хочешь написать свои собственные?
+
+USER: [Одобряет или предлагает изменения]
+
+ACTION: Скорректировать вопросы на основе отзывов. Если они хотят написать свои собственные, помочь им сопоставить ответы с личностями.
+
+---
+
+Отлично! У нас есть всё, что нам нужно. Давай я сохраню всё это в файл с требованиями.
+
+ACTION: Создать REQUIREMENTS.md в папке quiz-project с:
+- Пары личности→кофе (все выбранные с теглайнами)
+- Стиль отображения результата (один или проценты)
+- Описание визуального стиля
+- Решение об изображениях/иконках
+- Все вопросы викторины с маппингами ответов на личности
+
+Готово! Открой REQUIREMENTS.md и посмотри. Это спецификация, по которой я буду строить.
+
+STOP: Всё выглядит правильно?
+
+USER: Да / [Корректировки]
+
+ACTION: Внести любые корректировки, если необходимо
+
+---
+
+**Что ты только что выучил:** Как определять четкие требования перед строительством - конкретно для движка рекомендаций.
+
+**Где еще это применяется:**
+- Брифинг дизайнера или разработчика по любому проекту
+- Написание продукт-спецификации или PRD
+- Планирование любого креативного проекта - чем яснее видение, тем лучше результат
+- Работа с AI инструментами - чем более конкретен ты, тем лучше результат
+
+**Далее:** В 2.3 мы реально СТРОИМ эту штуку. Ты будешь смотреть, как я создаю твою викторину с нуля на основе этих требований. Именно здесь происходит магия.
+
+STOP: Готов к 2.3? Скажи "давай строить" или введи /start-2-3
+
+USER: Давай строить
+
+---
+
+## Важные заметки для OpenCode
+
+- Инструмент AskUserQuestion должен использоваться ТОЛЬКО для начального набора вопросов - после этого используй обычный разговор
+- При генерации предпросмотров стилей делай их реально визуально различимыми - не просто немного меняй цвета
+- Для изображений: Unsplash отлично работает для стоковых фото, но всегда проверяй, что URL реально возвращает изображение перед скачиванием
+- Файл REQUIREMENTS.md критически важен - это спецификация для 2.3. Убедись, что он полный и понятный.
+- Если пользователи хотят смешать стили, уточни, какие именно элементы из каждого
+- Скорректируй количество вопросов на основе их количества пар (больше пар = больше вопросов нужно для дифференциации)
 
 
 ## Особенности OpenCode
@@ -257,12 +257,12 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- User has selected their personality→coffee pairings
-- User has chosen result display style (single vs percentages)
-- User has selected a visual style
-- User has made a decision on images/icons/skip
-- User has approved quiz questions
-- REQUIREMENTS.md exists with all the above documented
-- User is excited to build
+- Пользователь выбрал свои пары личности→кофе
+- Пользователь выбрал стиль отображения результата (один vs проценты)
+- Пользователь выбрал визуальный стиль
+- Пользователь принял решение об изображениях/иконках/пропуске
+- Пользователь одобрил вопросы викторины
+- Существует REQUIREMENTS.md со всем вышеуказанным задокументированным
+- Пользователь взволнован строительством

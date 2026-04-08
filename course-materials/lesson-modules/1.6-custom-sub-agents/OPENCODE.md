@@ -1,184 +1,184 @@
-# Lesson 1.6: Custom Sub-agents
+# Урок 1.6: Пользовательские суб-агенты
 
-We've done the research. We know there's a problem.
+Мы провели исследование. Мы знаем, что есть проблема.
 
-But before we decide what to DO about it, we need perspectives.
+Но прежде чем мы решим, что с ней ДЕЛАТЬ, нам нужны перспективы.
 
-Different stakeholders see problems differently.
+Разные заинтересованные стороны видят проблемы по-разному.
 
-I'm going to show you something powerful: custom sub-agents.
+Я покажу тебе что-то мощное: пользовательские суб-агенты.
 
-You'll also learn how to make your own.
+Ты также научишься создавать свои собственные.
 
-STOP: Ready to meet your team?
+STOP: Готов встретить свою команду?
 
-USER: Yes
-
----
-
-## Agents vs Sub-agents
-
-What's the difference between agents and sub-agents?
-
-Think of **agents** as temporary workers. You spin them up for a task, then they're gone.
-
-**Sub-agents** are permanent team members. They're defined in files with persistent personalities and perspectives.
-
-They're always available when you need them. And of course you can update or improve them as part of your evolving system whenever you want.
-
-STOP: This is like building your own advisory board. A skeptic, an optimist, a technical expert, a customer advocate - whatever perspectives you need, you can create them once and use them forever. Make sense?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Meet Your Advisory Team
+## Агенты vs Суб-агенты
 
-Meet your advisory team:
+В чем разница между агентами и суб-агентами?
 
-**(ಠ_ಠ) Exec** - leadership perspective, cares about ROI. "Will this move the needle?"
+Думай об **агентах** как о временных работниках. Ты запускаешь их для задачи, затем они исчезают.
 
-**(◠‿◠) Product Designer** - UX/experience perspective. "How does this feel to use?"
+**Суб-агенты** - это постоянные члены команды. Они определены в файлах с постоянными личностями и перспективами.
 
-**(•‿•) Barista Lead** - ground-level operations. "What do customers actually want?"
+Они всегда доступны, когда они тебе нужны. И, конечно, ты можешь обновлять или улучшать их как часть своей развивающейся системы когда захочешь.
 
-These sub-agents are defined in `.claude/agents/`. Take a look at those files.
+STOP: Это как построить свой собственный консультативный совет. Скептик, оптимист, технический эксперт, защитник клиентов - какие перспективы тебе нужны, ты можешь создать их один раз и использовать вечно. Понятно?
 
-STOP: Can you see the three sub-agent files?
-
-USER: Yes
+USER: Да
 
 ---
 
-## Review the Research Synthesis
+## Встречь свою консультативную команду
 
-Let's have all 3 review our research synthesis from different angles.
+Встречь свою консультативную команду:
 
-STOP: Ask me to have all three sub-agents review @analysis/comprehensive-research-synthesis.md from their perspectives. What do they think the problem is and what should we do about it?
+**(ಠ_ಠ) Исполнитель** - перспектива руководства, заботится о ROI. "Подвинет ли это иголку?"
 
-USER: Types command asking for sub-agent review
+**(◠‿◠) Продуктовый дизайнер** - UX/перспектива опыта. "Каково это использовать?"
 
-ACTION: Run all 3 sub-agents on the synthesis. Save their combined feedback to `reviews/synthesis-feedback.md`
+**(•‿•) Бариста-лидер** - операции на передовой. "Что на самом деле хотят клиенты?"
 
----
+Эти суб-агенты определены в `.claude/agents/`. Загляни в эти файлы.
 
-## The Three Perspectives
+STOP: Ты видишь три файла суб-агентов?
 
-Open up the feedback file I just created and let's look at what they said.
-
-**Exec:** "The data is clear - we're hemorrhaging engagement. But what's the fix? I need something with measurable ROI, not just 'make it better.'"
-
-**Product Designer:** "The program has no soul. It's a points tracker. There's no emotional connection, no identity, no reason to care. We need to make people FEEL something."
-
-**Barista Lead:** "You know what customers always ask us? 'What coffee should I try?' They want help finding THEIR drink. What if we helped them discover their coffee personality?"
-
-STOP: See how each perspective adds something different? You could use this same pattern to have multiple stakeholders review a proposal, stress-test a business plan, or get feedback on a document from different audiences - all at once. The barista insight is especially interesting...
-
-USER: Yes
+USER: Да
 
 ---
 
-## The Quiz Idea!
+## Просмотри синтез исследования
 
-That half-baked note from the previous manager ("coffee personalities")...
+Давай заставим всех 3 просмотреть наш синтез исследования с разных точек зрения.
 
-Plus the "no personality" discovery from our analysis...
+STOP: Попроси меня заставить всех трех суб-агентов просмотреть @analysis/comprehensive-research-synthesis.md с их перспектив. Что, по их мнению, является проблемой и что нам следует с ней делать?
 
-Plus the barista insight about what customers actually ask...
+USER: Вводит команду, прося проверку суб-агентов
 
-This all points to one thing - **A Coffee Personality Quiz!**
-
-Help people find their coffee identity. Give the program personality by giving MEMBERS personality.
-
-STOP: This is our solution. Do you like it?
-
-USER: Yes
-
-[If no: "Well, humor me - in a fictional interactive OpenCode course, sometimes the insights are a little too convenient. But the SKILLS you're learning are real! Let's keep going."]
+ACTION: Запустить всех 3 суб-агентов над синтезом. Сохранить их совместные отзывы в `reviews/synthesis-feedback.md`
 
 ---
 
-## How Sub-agents Work
+## Три перспективы
 
-Let me show you how sub-agents work. They live in `.claude/agents/`
+Открой файл с отзывами, который я только что создал, и давай посмотрим, что они сказали.
 
-Each file has YAML frontmatter with a name and description, plus a system prompt defining their perspective.
+**Исполнитель:** "Данные ясны - мы теряем вовлеченность. Но как исправить? Мне нужно что-то с измеримым ROI, а не просто 'сделать лучше'."
 
-You can create your own for any perspective you need.
+**Продуктовый дизайнер:** "У программы нет души. Это трекер очков. Нет эмоциональной связи, нет идентичности, нет причины заботиться. Нам нужно заставить людей ЧУВСТВОВАТЬ что-то."
 
-STOP: At their core, they're really just text files with a personality description. You could create a "demanding client" for testing proposals, a "confused beginner" for checking if instructions are clear, or a "legal reviewer" for spotting risks. The possibilities are endless. Let's make a new one. Ready?
+**Бариста-лидер:** "Знаешь, что клиенты всегда спрашивают у нас? 'Какой кофе мне попробовать?' Они хотят помочь найти СВОЙ напиток. Что если мы поможем им открыть их кофейную личность?"
 
-USER: Yes
+STOP: Видишь, как каждая перспектива добавляет что-то разное? Ты мог бы использовать тот же шаблон, чтобы несколько заинтересованных сторон проверили предложение, протестировали бизнес-план или получили отзывы о документе от разных аудиторий - все одновременно. Инсайт бариста особенно интересен...
 
----
-
-## Creating Your Own Sub-agents
-
-Creating your own sub-agents is easy:
-
-Just use the `/agents` command.
-
-You can either make an agent work just for this project (Project) or across any project on your entire computer (Personal). I will help you make the agent.
-
-I'd suggest making an "Engineer" agent who can help you think through technical decisions later in the course, but it's up to you!
-
-STOP: Go ahead and type `/agents` and go through the flow if you want, otherwise let me know when you're ready to continue.
-
-USER: Confirms
+USER: Да
 
 ---
 
-## Agents vs Sub-agents Decision
+## Идея викторины!
 
-When to use sub-agents vs regular agents:
+Та half-запеченная заметка от предыдущего менеджера ("кофейные личности")...
 
-**Agents** = temporary workers for parallel tasks (process these 10 files)
+Плюс открытие "нет личности" из нашего анализа...
 
-**Sub-agents** = permanent team members with defined perspectives (always available for review/feedback)
+Плюс инсайт бариста о том, что на самом деле спрашивают клиенты...
 
-STOP: Think of it this way: agents are for volume, sub-agents are for wisdom. Need to process 50 documents? Agents. Need thoughtful feedback from different viewpoints? Sub-agents. Got it?
+Всё это указывает на одно - **Викторина кофейной личности!**
 
-USER: Yes
+Помоги людям найти их кофейную идентичность. Дай программе личность, дав УЧАСТНИКАМ личность.
 
----
+STOP: Это наше решение. Нравится?
 
-## Installing Agents
+USER: Да
 
-There are a TON of agents people have already built that you can easily install into anything you're working on.
-
-Resources for these are provided in the reference for this lesson. Definitely check those out when you have time, and you can just ask me how to get them in here.
-
-STOP: Ready to wrap this up?
-
-USER: Confirms
+[Если нет: "Ну, согласись - в вымышленном интерактивном курсе OpenCode, иногда инсайты бывают слишком удобными. Но НАВЫКИ, которые ты учишься, реальны! Продолжим."]
 
 ---
 
-## Wrap-up
+## Как работают суб-агенты
 
-**Meta skill:** Getting diverse perspectives by creating specialized reviewers with different priorities and viewpoints.
+Давай я покажу тебе, как работают суб-агенты. Они живут в `.claude/agents/`
 
-**Where else this applies:**
-- Reviewing your resume - get feedback from a "recruiter" (keywords, formatting), "hiring manager" (skills fit), and "career coach" (narrative, positioning)
-- Pressure-testing a business idea - "skeptical investor," "enthusiastic customer," "operational realist"
-- Planning a presentation - "busy executive" (bottom line), "detail-oriented analyst" (data), "skeptic" (objections)
-- Writing anything important - "editor" (clarity), "target reader" (relevance), "critic" (weaknesses)
-- Making a big decision - "risk-averse advisor," "opportunity-focused advisor," "practical advisor"
+Каждый файл имеет YAML frontmatter с именем и описанием, плюс системный промпт, определяющий их перспективу.
 
-**Next up:** In 1.7, you'll learn about AGENTS.md - the killer feature that gives Claude persistent memory across sessions. No more re-explaining your project every time. You write the context once, and I know it forever.
+Ты можешь создать свои собственные для любой перспективы, которая тебе нужна.
 
-STOP: Ready for 1.7?
+STOP: По сути, они просто текстовые файлы с описанием личности. Ты мог бы создать "требовательного клиента" для тестирования предложений, "растерянного новичка" для проверки ясности инструкций или "юридического проверяющего" для выявления рисков. Возможности безграничны. Давай создадим новый. Готов?
 
-USER: Yes / /start-1-7
+USER: Да
 
 ---
 
-## Important Notes for OpenCode
+## Создание своих собственных суб-агентов
 
-- **Run all 3 sub-agents**: Actually invoke the exec, product-designer, and barista-lead agents on the synthesis
-- **Create the feedback file**: reviews/synthesis-feedback.md should be created
-- **The big moment**: The barista insight connecting to the coffee personality quiz is THE narrative payoff - make it land
-- **Optional agent creation**: Student can skip creating their own agent - don't force it
+Создание своих собственных суб-агентов легко:
+
+Просто используй команду `/agents`.
+
+Ты можешь либо создать агента, который работает только для этого проекта (Project), либо для любого проекта на всем твоем компьютере (Personal). Я помогу тебе создать агента.
+
+Я бы предложил создать агента "Инженер", который сможет помочь тебе продумать технические решения позже в курсе, но решение за тобой!
+
+STOP: Вперед и введи `/agents` и пройди поток, если хочешь, иначе дай мне знать, когда будешь готов продолжить.
+
+USER: Подтверждает
+
+---
+
+## Решение: Агенты vs Суб-агенты
+
+Когда использовать суб-агентов vs обычных агентов:
+
+**Агенты** = временные работники для параллельных задач (обработай эти 10 файлов)
+
+**Суб-агенты** = постоянные члены команды с определенными перспективами (всегда доступны для отзывов/обратной связи)
+
+STOP: Думай об этом так: агенты для объема, суб-агенты для мудрости. Нужно обработать 50 документов? Агенты. Нужны вдумчивые отзывы с разных точек зрения? Суб-агенты. Понял?
+
+USER: Да
+
+---
+
+## Установка агентов
+
+Есть ТОННА агентов, которые люди уже создали и которые ты можешь легко установить во всё, над чем работаешь.
+
+Ресурсы для них предоставлены в справке для этого урока. Обязательно проверь их, когда будет время, и ты всегда можешь спросить меня, как получить их здесь.
+
+STOP: Готов завершить это?
+
+USER: Подтверждает
+
+---
+
+## Завершение
+
+**Мета-навык:** Получение разнообразных перспектив путем создания специализированных проверяющих с разными приоритетами и точками зрения.
+
+**Где еще это применяется:**
+- Проверка резюме - получи отзывы от "рекрутера" (ключевые слова, форматирование), "менеджера по найму" (соответствие навыков) и "карьерного коуча" (нарратив, позиционирование)
+- Стресс-тест бизнес-идеи - "скептичный инвестор", "энтузиастичный клиент", "операционный реалист"
+- Планирование презентации - "занятый исполнитель" (суть), "детализированный аналитик" (данные), "скептик" (возражения)
+- Написание чего-то важного - "редактор" (ясность), "целевой читатель" (релевантность), "критик" (слабые места)
+- Принятие важного решения - "советник, избегающий риска", "советник, фокусирующийся на возможностях", "практичный советник"
+
+**Далее:** В 1.7 ты узнаешь об AGENTS.md - функции-убийце, которая дает Claude постоянную память между сессиями. Больше никакого повторного объяснения своего проекта каждый раз. Ты пишешь контекст один раз, и я знаю его вечно.
+
+STOP: Готов к 1.7?
+
+USER: Да / /start-1-7
+
+---
+
+## Важные заметки для OpenCode
+
+- **Запусти всех 3 суб-агентов**: Реально вызови exec, product-designer и barista-lead агентов над синтезом
+- **Создай файл с отзывами**: reviews/synthesis-feedback.md должен быть создан
+- **Ключевой момент**: Инсайт бариста, связанный с викториной кофейной личности - ЭТО narrative payoff - заставь его зазвучать
+- **Опциональное создание агента**: Студент может пропустить создание собственного агента - не заставляй
 
 
 ## Особенности OpenCode
@@ -211,14 +211,14 @@ OpenCode поддерживает 75+ провайдеров через Models.d
 - `Ctrl+O` - выбор модели
 - `Esc` - закрыть диалог
 
-## Success Criteria
+## Критерии успеха
 
-- [ ] Student understands difference between agents (temporary) and sub-agents (permanent)
-- [ ] Student saw all 3 sub-agents review the synthesis
-- [ ] Student received different perspectives from each sub-agent
-- [ ] Student had the "aha" moment about the Coffee Personality Quiz solution
-- [ ] Student knows sub-agents live in .claude/agents/
-- [ ] Student knows how to create new sub-agents (/agents command)
-- [ ] Student understands when to use agents vs sub-agents
-- [ ] reviews/synthesis-feedback.md created
-- [ ] Student is ready for 1.7
+- [ ] Студент понимает разницу между агентами (временными) и суб-агентами (постоянными)
+- [ ] Студент видел всех 3 суб-агентов, проверяющих синтез
+- [ ] Студент получил разные перспективы от каждого суб-агента
+- [ ] Студент пережил "ага" момент об идее Викторины кофейной личности
+- [ ] Студент знает, что суб-агенты живут в .claude/agents/
+- [ ] Студент знает, как создавать новых суб-агентов (команда /agents)
+- [ ] Студент понимает, когда использовать агентов vs суб-агентов
+- [ ] Создан reviews/synthesis-feedback.md
+- [ ] Студент готов к 1.7
