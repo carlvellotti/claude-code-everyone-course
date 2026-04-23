@@ -117,6 +117,8 @@ gh repo create quiz-project --private --source=. --push
 
 Готово! Код сохранен в GitHub. Отправили в облако.
 
+Если git commit или gh repo create не сработали: "Хочешь, разберёмся? Частые причины: git не настроен (нужен git config), имя репозитория уже занято — проверим через `git status` и `gh repo list`. Или пропустим?"
+
 Открою для тебя.
 
 ACTION: Получить URL репозитория и открыть его:
