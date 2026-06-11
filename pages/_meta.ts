@@ -7,5 +7,6 @@ export default
   "mini-lessons": "Mini Lessons",
   "cowork": "Complete Guide to Cowork",
   "gsd": "GSD: Advanced Vibe Coding",
+  "guides": "Guides & Reference",
   "search": "Search"
 }
