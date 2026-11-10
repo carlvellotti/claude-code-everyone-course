@@ -24,6 +24,19 @@ const trackEvent = (eventName, params = {}) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, params)
   }
+  // PostHog mirror: same name and properties as GA, plus the site
+  if (typeof window !== 'undefined' && window.posthog) {
+    window.posthog.capture(eventName, { ...params, site: 'ccforeveryone.com' })
+  }
+}
+
+// PostHog identity: the distinct ID is the lowercased, trimmed email.
+// Called only after a successful subscribe.
+const identifyEmail = (rawEmail) => {
+  const email = (rawEmail || '').trim().toLowerCase()
+  if (email && typeof window !== 'undefined' && window.posthog) {
+    window.posthog.identify(email, { email })
+  }
 }
 
 // Shipped: Cheatsheet variant won A/B test
@@ -90,6 +103,7 @@ export default function EmailPopup() {
 
       if (response.ok && data.success) {
         setStatus('success')
+        identifyEmail(email)
         localStorage.setItem('cc4e-popup-seen', 'true')
         trackEvent('popup_submitted', { popup_type: 'email_signup', source: 'cc4e', variant: VARIANT })
         setTimeout(() => {

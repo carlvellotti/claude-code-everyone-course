@@ -24,6 +24,19 @@ const trackEvent = (eventName, params = {}) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, params)
   }
+  // PostHog mirror: same name and properties as GA, plus the site
+  if (typeof window !== 'undefined' && window.posthog) {
+    window.posthog.capture(eventName, { ...params, site: 'ccforeveryone.com' })
+  }
+}
+
+// PostHog identity: the distinct ID is the lowercased, trimmed email.
+// Called only after a successful subscribe.
+const identifyEmail = (rawEmail) => {
+  const email = (rawEmail || '').trim().toLowerCase()
+  if (email && typeof window !== 'undefined' && window.posthog) {
+    window.posthog.identify(email, { email })
+  }
 }
 
 const EMAIL_SUBMITTED_KEY = 'cc4e-download-email-submitted'
@@ -162,6 +175,7 @@ export default function DownloadGate() {
 
       if (response.ok && data.success) {
         setStatus('success')
+        identifyEmail(email)
         localStorage.setItem(EMAIL_SUBMITTED_KEY, 'true')
         trackEvent('email_gate_completed', { page: window.location.pathname })
 
