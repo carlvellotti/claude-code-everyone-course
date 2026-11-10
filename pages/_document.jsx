@@ -1,8 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
-const LINKEDIN_PARTNER_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID
-const X_PIXEL_ID = process.env.NEXT_PUBLIC_X_PIXEL_ID
+const META_PIXEL_ID = (process.env.NEXT_PUBLIC_META_PIXEL_ID || '').trim()
+const LINKEDIN_PARTNER_ID = (process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '').trim()
+const X_PIXEL_ID = (process.env.NEXT_PUBLIC_X_PIXEL_ID || '').trim()
 
 export default function Document() {
   return (
